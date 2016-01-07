@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+
+# .bash_prompt
+
+# Contains settings for various prompts
+
+# Best Terminal Background Colors:
+#   Monokai  [Sublime Text] (hex: #272822; rgb: 39,40,34; hsv:  70, 15,16)
+#   Dark Aubergine [Ubuntu] (hex: #2C001E; rgb: 44, 0,30; hsv: 319,100,17)
+
+# Text settings: Menlo Regular 12pt
+
+# Make sure this is an interactive prompt before running tput
+# This is needed to avoid problems with scp
+if tty -s
+then
+    bold=$(   tput bold)
+    reset=$(  tput sgr0)
+
+    black=$(  tput setaf 0)
+    red=$(    tput setaf 1)
+    green=$(  tput setaf 2)
+    yellow=$( tput setaf 3)
+    blue=$(   tput setaf 4)
+    magenta=$(tput setaf 5)
+    cyan=$(   tput setaf 6)
+    white=$(  tput setaf 7)
+else
+    bold=""
+    reset="\e[0m"
+
+    black="\e[0;30m"
+    red="\e[0;31m"
+    green="\e[0;32m"
+    yellow="\e[0;33m"
+    blue="\e[0;34m"
+    magenta="\e[0;35m"
+    cyan="\e[0;36m"
+    white="\e[0;37m"
+fi
+
+# Wrap meta-characters in square brackets to prevent bash
+# from using them to calculate the width of the prompt
+bold="\[$bold\]"
+reset="\[$reset\]"
+
+black="\[$black\]"
+red="\[$red\]"
+green="\[$green\]"
+yellow="\[$yellow\]"
+blue="\[$blue\]"
+magenta="\[$magenta\]"
+cyan="\[$cyan\]"
+white="\[$white\]"
+
+# I am using \u@\h:\w\$
+# originally [\u@\h \W]\$ on Fedora
+export PS1="[${reset}${cyan}\u${white}@${green}\h${white} ${yellow}\w${white}]\$ "
+

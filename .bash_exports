@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+# .bash_exports
+
+# Contains all exported environment variables
+
+# OS Specific Aliases
+kernel=$(uname)
+case "$kernel" in
+    'Darwin') # OS X
+        # Note lack of underscore
+        export LSCOLORS='exfxcxdxbxegedabagexex'
+        export PATH="/Users/Adam/anaconda3/bin:$PATH:/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+        ;;
+    'Linux')
+        # Note presence of underscore
+        export LS_COLORS='di=34:fi=0:ln=35:so=32:pi=33:ex=31:bd=34:cd=34:su=0:sg=0:tw=34:ow=34'
+        ;;
+    *)
+        echo "Unknown OS: $kernel"
+        ;;
+esac
+
+# Set default text editor
+export EDITOR="vim"
+
+# Bash history settings
+export HISTSIZE='32768'
+export HISTFILESIZE="$HISTSIZE"
+export HISTCONTROL='ignoreboth'
+
+# Language Settings
+export LANG='en_US.UTF-8'
+export LC_ALL='en_US.UTF-8'
+

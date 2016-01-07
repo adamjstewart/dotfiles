@@ -1,0 +1,49 @@
+[alias]
+
+    # Abbreviated command names
+	ad = add
+	br = branch
+	ci = commit
+	co = checkout
+	re = rebase
+	st = status
+
+[apply]
+
+    # Detect whitespace errors when applying a patch
+	whitespace = fix
+
+[color]
+
+    # Use colors in Git commands that are capable of colored output
+    ui = auto
+
+[core]
+
+    # Set the default editor
+	editor = vim
+
+	# Use global .gitignore file to ignore certain filetypes
+	excludesfile = ~/.gitignore
+
+    # Treat spaces before tabs and all kinds of trailing whitespace as an error
+    # [default] trailing-space: looks for spaces at the end of a line
+    # [default] space-before-tab: looks for spaces before tabs at the beginning of a line
+    whitespace = space-before-tab,-indent-with-non-tab,trailing-space 
+
+[help]
+
+    # Automatically correct and execute mistyped commands
+    autocorrect = 1
+
+[merge]
+
+    # Include summaries of merged commits in newly created merge commit messages
+    log = true
+
+[user]
+
+    # Set user commit information
+	email = ajstewart426@gmail.com
+	name = Adam J. Stewart
+

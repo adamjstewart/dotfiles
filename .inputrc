@@ -1,0 +1,26 @@
+# Readline Settings
+
+# (Bash 4.3+) Display tab-to-complete suggestions using colors to indicate file type, based on LS_COLORS
+set colored-stats on
+# Perform filename matching and completion in a case-insensitive fashion
+set completion-ignore-case on
+# (Bash 4.2+) Set hyphens and underscores as equivalent for filename matching and completion
+set completion-map-case on
+# Completed names which are directories have a slash appended
+set mark-directories on
+# Completed names which are symbolic links to directories have a slash appended
+set mark-symlinked-directories off
+# Display all possible completions when tab is pressed and no partial completion is possible
+set show-all-if-unmodified on
+# (Bash 4.1+) Don't repeat text when tab to complete in middle of word
+set skip-completed-text on
+# Show extra file information when completing, like `ls -F` does
+set visible-stats off
+
+# Keymaps for insert mode
+set keymap emacs
+
+# Use up/down arrows to cycle through history of commands starting with current prefix
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
