@@ -10,7 +10,7 @@ case "$kernel" in
     'Darwin') # OS X
         # Note lack of underscore
         export LSCOLORS='exfxcxdxbxegedabagexex'
-        export PATH="/Users/Adam/anaconda3/bin:$PATH:/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+        export PATH="/Users/Adam/anaconda3/bin:$PATH"
         ;;
     'Linux')
         # Note presence of underscore
