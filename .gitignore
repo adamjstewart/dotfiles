@@ -1,5 +1,65 @@
-# Compiled Python files
-*.pyc
+# More suggestions of language-specific .gitignore files can be found at:
+# https://github.com/github/gitignore
+
+##########
+# Python #
+##########
+
+# Byte-compiled / optimized / DLL files:
+*.py[cod]
+
+#######
+# TeX #
+#######
+
+# Core latex/pdflatex auxiliary files:
+*.aux
+*.fls
+*.fmt
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+
+# Bibliography auxiliary files (bibtex/biblatex/biber):
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.brf
+*.run.xml
+
+# Build tool auxiliary files:
+*.fdb_latexmk
+*.pdfsync
+*.synctex
+*.synctex.gz
+*.synctex.gz(busy)
+
+#################
+# Sumblime Text #
+#################
+
+# Workspace files
+*.sublime-workspace
+
+# Cache files
+*.stTheme.cache
+*.tmlanguage.cache
+*.tmPreferences.cache
+
+#######
+# Vim #
+#######
+
+.netrwhist
+*~
+
+###########
+# Windows #
+###########
 
 # Folder view configuration files
 .DS_Store
@@ -9,6 +69,9 @@ Desktop.ini
 ._*
 Thumbs.db
 
-# Files that might appear on external disks
-.Spotlight-V100
-.Trashes
+################
+# Linux / OS X #
+################
+
+.Trash*
+
