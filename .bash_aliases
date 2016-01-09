@@ -48,7 +48,7 @@ alias sb="source  $HOME/.bashrc"
 alias vv="vim     $HOME/.vimrc"
 alias vi="vim     $HOME/.inputrc"
 alias si="bind -f $HOME/.inputrc"
-alias subl='s'
+alias s="subl"
 
 # System Aliases
 alias cl='clear; ls'
