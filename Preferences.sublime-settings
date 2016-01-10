@@ -1,0 +1,61 @@
+{
+    // Set to true to close windows as soon as the last file is closed, unless
+    // there's a folder open within the window.
+    // On OS X, this value is overridden in the platform specific settings, so
+    // you'll need to place this line in your user settings to override it.
+	"close_windows_when_empty": false,
+
+    // Sets the colors used within the text area
+	"color_scheme": "Packages/Color Scheme - Default/Monokai Bright.tmTheme",
+
+    // Determines what character(s) are used to terminate each line in new files.
+    // Valid values are 'system' (whatever the OS uses), 'windows' (CRLF) and
+    // 'unix' (LF only).
+	"default_line_ending": "unix",
+
+    // Set to false to disable detection of tabs vs. spaces on load
+	"detect_indentation": false,
+
+    // Set to true to ensure the last line of the file ends in a newline
+    // character when saving
+	"ensure_newline_at_eof_on_save": true,
+
+    // If true, the selected text will be copied into the find panel when it's
+    // shown.
+    // On OS X, this value is overridden in the platform specific settings, so
+    // you'll need to place this line in your user settings to override it.
+	"find_selected_text": true,
+
+    // OS X only: When files are opened from finder, or by dragging onto the
+    // dock icon, this controls if a new window is created or not.
+	"open_files_in_new_window": false,
+
+    // remember_full_screen will allow Sublime Text to start in full screen
+    // mode if it was exited in full screen mode. When set to false, Sublime
+    // Text will never start in full screen mode.
+	"remember_full_screen": true,
+
+    // Columns in which to display vertical rulers
+	"rulers":
+	[
+		100
+	],
+
+    // Set to false to disable scrolling past the end of the buffer.
+    // On OS X, this value is overridden in the platform specific settings, so
+    // you'll need to place this line in your user settings to override it.
+	"scroll_past_end": true,
+
+    // Set to true to turn spell checking on by default
+	"spell_check": true,
+
+    // Set to true to insert spaces when tab is pressed
+	"translate_tabs_to_spaces": true,
+
+    // Trims white space added by auto_indent when moving the caret off the
+    // line.
+	"trim_automatic_white_space": false,
+
+    // Set to true to removing trailing white space on save
+	"trim_trailing_white_space_on_save": true
+}
