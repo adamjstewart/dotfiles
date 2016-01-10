@@ -29,7 +29,7 @@ function syncDotfiles {
 
     if [[ -d "$sublimeDir" ]]
     then
-        rsync --include "*.sublime-settings" -avh --no-perms . "$sublimeDir"
+        rsync --include "*.sublime-settings" --exclude "*" -avh --no-perms . "$sublimeDir"
     fi
 }
 
