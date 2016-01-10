@@ -50,29 +50,29 @@ function man {
                         ;;
                     # Special cases
                     getopts|logout)
-                        LESS=-p"^       $var " command man "$var"
+                        LESS=-p"^       $var " command man bash
                         ;;
                     builtin)
-                        LESS=-p"^       $var shell-$var" command man "$var"
+                        LESS=-p"^       $var shell-$var" command man bash
                         ;;
                     let)
-                        LESS=-p"^       $var arg" command man "$var"
+                        LESS=-p"^       $var arg" command man bash
                         ;;
                     source)
-                        LESS=-p"^       $var filename" command man "$var"
+                        LESS=-p"^       $var filename" command man bash
                         ;;
                     times)
-                        LESS=-p"^       $var  " command man "$var"
+                        LESS=-p"^       $var  " command man bash
                         ;;
                     '.')
-                        LESS=-p"^        \. " command man "$var"
+                        LESS=-p"^        \. " command man bash
                         ;;
                     '[')
-                        LESS=-p"^       \[ expr \\]" command man "$var"
+                        LESS=-p"^       \[ expr \\]" command man bash
                         ;;
                     # Bash builtins without stand-alone man pages
                     *)
-                        LESS=-p"^       $var *\[" command man "$var"
+                        LESS=-p"^       $var *\[" command man bash
                         ;;
                 esac
                 ;;
@@ -82,7 +82,7 @@ function man {
                     # Special cases
                     # I overwrote cd with a function, so bash thinks it's a function now
                     cd)
-                        LESS=-p"^       $var \[" command man "$var"
+                        LESS=-p"^       $var \[" command man bash
                         ;;
                     *)
                         command man "$var"
