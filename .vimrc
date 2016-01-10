@@ -12,8 +12,8 @@ set ruler                               " display cursor position
 " Searching Criteria
 set ignorecase                          " ignore case in search patterns
 set smartcase                           " override ignorecase if search pattern has capital letters
-set wildmode=longest,list
-set showmatch
+set wildmode=longest,list               " list all matches
+set showmatch                           " highlight matching parentheses/brackets
 set hlsearch                            " highlight search results
 set incsearch                           " show matches while typing pattern
 
@@ -26,17 +26,14 @@ set nostartofline                       " don't reset cursor to start of line wh
 set wrap                                " wrap visually instead of changing text in buffer
 set linebreak                           " only wrap at characters listed in the breakat option
 set nolist                              " list disables linebreaks
-set textwidth=0
-set wrapmargin=0
 
 " Indentation
-set autoindent                          " copy indentation from current line
-set copyindent
-set smarttab                            " backspace will delete shiftwidth worth of spaces
-set expandtab                           " convert new tabs to spaces, use Ctrl-v-Tab to insert real tab
+set autoindent                          " copy indentation from current line when starting new line
+set copyindent                          " copy structure of indentation from previous line, e.g. comment symbols
+set expandtab                           " <Tab> inserts softtabstop spaces. Use <Ctrl>-V <Tab> to get real tab
 autocmd FileType make set noexpandtab   " don't convert tabs to spaces for Makefiles
 set tabstop=4                           " number of spaces that <Tab> equals
-set shiftwidth=4                        " number of spaces to use for each auto-indent
+set shiftwidth=4                        " number of spaces to use for each auto-indent, e.g. >>, << commands
 set softtabstop=4
 
 " Key Remaps
@@ -47,6 +44,9 @@ nnoremap ; :
 nnoremap / /\v
 cnoremap %s/ %s/\v
 
+" Jump to last known position in a file just after opening it
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
 " Whitespace Handling
 function! StripTrailingWhitespaces()
     let l = line(".")
@@ -54,7 +54,11 @@ function! StripTrailingWhitespaces()
     %s/\s\+$//e                         " delete trailing whitspaces
     call cursor(l, c)                   " return cursor to previous position
 endfunction
-
 autocmd FileType perl,sh,python,vi autocmd BufWrite <buffer> :call StripTrailingWhitespaces()
+
+" Clear searches when opening file
 autocmd BufReadPre <buffer> :let @/ = ""
+
+" Use JavaScript syntax highlighting for JSON files
+autocmd BufRead,BufNewFile *.json,*.sublime-settings setfiletype javascript
 
