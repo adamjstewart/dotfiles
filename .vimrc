@@ -1,6 +1,6 @@
 " Compatibility
 set nocompatible                        " disable vi compatibility mode
-set mouse=a                             " enable mouse for all modes
+"set mouse=a                             " enable mouse for all modes
 set mousefocus                          " window focus follows mouse
 set mousehide                           " hide mouse pointer when characters are typed
 
@@ -9,7 +9,7 @@ syntax enable                           " enable syntax highlighting
 colorscheme monokai                     " use colorscheme in ~/.vim/colors
 
 " Display Line Numbers
-set number                              " display line numbers
+"set number                              " display line numbers
 set ruler                               " display cursor position
 
 " Searching Criteria
@@ -31,7 +31,7 @@ set linebreak                           " only wrap at characters listed in the 
 set nolist                              " list disables linebreaks
 
 " Indentation
-set autoindent                          " copy indentation from current line when starting new line
+"set autoindent                          " copy indentation from current line when starting new line
 set copyindent                          " copy structure of indentation from previous line, e.g. comment symbols
 set expandtab                           " <Tab> inserts softtabstop spaces. Use <Ctrl>-V <Tab> to get real tab
 autocmd FileType make set noexpandtab   " don't convert tabs to spaces for Makefiles
