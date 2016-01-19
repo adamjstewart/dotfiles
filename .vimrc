@@ -1,5 +1,8 @@
 " Compatibility
 set nocompatible                        " disable vi compatibility mode
+set mouse=a                             " enable mouse for all modes
+set mousefocus                          " window focus follows mouse
+set mousehide                           " hide mouse pointer when characters are typed
 
 " Color and Style
 syntax enable                           " enable syntax highlighting
