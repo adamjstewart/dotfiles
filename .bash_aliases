@@ -39,6 +39,7 @@ alias ..5=' cd ../../../../..'
 
 # Text Editor Aliases
 alias v='vim'
+alias vd='vimdiff'
 alias va="vim     $HOME/.bash_aliases"
 alias ve="vim     $HOME/.bash_exports"
 alias vf="vim     $HOME/.bash_functions"
