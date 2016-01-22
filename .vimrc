@@ -26,9 +26,9 @@ set whichwrap+=<,>,[,],h,l              " <Left>, <Right>, h, and l wrap around 
 set nostartofline                       " don't reset cursor to start of line when moving around
 
 " Word Wrap
-set wrap                                " wrap visually instead of changing text in buffer
-set linebreak                           " only wrap at characters listed in the breakat option
-set nolist                              " list disables linebreaks
+"set wrap                                " wrap visually instead of changing text in buffer
+"set linebreak                           " only wrap at characters listed in the breakat option
+"set nolist                              " list disables linebreaks
 
 " Indentation
 "set autoindent                          " copy indentation from current line when starting new line
