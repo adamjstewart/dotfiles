@@ -53,7 +53,33 @@ magenta="\[$magenta\]"
 cyan="\[$cyan\]"
 white="\[$white\]"
 
-# I am using \u@\h:\w\$
-# originally [\u@\h \W]\$ on Fedora
-export PS1="[${reset}${cyan}\u${white}@${green}\h${white} ${yellow}\w${white}]\$ "
+# Add Git branch name to prompt
+prompt_git() {
+    # Parameters:
+    #   $1 - color of parentheses
+    #   $2 - color of branch name
 
+    # Check if the current directory is in a Git repository
+    if git rev-parse --is-inside-work-tree &> /dev/null
+    then
+        # Get branch name
+        branch=$(git rev-parse --abbrev-ref HEAD)
+
+        echo -n " $1("
+        echo -n "$2${branch}"
+        echo -n "$1)"
+    fi
+}
+
+PS1="${reset}${white}["
+PS1+="${blue}\T"   # time
+PS1+="${white}] "
+PS1+="${cyan}\u"   # username
+PS1+="${white}@"
+PS1+="${green}\h" # hostname
+PS1+="${white}:"
+PS1+="${yellow}\w" # pwd
+PS1+="\$(prompt_git $white $red)\n"
+PS1+="${white}\$ "
+
+export PS1
