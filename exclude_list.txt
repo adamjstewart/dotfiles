@@ -2,5 +2,6 @@
 README.md
 bootstrap.sh
 exclude_list.txt
+screenshots
 *.sublime-settings
 .DS_Store
