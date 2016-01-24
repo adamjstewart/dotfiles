@@ -1,0 +1,6 @@
+.git
+README.md
+bootstrap.sh
+exclude_list.txt
+*.sublime-settings
+.DS_Store

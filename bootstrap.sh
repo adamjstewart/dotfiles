@@ -9,8 +9,7 @@ cd "$(dirname "$BASH_SOURCE")"
 git pull origin master
 
 function syncDotfiles {
-    rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
-          --exclude "*.sublime-settings" --exclude "README.md" -avh --no-perms . ~
+    rsync --exclude-from "exclude_list.txt" -avh --no-perms . ~
     source ~/.bashrc
 
     # Sync Sublime Text settings files
