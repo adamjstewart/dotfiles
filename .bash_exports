@@ -15,6 +15,10 @@ case "$kernel" in
     'Linux')
         # Note presence of underscore
         export LS_COLORS='di=34:fi=0:ln=35:so=32:pi=33:ex=31:bd=34:cd=34:su=0:sg=0:tw=34:ow=34'
+        if [[ -d /soft/git/2.5.0/bin ]]
+        then
+            export PATH="/soft/git/2.5.0/bin:$PATH"
+        fi
         ;;
     *)
         echo "Unknown OS: $kernel"
