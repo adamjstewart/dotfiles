@@ -79,7 +79,7 @@ PS1+="${white}@"
 PS1+="${green}\h" # hostname
 PS1+="${white}:"
 PS1+="${yellow}\w" # pwd
-PS1+="\$(prompt_git $white $red)\n"
+PS1+="\$(prompt_git $white $red 2> /dev/null)\n"
 PS1+="${white}\$ "
 
 export PS1
