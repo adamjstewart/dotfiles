@@ -14,6 +14,19 @@ function ff {
     firefox "$@" &> /dev/null &
 }
 
+# Pretty-prints one or more arrays
+# Syntax: pretty_print array1[@] ...
+function pretty_print {
+    for arg in $@
+    do
+        local array=("${!arg}")
+        echo -n "$arg: ["
+        printf   "'%s'" "${array[0]}"
+        printf ", '%s'" "${array[@]:1}"
+        echo "]"
+    done
+}
+
 # Extract any compressed file
 function extract {
     if [[ -f "$1" ]]; then
