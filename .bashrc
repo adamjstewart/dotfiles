@@ -39,7 +39,7 @@ complete -o "nospace" -W "$(alias | cut -d ' ' -f 2 | cut -d '=' -f 1)" alias
 complete -W "$(git help -a | grep "^  [a-z]")" git
 
 # Tab completion for cd should be directories only
-complete -d cd
+complete -d cd c
 
 # Tab completion for extract in .bash_functions should only list files with
 # extensions denoting that they are compressed. This requires Extended Globs.
