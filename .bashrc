@@ -14,21 +14,6 @@ do
     fi
 done
 
-# Add tab completion for alias based on existing aliases
-complete -o "nospace" -W "$(alias | cut -d ' ' -f 2 | cut -d '=' -f 1)" alias
-
-# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
-[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f 2-)" scp sftp ssh
-
-# Add tab completion for Git subcommands
-complete -W "$(git help -a | grep "^  [a-z]")" git
-
-# Add tab completion for Spack subcommands
-complete -W "$(spack help | egrep "^    [a-z]|^  -" | awk '{print $1}' | tr -d ',')" spack
-
-# Tab completion for cd should be directories only
-complete -d cd
-
 # If set, minor errors in the spelling of a directory component in a cd command will be corrected. The errors checked for are transposed characters, a missing character, and one character too many. If a correction is found, the corrected filename is printed, and the command proceeds. This option is only used by interactive shells.
 shopt -s cdspell
 # If set, bash checks that a command found in the hash table exists before trying to execute it. If a hashed command no longer exists, a normal path search is performed.
@@ -43,4 +28,20 @@ shopt -s extglob
 shopt -s no_empty_cmd_completion
 # If set, bash matches filenames in a case-insensitive fashion when performing pathname expansion (see Pathname Expansion above).
 shopt -s nocaseglob
+
+# Add tab completion for alias based on existing aliases
+complete -o "nospace" -W "$(alias | cut -d ' ' -f 2 | cut -d '=' -f 1)" alias
+
+# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
+[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f 2-)" scp sftp ssh
+
+# Add tab completion for Git subcommands
+complete -W "$(git help -a | grep "^  [a-z]")" git
+
+# Tab completion for cd should be directories only
+complete -d cd
+
+# Tab completion for extract in .bash_functions should only list files with
+# extensions denoting that they are compressed. This requires Extended Globs.
+complete -f -X '!*.@(gz|bz2|tar|zip|rar|Z|7z)' extract
 
