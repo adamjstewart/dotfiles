@@ -8,4 +8,5 @@
 +spack
 +git-2.5.0
 +userbase
+@autotools
 @default
