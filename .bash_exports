@@ -30,6 +30,9 @@ esac
 # Set default text editor
 export EDITOR="vim"
 
+# Less settings
+export LESS='--ignore-case --RAW-CONTROL-CHARS --quit-if-one-screen'
+
 # Bash history settings
 export HISTSIZE='32768'
 export HISTFILESIZE="$HISTSIZE"
