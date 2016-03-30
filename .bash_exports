@@ -31,7 +31,7 @@ esac
 export EDITOR="vim"
 
 # Less settings
-export LESS='--ignore-case --RAW-CONTROL-CHARS --quit-if-one-screen'
+export LESS='--ignore-case --RAW-CONTROL-CHARS'
 
 # Bash history settings
 export HISTSIZE='32768'
