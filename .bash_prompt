@@ -109,7 +109,8 @@ export PS3
 
 # This prompt is used when execution tracing is enabled (set -x)
 # The first character is replicated to represent multiple levels of indirection
-# Default was '+ '
+# Default was '+ '. Credit goes to:
+# http://www.runscripts.com/support/guides/scripting/bash/debugging-bash/verbose-tracing
 PS4=$'+ $(date +"%Y-%m-%d %H:%M:%S"): ' # + date time
 PS4+=$'+${SECONDS}s: '                  # script execution time so far
 PS4+=$'${BASH_SOURCE[0]##*/}: '         # file name
