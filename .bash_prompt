@@ -26,17 +26,17 @@ then
     cyan=$(   tput setaf 6)
     white=$(  tput setaf 7)
 else
-    bold=""
-    reset="\e[0m"
+    bold=''
+    reset='\e[0m'
 
-    black="\e[0;30m"
-    red="\e[0;31m"
-    green="\e[0;32m"
-    yellow="\e[0;33m"
-    blue="\e[0;34m"
-    magenta="\e[0;35m"
-    cyan="\e[0;36m"
-    white="\e[0;37m"
+    black='\e[0;30m'
+    red='\e[0;31m'
+    green='\e[0;32m'
+    yellow='\e[0;33m'
+    blue='\e[0;34m'
+    magenta='\e[0;35m'
+    cyan='\e[0;36m'
+    white='\e[0;37m'
 fi
 
 # Wrap meta-characters in square brackets to prevent bash
@@ -54,7 +54,7 @@ cyan="\[$cyan\]"
 white="\[$white\]"
 
 # Add Git branch name to prompt
-prompt_git() {
+function prompt_git {
     # Parameters:
     #   $1 - color of parentheses
     #   $2 - color of branch name
@@ -71,15 +71,51 @@ prompt_git() {
     fi
 }
 
+# Define bash prompt (PS1)
+
+# [time] user@host:pwd (branch)
+# Default varies by OS
 PS1="${reset}${white}["
 PS1+="${blue}\T"   # time
 PS1+="${white}] "
 PS1+="${cyan}\u"   # username
 PS1+="${white}@"
-PS1+="${green}\h" # hostname
+PS1+="${green}\h"  # hostname
 PS1+="${white}:"
 PS1+="${yellow}\w" # pwd
 PS1+="\$(prompt_git $white $red 2> /dev/null)\n"
 PS1+="${white}\$ "
 
 export PS1
+
+# Define continuation prompt (PS2)
+
+# This prompt is used when a command, such as a for loop or if statement,
+# is written over multiple lines at the command prompt
+# Same as default
+PS2='> '
+
+export PS2
+
+# Define select command prompt (PS3)
+
+# This prompt is used when the select command is called to ask for user input
+# Default was '#?'
+PS3='Select an option: '
+
+export PS3
+
+# Define execution trace prompt (PS4)
+
+# This prompt is used when execution tracing is enabled (set -x)
+# The first character is replicated to represent multiple levels of indirection
+# Default was '+ '
+PS4=$'+ $(date +"%Y-%m-%d %H:%M:%S"): ' # + date time
+PS4+=$'+${SECONDS}s: '                  # script execution time so far
+PS4+=$'${BASH_SOURCE[0]##*/}: '         # file name
+PS4+=$'Line ${LINENO}\n'                # line number
+PS4+=$'> ${BASH_COMMAND}\n'             # command before expansion (set -v)
+PS4+=$'> '                              # command after expansion
+
+export PS4
+
