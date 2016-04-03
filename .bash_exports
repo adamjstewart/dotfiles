@@ -12,7 +12,7 @@ case "$kernel" in
         export LSCOLORS='exfxcxdxbxegedabagexex'
         # In Bash 4.3+, the Readline utility uses LS_COLORS when colored-stats is set to "on"
         export LS_COLORS='di=34:fi=0:ln=35:so=32:pi=33:ex=31:bd=34:cd=34:su=0:sg=0:tw=34:ow=34'
-        export PATH="/Users/Adam/anaconda3/bin:/Users/Adam/anaconda2/bin:$PATH"
+        export PATH="/Users/Adam/anaconda2/bin:/Users/Adam/anaconda3/bin:$PATH"
         ;;
     'Linux')
         # The Linux version of ls uses LS_COLORS
