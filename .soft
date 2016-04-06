@@ -8,6 +8,7 @@
 +spack
 +git-2.5.0
 +vim-7.4
++bash-4.3
 +userbase
 @autotools
 @default
