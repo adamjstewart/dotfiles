@@ -44,8 +44,8 @@ nmap <silent> ,/ :nohlsearch<CR>
 nnoremap ; :
 
 " Make searches always 'very magic'
-nnoremap / /\v
-cnoremap %s/ %s/\v
+"nnoremap / /\v
+"cnoremap %s/ %s/\v
 
 " Jump to last known position in a file just after opening it
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
