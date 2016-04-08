@@ -66,6 +66,7 @@ alias gdb='gdb -silent --args'
 # Work Aliases
 alias dp22='xrandr --output DP2-2 --mode 3440x1440 --rate 50'
 alias vsoft='vim /soft/softenv/latest/etc/softenv.db'
+alias soft-ms='soft-msd -n && soft-msd && soft-msc'
 
 ssh_hosts=(blues fusion mcs)
 for host in "${ssh_hosts[@]}"
