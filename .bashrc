@@ -33,12 +33,12 @@ shopt -s nocaseglob
 complete -o "nospace" -W "$(alias | cut -d ' ' -f 2 | cut -d '=' -f 1)" alias
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
-[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f 2-)" scp sftp ssh
+[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f 2-)" ssh scp ftp lftp sftp
 
 # Add tab completion for Git subcommands
 complete -W "$(git help -a | grep "^  [a-z]")" git
 
-# Tab completion for cd should be directories only
+# Tab completion for cd should list directories only
 complete -d cd c
 
 # Tab completion for extract in .bash_functions should only list files with
