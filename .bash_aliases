@@ -38,6 +38,7 @@ alias ..4=' cd ../../../..'
 alias ..5=' cd ../../../../..'
 
 # Text Editor Aliases
+alias s="subl"
 alias v='vim'
 alias vd='vimdiff'
 alias va="vim     $HOME/.bash_aliases"
@@ -49,7 +50,6 @@ alias sb="source  $HOME/.bashrc"
 alias vv="vim     $HOME/.vimrc"
 alias vi="vim     $HOME/.inputrc"
 alias si="bind -f $HOME/.inputrc"
-alias s="subl"
 
 # System Aliases
 alias cl='clear; ls'
@@ -58,19 +58,24 @@ alias grep='grep --color=auto'
 alias df='df -h'
 alias du='du -h --max-depth=1'
 alias bc='bc -ql'
+alias ftp='lftp'
 
 # Debugger Aliases
 alias ddd='ddd --exec-window'
 alias gdb='gdb -silent --args'
 
+# SSH Aliases
+if [[ -e "$HOME/.ssh/config" ]]
+then
+    ssh_hosts=($(grep "^Host" "$HOME/.ssh/config" | grep -v "[?*]" | cut -d " " -f 2-))
+    for host in "${ssh_hosts[@]}"
+    do
+        alias $host="ssh $host"
+    done
+fi
+
 # Work Aliases
 alias dp22='xrandr --output DP2-2 --mode 3440x1440 --rate 50'
 alias vsoft='vim /soft/softenv/latest/etc/softenv.db'
 alias soft-ms='soft-msd -n && soft-msd && soft-msc'
-
-ssh_hosts=(blues fusion mcs)
-for host in "${ssh_hosts[@]}"
-do
-    alias $host="ssh $host"
-done
 
