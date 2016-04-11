@@ -10,8 +10,13 @@ function c {
 }
 
 # Open Firefox in the background
+# Websites with text fields that don't specify both the
+# background and text colors show both as black.
+# Setting GTK_THEME overrides this and allows the user
+# to run global dark theme but light theme for firefox.
+# http://worldofgnome.org/running-gtk-applications-different-themes-per-app/
 function ff {
-    firefox "$@" &> /dev/null &
+    GTK_THEME=Adwaita:light firefox "$@" &> /dev/null &
 }
 
 # Pretty-prints one or more arrays
