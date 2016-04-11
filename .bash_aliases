@@ -15,6 +15,7 @@ case "$kernel" in
         colorFlag='--color'
         alias trash='mv --verbose -f --backup=numbered --target-directory $HOME/.Trash'
         alias empty="find $HOME/.Trash -mtime +2 -delete"
+        alias open='xdg-open'
         ;;
     *)
         echo "Unknown OS: $kernel"
