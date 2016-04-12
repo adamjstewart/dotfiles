@@ -14,7 +14,7 @@ function c {
 # Websites with text fields that don't specify both the
 # background and text colors show both as black.
 # Setting GTK_THEME overrides this and allows the user
-# to run global dark theme but light theme for firefox.
+# to run dark theme globally but light theme for firefox.
 # http://worldofgnome.org/running-gtk-applications-different-themes-per-app/
 function ff {
     GTK_THEME=Adwaita:light firefox "$@" &> /dev/null &
@@ -35,6 +35,8 @@ function pretty_print {
 }
 
 # Extract any compressed file
+#
+# Chooses extraction utility based on file extension
 function extract {
     if [[ -f "$1" ]]; then
         case "$1" in
@@ -59,10 +61,9 @@ function extract {
 # Automatically jumps to the appropriate section
 # of the Bash man page for builtin commands
 function man {
-    local LESS
-    # Loop through all arguments in case you are searching for multiple man pages
+    # Allow user to view multiple man pages
     for var in "$@"; do
-        # Determine the proper search string, if any
+        # Check type of the command
         case "$(type -t "$var")" in
             # Bash builtins
             'builtin')
@@ -101,16 +102,7 @@ function man {
                 ;;
             # Non bash builtins
             *)
-                case "$var" in
-                    # Special cases
-                    # I overwrote cd with a function, so bash thinks it's a function now
-                    cd)
-                        LESS=-p"^       $var \[" command man bash
-                        ;;
-                    *)
-                        command man "$var"
-                        ;;
-                esac
+                command man "$var"
                 ;;
         esac
     done
