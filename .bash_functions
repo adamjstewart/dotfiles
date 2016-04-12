@@ -10,6 +10,7 @@ function c {
 }
 
 # Open Firefox in the background
+#
 # Websites with text fields that don't specify both the
 # background and text colors show both as black.
 # Setting GTK_THEME overrides this and allows the user
@@ -20,6 +21,7 @@ function ff {
 }
 
 # Pretty-prints one or more arrays
+#
 # Syntax: pretty_print array1[@] ...
 function pretty_print {
     for arg in $@
@@ -52,10 +54,13 @@ function extract {
     fi
 }
 
-# Better man page for builtin commands
+# Better `man` for builtin commands
+#
+# Automatically jumps to the appropriate section
+# of the Bash man page for builtin commands
 function man {
     local LESS
-    # Loop through all arguments to man in case you are searching for multiple man pages
+    # Loop through all arguments in case you are searching for multiple man pages
     for var in "$@"; do
         # Determine the proper search string, if any
         case "$(type -t "$var")" in
