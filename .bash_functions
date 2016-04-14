@@ -73,30 +73,18 @@ function man {
                         command man "$var"
                         ;;
                     # Special cases
-                    getopts|logout)
-                        LESS=-p"^       $var " command man bash
+                    '.'|'[')
+                        LESS=-p"^ {7,8}\\$var .*\]" command man bash
                         ;;
-                    builtin)
-                        LESS=-p"^       $var shell-$var" command man bash
+                    declare)
+                        LESS=-p"^ {7}$var \[.*"     command man bash
                         ;;
-                    let)
-                        LESS=-p"^       $var arg" command man bash
-                        ;;
-                    source)
-                        LESS=-p"^       $var filename" command man bash
-                        ;;
-                    times)
-                        LESS=-p"^       $var  " command man bash
-                        ;;
-                    '.')
-                        LESS=-p"^        \. " command man bash
-                        ;;
-                    '[')
-                        LESS=-p"^       \[ expr \\]" command man bash
+                    logout|times)
+                        LESS=-p"^ {7}$var "         command man bash
                         ;;
                     # Bash builtins without stand-alone man pages
                     *)
-                        LESS=-p"^       $var *\[" command man bash
+                        LESS=-p"^ {7}$var .*\[.*"   command man bash
                         ;;
                 esac
                 ;;
