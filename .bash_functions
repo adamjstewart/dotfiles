@@ -61,38 +61,39 @@ function extract {
 # Automatically jumps to the appropriate section
 # of the Bash man page for builtin commands
 function man {
-    # Allow user to view multiple man pages
-    for var in "$@"; do
-        # Check type of the command
-        case "$(type -t "$var")" in
-            # Bash builtins
-            'builtin')
-                case "$var" in
-                    # Bash builtins with stand-alone man pages
-                    echo|false|kill|printf|pwd|test|true)
-                        command man "$var"
-                        ;;
-                    # Special cases
-                    '.'|'[')
-                        LESS=-p"^ {7,8}\\$var .*\]" command man bash
-                        ;;
-                    declare)
-                        LESS=-p"^ {7}$var \[.*"     command man bash
-                        ;;
-                    logout|times)
-                        LESS=-p"^ {7}$var "         command man bash
-                        ;;
-                    # Bash builtins without stand-alone man pages
-                    *)
-                        LESS=-p"^ {7}$var .*\[.*"   command man bash
-                        ;;
-                esac
-                ;;
-            # Non bash builtins
-            *)
-                command man "$var"
-                ;;
-        esac
-    done
+    local search=''
+    local name='bash'
+    # Check type of the command
+    case $(type -t "$1") in
+        # Bash builtins
+        'builtin')
+            case "$1" in
+                # Bash builtins with stand-alone man pages
+                echo|false|kill|printf|pwd|test|true)
+                    name="$1"
+                    ;;
+                # Special cases
+                '.'|'[')
+                    search=-p"^ {7,8}\\$1 .*\]"
+                    ;;
+                declare)
+                    search=-p"^ {7}$1 \[.*"
+                    ;;
+                logout|times)
+                    search=-p"^ {7}$1 "
+                    ;;
+                # Bash builtins without stand-alone man pages
+                *)
+                    search=-p"^ {7}$1 .*\[.*"
+                    ;;
+            esac
+            ;;
+        # Non bash builtins
+        *)
+            name="$1"
+            ;;
+    esac
+    # Now run actual command `man` and search for string `search`
+    LESS="$search" command man "$name"
 }
 
