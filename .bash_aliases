@@ -15,6 +15,7 @@ case "$kernel" in
         colorFlag='--color'
         alias trash='mv --verbose -f --backup=numbered --target-directory $HOME/.Trash'
         alias empty="find $HOME/.Trash -mtime +2 -delete"
+        alias open='xdg-open'
         ;;
     *)
         echo "Unknown OS: $kernel"
@@ -30,7 +31,7 @@ alias lv='l -v'     # prints files sorted numerically
 alias lf='l -1 -f'  # fastest way to list files in large directory, disables sorting
 
 # cd Aliases
-alias -- -='cd -'
+alias -- -='cd $OLDPWD'
 alias ..='  cd ..'
 alias ..2=' cd ../..'
 alias ..3=' cd ../../..'

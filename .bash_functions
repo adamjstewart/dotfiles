@@ -10,11 +10,18 @@ function c {
 }
 
 # Open Firefox in the background
+#
+# Websites with text fields that don't specify both the
+# background and text colors show both as black.
+# Setting GTK_THEME overrides this and allows the user
+# to run dark theme globally but light theme for firefox.
+# http://worldofgnome.org/running-gtk-applications-different-themes-per-app/
 function ff {
-    firefox "$@" &> /dev/null &
+    GTK_THEME=Adwaita:light firefox "$@" &> /dev/null &
 }
 
 # Pretty-prints one or more arrays
+#
 # Syntax: pretty_print array1[@] ...
 function pretty_print {
     for arg in $@
@@ -28,6 +35,8 @@ function pretty_print {
 }
 
 # Extract any compressed file
+#
+# Chooses extraction utility based on file extension
 function extract {
     if [[ -f "$1" ]]; then
         case "$1" in
@@ -47,62 +56,44 @@ function extract {
     fi
 }
 
-# Better man page for builtin commands
+# Better `man` for builtin commands
+#
+# Automatically jumps to the appropriate section
+# of the Bash man page for builtin commands
 function man {
-    local LESS
-    # Loop through all arguments to man in case you are searching for multiple man pages
-    for var in "$@"; do
-        # Determine the proper search string, if any
-        case "$(type -t "$var")" in
-            # Bash builtins
-            'builtin')
-                case "$var" in
-                    # Bash builtins with stand-alone man pages
-                    echo|false|kill|printf|pwd|test|true)
-                        command man "$var"
-                        ;;
-                    # Special cases
-                    getopts|logout)
-                        LESS=-p"^       $var " command man bash
-                        ;;
-                    builtin)
-                        LESS=-p"^       $var shell-$var" command man bash
-                        ;;
-                    let)
-                        LESS=-p"^       $var arg" command man bash
-                        ;;
-                    source)
-                        LESS=-p"^       $var filename" command man bash
-                        ;;
-                    times)
-                        LESS=-p"^       $var  " command man bash
-                        ;;
-                    '.')
-                        LESS=-p"^        \. " command man bash
-                        ;;
-                    '[')
-                        LESS=-p"^       \[ expr \\]" command man bash
-                        ;;
-                    # Bash builtins without stand-alone man pages
-                    *)
-                        LESS=-p"^       $var *\[" command man bash
-                        ;;
-                esac
-                ;;
-            # Non bash builtins
-            *)
-                case "$var" in
-                    # Special cases
-                    # I overwrote cd with a function, so bash thinks it's a function now
-                    cd)
-                        LESS=-p"^       $var \[" command man bash
-                        ;;
-                    *)
-                        command man "$var"
-                        ;;
-                esac
-                ;;
-        esac
-    done
+    local search=''
+    local name='bash'
+    # Check type of the command
+    case $(type -t "$1") in
+        # Bash builtins
+        'builtin')
+            case "$1" in
+                # Bash builtins with stand-alone man pages
+                echo|false|kill|printf|pwd|test|true)
+                    name="$1"
+                    ;;
+                # Special cases
+                '.'|'[')
+                    search=-p"^ {7,8}\\$1 .*\]"
+                    ;;
+                declare)
+                    search=-p"^ {7}$1 \[.*"
+                    ;;
+                logout|times)
+                    search=-p"^ {7}$1 "
+                    ;;
+                # Bash builtins without stand-alone man pages
+                *)
+                    search=-p"^ {7}$1 .*\[.*"
+                    ;;
+            esac
+            ;;
+        # Non bash builtins
+        *)
+            name="$1"
+            ;;
+    esac
+    # Now run actual command `man` and search for string `search`
+    LESS="$search" command man "$name"
 }
 
