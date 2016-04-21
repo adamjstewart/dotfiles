@@ -31,11 +31,6 @@
     # [default] space-before-tab: looks for spaces before tabs at the beginning of a line
     whitespace = space-before-tab,-indent-with-non-tab,trailing-space 
 
-[help]
-
-    # Automatically correct and execute mistyped commands
-    autocorrect = 1
-
 [merge]
 
     # Include summaries of merged commits in newly created merge commit messages
