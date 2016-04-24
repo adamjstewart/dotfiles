@@ -23,7 +23,7 @@ case "$kernel" in
 esac
 
 # Set default text editor
-export EDITOR="vim"
+export EDITOR='vim'
 
 # Less settings
 export LESS='--ignore-case --RAW-CONTROL-CHARS'
@@ -43,5 +43,10 @@ export NAG_KUSARI_FILE='licman1.mcs.anl.gov:'
 if [[ -d /scratch ]]
 then
     export TMPDIR='/scratch'
+fi
+
+if [[ -d ~/spack/bin ]]
+then
+    export PATH+=":$HOME/spack/bin"
 fi
 
