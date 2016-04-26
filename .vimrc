@@ -61,7 +61,7 @@ function! StripTrailingWhitespaces()
     %s/\s\+$//e                         " delete trailing whitspaces
     call cursor(l, c)                   " return cursor to previous position
 endfunction
-autocmd FileType perl,sh,python,vi autocmd BufWrite <buffer> :call StripTrailingWhitespaces()
+autocmd FileType perl,sh,python,ruby,vi autocmd BufWrite <buffer> :call StripTrailingWhitespaces()
 
 " Clear searches when opening file
 autocmd BufReadPre <buffer> :let @/ = ""
