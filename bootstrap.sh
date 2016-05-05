@@ -49,3 +49,5 @@ fi
 
 unset syncDotfiles
 
+cd "$OLDPWD"
+
