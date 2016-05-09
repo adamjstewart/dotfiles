@@ -20,6 +20,10 @@ set showmatch                           " highlight matching parentheses/bracket
 set hlsearch                            " highlight search results
 set incsearch                           " show matches while typing pattern
 
+" Spell Checking
+" Use ':set spell' and ':set nospell' to turn spell checking on/off
+set spelllang=en_us
+
 " Scrolling and Mouse Control
 set scrolloff=10                        " keep at least x lines above/below cursor if possible
 set whichwrap+=<,>,[,],h,l              " <Left>, <Right>, h, and l wrap around line breaks
