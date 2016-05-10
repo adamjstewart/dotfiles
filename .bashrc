@@ -6,7 +6,7 @@
 # On Linux, this occurs when a new Terminal is opened
 
 # Source all user setting files
-for file in ~/.bash_{aliases,exports,functions,prompt}
+for file in ~/.git-{completion.bash,prompt.sh} ~/.bash_{aliases,exports,functions,prompt}
 do
     if [[ -f "$file" ]]
     then
@@ -34,9 +34,6 @@ complete -o "nospace" -W "$(alias | cut -d ' ' -f 2 | cut -d '=' -f 1)" alias
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f 2-)" ssh scp ftp lftp sftp
-
-# Add tab completion for Git subcommands
-complete -W "$(git help -a | grep "^  [a-z]")" git
 
 # Tab completion for cd should list directories only
 complete -d cd c

@@ -53,40 +53,41 @@ magenta="\[$magenta\]"
 cyan="\[$cyan\]"
 white="\[$white\]"
 
-# Add Git branch name to prompt
-function prompt_git {
-    # Parameters:
-    #   $1 - color of parentheses
-    #   $2 - color of branch name
+# Define bash prompt (PS1/PROMPT_COMMAND)
 
-    # Check if the current directory is in a Git repository
-    if git rev-parse --is-inside-work-tree &> /dev/null
-    then
-        # Get branch name
-        branch=$(git symbolic-ref --quiet --short HEAD 2> /dev/null)
-
-        echo -n " $1("
-        echo -n "$2${branch}"
-        echo -n "$1)"
-    fi
-}
-
-# Define bash prompt (PS1)
+# PS1 sets a static bash prompt
+# PROMPT_COMMAND sets a dynamic bash prompt
 
 # [time] user@host:pwd (branch)
-# Default varies by OS
-PS1="${reset}${white}["
-PS1+="${blue}\T"   # time
-PS1+="${white}] "
-PS1+="${cyan}\u"   # username
-PS1+="${white}@"
-PS1+="${green}\h"  # hostname
-PS1+="${white}:"
-PS1+="${yellow}\w" # pwd
-PS1+="\$(prompt_git $white $red 2> /dev/null)\n"
-PS1+="${white}\$ "
+# $
 
-export PS1
+# Default varies by OS
+pre="$reset"
+
+pre+="$white["
+pre+="$blue\T"   # time
+pre+="$white] "
+
+pre+="$cyan\u"   # username
+pre+="$white@"
+pre+="$green\h"  # hostname
+pre+="$white:"
+pre+="$yellow\w" # pwd
+
+mid=" $white("
+mid+="$red%s"
+mid+="$white)"
+
+post="$white\n\$ "
+
+# See .git-prompt.sh for details
+PROMPT_COMMAND="__git_ps1 '$pre' '$post' '$mid'"
+
+export PROMPT_COMMAND
+
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
 
 # Define continuation prompt (PS2)
 
