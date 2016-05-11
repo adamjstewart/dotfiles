@@ -1,6 +1,6 @@
 " Compatibility
 set nocompatible                        " disable vi compatibility mode
-set backspace=indent,eol,start          " if unset, Vi compatible backspacing is used
+set backspace=indent,eol,start          " if unset, vi compatible backspacing is used
 set mousefocus                          " window focus follows mouse
 set mousehide                           " hide mouse pointer when characters are typed
 
@@ -11,6 +11,7 @@ colorscheme monokai                     " use colorscheme in ~/.vim/colors
 " Display Line Numbers
 "set number                              " display line numbers
 set ruler                               " display cursor position
+set colorcolumn=80                      " highlight column 80
 
 " Searching Criteria
 set ignorecase                          " ignore case in search patterns
