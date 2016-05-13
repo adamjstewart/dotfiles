@@ -11,7 +11,6 @@ colorscheme monokai                     " use colorscheme in ~/.vim/colors
 " Display Line Numbers
 "set number                              " display line numbers
 set ruler                               " display cursor position
-set colorcolumn=80                      " highlight column 80
 set title                               " terminal title becomes filename being edited
 
 " Searching Criteria
@@ -75,3 +74,5 @@ autocmd BufReadPre <buffer> :let @/ = ""
 " Use JavaScript syntax highlighting for JSON files
 autocmd BufRead,BufNewFile *.json,*.sublime-settings setfiletype javascript
 
+" Highlight column 80 for Python files
+autocmd FileType python set colorcolumn=80
