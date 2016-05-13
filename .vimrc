@@ -12,6 +12,7 @@ colorscheme monokai                     " use colorscheme in ~/.vim/colors
 "set number                              " display line numbers
 set ruler                               " display cursor position
 set colorcolumn=80                      " highlight column 80
+set title                               " terminal title becomes filename being edited
 
 " Searching Criteria
 set ignorecase                          " ignore case in search patterns
