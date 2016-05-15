@@ -14,7 +14,7 @@ case "$kernel" in
     'Linux')
         colorFlag='--color'
         alias trash='mv --verbose -f --backup=numbered --target-directory $HOME/.Trash'
-        alias empty="find $HOME/.Trash -mtime +2 -delete"
+        alias empty='find "$HOME/.Trash" -mtime +2 -delete'
         alias open='xdg-open'
         ;;
     *)
@@ -31,26 +31,26 @@ alias lv='l -v'     # prints files sorted numerically
 alias lf='l -1 -f'  # fastest way to list files in large directory, disables sorting
 
 # cd Aliases
-alias -- -='cd $OLDPWD'
-alias ..='  cd ..'
-alias ..2=' cd ../..'
-alias ..3=' cd ../../..'
-alias ..4=' cd ../../../..'
-alias ..5=' cd ../../../../..'
+alias -- -='cd "$OLDPWD"'
+alias ..='cd ..'
+alias ..2='cd ../..'
+alias ..3='cd ../../..'
+alias ..4='cd ../../../..'
+alias ..5='cd ../../../../..'
 
 # Text Editor Aliases
-alias s="subl"
+alias s='subl'
 alias v='vim'
 alias vd='vimdiff'
-alias va="vim     $HOME/.bash_aliases"
-alias ve="vim     $HOME/.bash_exports"
-alias vf="vim     $HOME/.bash_functions"
-alias vp="vim     $HOME/.bash_prompt"
-alias vb="vim     $HOME/.bashrc"
-alias sb="source  $HOME/.bashrc"
-alias vv="vim     $HOME/.vimrc"
-alias vi="vim     $HOME/.inputrc"
-alias si="bind -f $HOME/.inputrc"
+alias va='vim     "$HOME/.bash_aliases"'
+alias ve='vim     "$HOME/.bash_exports"'
+alias vf='vim     "$HOME/.bash_functions"'
+alias vp='vim     "$HOME/.bash_prompt"'
+alias vb='vim     "$HOME/.bashrc"'
+alias sb='source  "$HOME/.bashrc"'
+alias vv='vim     "$HOME/.vimrc"'
+alias vi='vim     "$HOME/.inputrc"'
+alias si='bind -f "$HOME/.inputrc"'
 
 # System Aliases
 alias cl='clear; ls'
