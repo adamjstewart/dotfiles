@@ -80,3 +80,11 @@ alias dp22='xrandr --output DP2-2 --mode 3440x1440 --rate 50'
 alias vsoft='vim /soft/softenv/latest/etc/softenv.db'
 alias soft-ms='soft-msd -n && soft-msd && soft-msc'
 
+if [[ -d /soft/spack ]]
+then
+    alias cs='cd /soft/spack'
+elif [[ -d ~/spack ]]
+then
+    alias cs='cd ~/spack'
+fi
+
