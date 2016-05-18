@@ -12,7 +12,7 @@
 +curl-7.47.1
 +userbase
 @autotools
++softenv
 +lcrc-utils
 +os_paths
 +user_paths
-+softenv
