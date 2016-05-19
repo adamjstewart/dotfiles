@@ -53,7 +53,7 @@ alias vi='vim     "$HOME/.inputrc"'
 alias si='bind -f "$HOME/.inputrc"'
 
 # System Aliases
-alias cl='clear; ls'
+alias cl='clear; l'
 alias env='env | sort'
 alias grep='grep --color=auto'
 alias df='df -h'
