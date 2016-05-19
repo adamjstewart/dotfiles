@@ -45,7 +45,7 @@ then
     export TMPDIR='/scratch'
 fi
 
-if [[ -d ~/spack/bin ]]
+if [[ -d ~/spack/bin && ! $PATH =~ spack ]]
 then
     export PATH+=":$HOME/spack/bin"
 fi
