@@ -6,7 +6,19 @@
 # On Linux, this occurs when a new Terminal is opened
 
 # Source all user setting files
-for file in ~/.git-{completion.bash,prompt.sh} ~/.bash_{aliases,exports,functions,prompt}
+# Note: .git-prompt.sh must come before .bash_prompt
+# Note: .bash_exports must come before .bash_aliases
+# Note: .bash_aliases must come before .bash_functions
+for file in ~/.git-{completion.bash,prompt.sh} ~/.bash_{exports,aliases,functions,prompt}
+do
+    if [[ -f "$file" ]]
+    then
+        source "$file"
+    fi
+done
+
+# Source spack setting files
+for file in ~/.spack-completion.bash $SPACK_ROOT/share/spack/setup-env.sh
 do
     if [[ -f "$file" ]]
     then

@@ -45,8 +45,25 @@ then
     export TMPDIR='/scratch'
 fi
 
-if [[ -d ~/spack/bin && ! $PATH =~ spack ]]
+# Spack exports
+if [[ -d /soft/spack ]]
 then
-    export PATH+=":$HOME/spack/bin"
+    export SPACK_ROOT='/soft/spack'
+elif [[ -d ~/spack ]]
+then
+    export SPACK_ROOT="$HOME/spack"
+fi
+
+if [[ "$SPACK_ROOT" ]]
+then
+    if [[ ! $PATH =~ $SPACK_ROOT/bin ]]
+    then
+        PATH+=":$SPACK_ROOT/bin"
+    fi
+    if [[ ! $PATH =~ run-flake8 ]]
+    then
+        PATH+=":$SPACK_ROOT/share/spack/qa"
+    fi
+    export PATH
 fi
 

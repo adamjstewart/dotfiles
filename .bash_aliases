@@ -76,15 +76,19 @@ then
 fi
 
 # Work Aliases
-alias dp22='xrandr --output DP2-2 --mode 3440x1440 --rate 50'
 alias vsoft='vim /soft/softenv/latest/etc/softenv.db'
 alias soft-ms='soft-msd -n && soft-msd && soft-msc'
 
-if [[ -d /soft/spack ]]
+if [[ -d "$TMPDIR/$USER" ]]
 then
-    alias cs='cd /soft/spack'
-elif [[ -d ~/spack ]]
-then
-    alias cs='cd ~/spack'
+    alias csc="cd $TMPDIR/$USER"
 fi
 
+# Spack Aliases
+if [[ "$SPACK_ROOT" ]]
+then
+    alias cs="cd $SPACK_ROOT"
+    alias csv="cd $SPACK_ROOT/var/spack/repos/builtin/packages"
+    alias csl="cd $SPACK_ROOT/lib/spack/spack"
+    alias cso="cd $SPACK_ROOT/opt/spack"
+fi

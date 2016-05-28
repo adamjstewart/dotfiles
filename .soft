@@ -5,12 +5,21 @@
 #   setting up variables such as PATH and MANPATH.  To learn more
 #   about this file, do a "man softenv".
 #
+
+# Spack and dependencies
 +spack
++python-2.7.11-gcc-6.1.0
 +git-2.5.0
++curl-7.47.1
+
+# General utilities
 +vim-7.4
 +bash-4.3
-+curl-7.47.1
+
+# Userbase
 +userbase
+
+# @default minus MPI and Intel
 @autotools
 +softenv
 +lcrc-utils
