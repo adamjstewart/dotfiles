@@ -18,7 +18,8 @@ do
 done
 
 # Source spack setting files
-for file in ~/.spack-completion.bash $SPACK_ROOT/share/spack/setup-env.sh
+# Second file doesn't work on Fusion, Python version too old
+for file in ~/.spack-completion.bash #$SPACK_ROOT/share/spack/setup-env.sh
 do
     if [[ -f "$file" ]]
     then
