@@ -8,6 +8,9 @@ set mousehide                           " hide mouse pointer when characters are
 syntax enable                           " enable syntax highlighting
 colorscheme monokai                     " use colorscheme in ~/.vim/colors
 
+" Window Splitting
+" TODO: read https://robots.thoughtbot.com/vim-splits-move-faster-and-more-naturally
+
 " Display Line Numbers
 "set number                              " display line numbers
 set ruler                               " display cursor position

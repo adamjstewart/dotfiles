@@ -24,19 +24,16 @@ esac
 
 # ls Aliases
 alias l="ls $colorFlag"
-alias la='l -A'     # prints hidden files
-alias ll='l -l -h'  # prints files in long list format
-alias l1='l -1'     # prints files in single column
-alias lv='l -v'     # prints files sorted numerically
-alias lf='l -1 -f'  # fastest way to list files in large directory, disables sorting
+alias la='l -A'      # prints hidden files
+alias ll='l -lhA'    # prints files in long list format
+alias l1='l -1'      # prints files in single column
+alias lt='l -lhAtr'  # prints files sorted by timestamp
+alias lv='l -v'      # prints files sorted numerically
+alias lf='l -1f'     # fastest way to list files in large directory, disables sorting
 
 # cd Aliases
 alias -- -='cd "$OLDPWD"'
 alias ..='cd ..'
-alias ..2='cd ../..'
-alias ..3='cd ../../..'
-alias ..4='cd ../../../..'
-alias ..5='cd ../../../../..'
 
 # Text Editor Aliases
 alias s='subl'
@@ -53,13 +50,22 @@ alias vi='vim     "$HOME/.inputrc"'
 alias si='bind -f "$HOME/.inputrc"'
 
 # System Aliases
-alias cl='clear; l'
-alias env='env | sort'
+alias mkdirp='mkdir -p'
+alias cl='clear'
 alias grep='grep --color=auto'
-alias df='df -h'
-alias du='du -h --max-depth=1'
+alias df='df -Tha --total'
+alias du='du -ch --max-depth=1 | sort -hr'
+alias free='free -mt'
+alias ps='ps auxf'
 alias bc='bc -ql'
 alias ftp='lftp'
+alias wget='wget -c'
+
+# Grep processes for one of a particular name
+alias psg='ps aux | grep -v grep | grep -i -e VSZ -e'
+
+# List most commonly used commands
+alias common="history | awk '{CMD[\$2]++;count++;}END { for (a in CMD)print CMD[a] \" \" CMD[a]/count*100 \"% \" a;}' | grep -v \"./\" | column -c3 -s \" \" -t | sort -nr | nl |  head -n10"
 
 # Debugger Aliases
 alias ddd='ddd --exec-window'

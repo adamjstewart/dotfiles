@@ -9,6 +9,34 @@ function c {
     cd "$@" && l
 }
 
+# Make directory and cd into it
+function mcd {
+    mkdir -p "$1"
+    cd "$1"
+}
+
+# Go up a certain number of directories
+#
+# Usage: up [NUMBER]
+function up {
+    local counter="$1"
+
+    # Default to 1 if counter not set
+    if [[ -z "$counter" ]]
+    then
+        counter=1
+    fi
+
+    # Start from current directory
+    local nwd=$(pwd)
+    until [[ "$counter" -lt 1 ]]
+    do
+        nwd=$(dirname "$nwd")
+        let counter-=1
+    done
+    cd "$nwd"
+}
+
 # Open Firefox in the background
 #
 # Websites with text fields that don't specify both the
@@ -37,24 +65,43 @@ function pretty_print {
 # Extract any compressed file
 #
 # Chooses extraction utility based on file extension
+#
+# Can extract multiple files
+#
+# TODO: Add the following options
+# TODO:     Ignore non-compressed files
+# TODO:     Ignore already uncompressed files
+# TODO:     Overwrite and re-extract already uncompressed files
 function extract {
-    if [[ -f "$1" ]]; then
-        case "$1" in
-            *.tar.gz|*.tgz)     tar xvzf   "$1" ;;
-            *.tar.bz2|*.tbz2)   tar xvjf   "$1" ;;
-            *.tar.xz|*.txz)     tar xvJf   "$1" ;;
-            *.tar)              tar xvf    "$1" ;;
-            *.gz)               gunzip     "$1" ;;
-            *.bz2)              bunzip2    "$1" ;;
-            *.zip)              unzip      "$1" ;;
-            *.rar)              unrar x    "$1" ;;
-            *.Z)                uncompress "$1" ;;
-            *.7z)               7z x       "$1" ;;
-            *)                  echo "Don't know how to extract '$1'..." ;;
-        esac
-    else
-        echo "'$1' is not a valid file!"
+    if [[ "$#" -eq 0 ]]
+    then
+        echo "Usage: extract FILE [FILE ...]"
     fi
+
+    # Loop through all files
+    for file in "$@"
+    do
+        if [[ -f "$file" ]]; then
+            case "$file" in
+                *.tar.gz|*.tgz)     tar xvzf   "$file" ;;
+                *.tar.bz2|*.tbz2)   tar xvjf   "$file" ;;
+                *.tar.xz|*.txz)     tar xvJf   "$file" ;;
+                *.tar)              tar xvf    "$file" ;;
+                *.gz)               gunzip     "$file" ;;
+                *.bz2)              bunzip2    "$file" ;;
+                *.xz)               unxz       "$file" ;;
+                *.zip)              unzip      "$file" ;;
+                *.rar)              unrar x    "$file" ;;
+                *.lzma)             unlzma     "$file" ;;
+                *.Z)                uncompress "$file" ;;
+                *.7z)               7z x       "$file" ;;
+                *.exe)              cabextract "$file" ;;
+                *)                  echo "extract: '$file' - unknown archive method" ;;
+            esac
+        else
+            echo "extract: '$file' - file does not exist"
+        fi
+    done
 }
 
 # Better `man` for builtin commands
