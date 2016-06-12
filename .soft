@@ -8,7 +8,6 @@
 
 # Spack and dependencies
 +spack
-+python-2.7.11-gcc-6.1.0
 +git-2.5.0
 +curl-7.47.1
 +cmake-3.5.2
