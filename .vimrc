@@ -48,9 +48,9 @@ set tabstop=4                           " number of spaces that <Tab> equals
 set shiftwidth=4                        " number of spaces to use for each auto-indent, e.g. >>, << commands
 set softtabstop=4
 
-autocmd FileType ruby set tabstop=2
-autocmd FileType ruby set shiftwidth=2
-autocmd FileType ruby set softtabstop=2
+autocmd FileType ruby,yaml set tabstop=2
+autocmd FileType ruby,yaml set shiftwidth=2
+autocmd FileType ruby,yaml set softtabstop=2
 
 " Key Remaps
 nmap <silent> ,/ :nohlsearch<CR>
