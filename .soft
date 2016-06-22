@@ -11,6 +11,7 @@
 +git-2.5.0
 +curl-7.47.1
 +cmake-3.5.2
++flake8
 
 # General utilities
 +vim-7.4
