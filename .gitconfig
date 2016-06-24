@@ -1,17 +1,17 @@
 [alias]
 
     # Abbreviated command names
-	ad = add
-	br = branch
-	ci = commit
-	co = checkout
-	re = rebase
-	st = status
+    ad = add
+    br = branch
+    ci = commit
+    co = checkout
+    re = rebase
+    st = status
 
 [apply]
 
     # Detect whitespace errors when applying a patch
-	whitespace = fix
+    whitespace = fix
 
 [color]
 
@@ -21,10 +21,10 @@
 [core]
 
     # Set the default editor
-	editor = vim
+    editor = vim
 
-	# Use global .gitignore file to ignore certain filetypes
-	excludesfile = ~/.gitignore
+    # Use global .gitignore file to ignore certain filetypes
+    excludesfile = ~/.gitignore
 
     # Treat spaces before tabs and all kinds of trailing whitespace as an error
     # [default] trailing-space: looks for spaces at the end of a line
@@ -39,6 +39,6 @@
 [user]
 
     # Set user commit information
-	email = ajstewart426@gmail.com
-	name = Adam J. Stewart
+    email = ajstewart426@gmail.com
+    name = Adam J. Stewart
 
