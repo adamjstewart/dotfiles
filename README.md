@@ -35,12 +35,6 @@ cd dotfiles
 source bootstrap.sh
 ```
 
-By default, the script will prompt to make sure you don't accidentally overwrite any dotfiles in your home directory. If you want to skip the prompt, use the `-f` or `--force` option:
-
-```bash
-source bootstrap.sh -f
-```
-
 To update your local repository with any changes I've made, just source the bootstrap script again.
 
 ## Credits
