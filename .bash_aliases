@@ -62,7 +62,7 @@ alias ftp='lftp'
 alias wget='wget -c'
 
 # Grep processes for one of a particular name
-alias psg='ps aux | grep -v grep | grep -i -e VSZ -e'
+alias psg='ps | grep -v grep | grep -i -e VSZ -e'
 
 # List most commonly used commands
 alias common="history | awk '{CMD[\$2]++;count++;}END { for (a in CMD)print CMD[a] \" \" CMD[a]/count*100 \"% \" a;}' | grep -v \"./\" | column -c3 -s \" \" -t | sort -nr | nl |  head -n10"
