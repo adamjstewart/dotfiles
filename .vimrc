@@ -6,9 +6,9 @@ set mousehide                   " hide mouse pointer when characters are typed
 set history=50		            " keep 50 lines of command line history
 
 " In many terminal emulators the mouse works just fine, thus enable it.
-if has('mouse')
-    set mouse=a
-endif
+"if has('mouse')
+"    set mouse=a
+"endif
 
 " Color and Style
 if &t_Co > 2 || has("gui_running")
