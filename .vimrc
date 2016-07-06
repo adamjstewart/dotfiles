@@ -21,7 +21,7 @@ endif
 " TODO: read https://robots.thoughtbot.com/vim-splits-move-faster-and-more-naturally
 
 " Display Line Numbers
-set number                      " display line numbers
+"set number                      " display line numbers
 set ruler                       " display cursor position
 set title                       " terminal title becomes filename being edited
 set titleold=""                 " return terminal title to normal value upon exiting
