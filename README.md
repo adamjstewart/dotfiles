@@ -8,7 +8,7 @@ My personal Linux and OS X configurations and settings
 
 ![Terminal Screenshot](screenshots/terminal.png)
 
-The bash prompt displays the time, username, hostname, and working directory. If you are in a Git repository, it will also display the current branch. Yes, my computer is named after Mount Vesuvius. :)
+The bash prompt displays the time, username, hostname, and working directory. If you are in a Git repository, it will also display the current branch.
 
 ### Vim
 
@@ -18,7 +18,7 @@ I chose a color scheme called Monokai, originally written by Wimer Hazenberg for
 
 ## Installation
 
-**Warning:** Installing my dotfiles will overwrite your old dotfiles. If you have any dotfiles in your home directory, back them up before doing anything else. That way you can revert to your old settings if you want to.
+:warning: **Warning:** Installing my dotfiles will overwrite your old dotfiles. If you have any dotfiles in your home directory, back them up before doing anything else. That way you can revert to your old settings if you want to.
 
 ### Using Git and the bootstrap script
 
@@ -31,8 +31,7 @@ git clone https://github.com/adamjstewart/dotfiles.git
 Then, all you have to do is source the bootstrap script:
 
 ```bash
-cd dotfiles
-source bootstrap.sh
+source dotfiles/bootstrap.sh
 ```
 
 To update your local repository with any changes I've made, just source the bootstrap script again.
