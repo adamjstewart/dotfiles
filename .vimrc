@@ -1,3 +1,12 @@
+" Global vim settings for all file types
+"
+" See ~/.vim/colors/   for additional color scheme files
+" See ~/.vim/ftplugin/ for language specific settings
+" See ~/.vim/ftdetect/ for language specific file type detection
+" See ~/.vim/spell/    for spell check files
+"
+" See ':help vimfiles' for a description of the .vim file hierarchy
+
 " Compatibility
 set nocompatible                " disable vi compatibility mode, must be done first
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
@@ -14,7 +23,7 @@ set history=50		            " keep 50 lines of command line history
 if &t_Co > 2 || has("gui_running")
     syntax on                   " enable syntax highlighting
     set hlsearch                " highlight search results
-    colorscheme monokai         " use colorscheme in ~/.vim/colors
+    colorscheme monokai         " use color scheme in ~/.vim/colors
 endif
 
 " Window Splitting
@@ -51,9 +60,9 @@ set nostartofline               " don't reset cursor to start of line when movin
 set autoindent                  " copy indentation from current line when starting new line
 set copyindent                  " copy structure of indentation from previous line, e.g. comment symbols
 set expandtab                   " <Tab> inserts softtabstop spaces. Use <Ctrl>-V <Tab> to get real tab
-set tabstop=4                   " number of spaces that <Tab> equals
+set tabstop=4                   " number of spaces that <Tab> displays as
+set softtabstop=4               " number of spaces to insert when the <Tab> key is pressed
 set shiftwidth=4                " number of spaces to use for each auto-indent, e.g. >>, << commands
-set softtabstop=4
 
 " Key Remaps
 nmap <silent> ,/ :nohlsearch<CR>
@@ -65,10 +74,7 @@ nnoremap ; :
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
-    " Enable file type detection.
-    " Use the default filetype settings, so that mail gets 'tw' set to 72,
-    " 'cindent' is on in C files, etc.
-    " Also load indent files, to automatically do language-dependent indenting.
+    " Enable file type plugin, indentation, and detection overrides in ~/.vim/
     filetype plugin indent on
 
     " When editing a file, always jump to the last known cursor position.
@@ -81,14 +87,6 @@ if has("autocmd")
         \     exe "normal! g`\"" |
         \ endif
 
-    " Don't convert tabs to spaces for Makefiles
-    autocmd FileType make set noexpandtab
-
-    " Use two space indentation for ruby and yaml
-    autocmd FileType ruby,yaml set tabstop=2
-    autocmd FileType ruby,yaml set shiftwidth=2
-    autocmd FileType ruby,yaml set softtabstop=2
-
     " Whitespace Handling
     function! StripTrailingWhitespaces()
         let l = line(".")
@@ -100,12 +98,6 @@ if has("autocmd")
     
     " Clear searches when opening file
     autocmd BufReadPre <buffer> :let @/ = ""
-    
-    " Use JavaScript syntax highlighting for JSON files
-    autocmd BufRead,BufNewFile *.json,*.sublime-settings setfiletype javascript
-    
-    " Highlight column 80 for Python files
-    autocmd FileType python set colorcolumn=80
 endif
 
 " Convenient command to see the difference between the current buffer and the
