@@ -94,7 +94,6 @@ if has("autocmd")
         %s/\s\+$//e         " delete trailing whitespaces
         call cursor(l, c)   " return cursor to previous position
     endfunction
-    autocmd FileType perl,sh,python,ruby,vi autocmd BufWrite <buffer> :call StripTrailingWhitespaces()
     
     " Clear searches when opening file
     autocmd BufReadPre <buffer> :let @/ = ""
