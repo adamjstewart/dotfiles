@@ -1,6 +1,6 @@
 # dotfiles
 
-My personal Linux and OS X configurations and settings
+:wrench: My personal Linux and macOS configurations and settings
 
 ## Screenshots
 
