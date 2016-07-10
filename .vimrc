@@ -21,7 +21,7 @@ set history=50		            " keep 50 lines of command line history
 
 " Color and Style
 if &t_Co > 2 || has("gui_running")
-    syntax on                   " enable syntax highlighting
+    syntax enable               " enable syntax highlighting
     set hlsearch                " highlight search results
     colorscheme monokai         " use color scheme in ~/.vim/colors
 endif
@@ -60,7 +60,7 @@ set nostartofline               " don't reset cursor to start of line when movin
 set autoindent                  " copy indentation from current line when starting new line
 set copyindent                  " copy structure of indentation from previous line, e.g. comment symbols
 set expandtab                   " <Tab> inserts softtabstop spaces. Use <Ctrl>-V <Tab> to get real tab
-set tabstop=4                   " number of spaces that <Tab> displays as
+set tabstop=8                   " number of spaces that an existing <Tab> displays as
 set softtabstop=4               " number of spaces to insert when the <Tab> key is pressed
 set shiftwidth=4                " number of spaces to use for each auto-indent, e.g. >>, << commands
 
