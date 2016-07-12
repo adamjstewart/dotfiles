@@ -7,5 +7,5 @@ setlocal colorcolumn=80
 autocmd BufWrite <buffer> :call StripTrailingWhitespaces()
 
 " Long docstrings can break syntax highlighting in Python
-" Search more lines than the default
-autocmd BufEnter * :syntax sync minlines=75
+" Parse from the beginning of the file for best results
+autocmd BufEnter * :syntax sync fromstart
