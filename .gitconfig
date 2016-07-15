@@ -31,10 +31,10 @@
     # [default] space-before-tab: looks for spaces before tabs at the beginning of a line
     whitespace = space-before-tab,-indent-with-non-tab,trailing-space 
 
-[merge]
+[push]
 
-    # Include summaries of merged commits in newly created merge commit messages
-    log = true
+    # Unless otherwise specified, push the current branch to a remote branch of the same name
+    default = current
 
 [user]
 
