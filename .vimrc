@@ -12,7 +12,7 @@ set nocompatible                " disable vi compatibility mode, must be done fi
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
 set mousefocus                  " window focus follows mouse
 set mousehide                   " hide mouse pointer when characters are typed
-set history=50		            " keep 50 lines of command line history
+set history=50                  " keep 50 lines of command line history
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 "if has('mouse')
@@ -104,5 +104,5 @@ endif
 " Only define it when not defined already.
 if !exists(":DiffOrig")
     command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-	    \ | wincmd p | diffthis
+        \ | wincmd p | diffthis
 endif
