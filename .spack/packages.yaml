@@ -15,7 +15,7 @@ packages:
   hdf5:
     variants: +szip
   netcdf:
-    variants: -mpi+hdf4
+    variants: +hdf4~mpi
   python:
     variants: +tk
   openblas:
