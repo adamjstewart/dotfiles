@@ -7,7 +7,7 @@
 #
 
 # Spack and dependencies
-+spack
++spack-0.9.1
 +git-2.5.0
 +curl-7.47.1
 +cmake-3.5.2

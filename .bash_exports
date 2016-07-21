@@ -12,6 +12,11 @@ case "$kernel" in
         export LSCOLORS='exfxcxdxbxegedabagexex'
         # In Bash 4.3+, the Readline utility uses LS_COLORS when colored-stats is set to "on"
         export LS_COLORS='di=34:fi=0:ln=35:so=32:pi=33:ex=31:bd=34:cd=34:su=0:sg=0:tw=34:ow=34'
+        export SPACK_ROOT="$HOME/spack"
+        if [[ ! spack =~ $PATH ]]
+        then
+            export PATH+=":$SPACK_ROOT/bin:$SPACK_ROOT/share/spack/qa"
+        fi
         ;;
     'Linux')
         # The Linux version of ls uses LS_COLORS
@@ -43,27 +48,5 @@ export NAG_KUSARI_FILE='licman1.mcs.anl.gov:'
 if [[ -d /scratch ]]
 then
     export TMPDIR='/scratch'
-fi
-
-# Spack exports
-if [[ -d /soft/spack ]]
-then
-    export SPACK_ROOT='/soft/spack'
-elif [[ -d ~/spack ]]
-then
-    export SPACK_ROOT="$HOME/spack"
-fi
-
-if [[ "$SPACK_ROOT" ]]
-then
-    if [[ ! $PATH =~ $SPACK_ROOT/bin ]]
-    then
-        PATH+=":$SPACK_ROOT/bin"
-    fi
-    if [[ ! $PATH =~ $SPACK_ROOT/share/spack/qa ]]
-    then
-        PATH+=":$SPACK_ROOT/share/spack/qa"
-    fi
-    export PATH
 fi
 
