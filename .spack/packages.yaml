@@ -22,3 +22,5 @@ packages:
     variants: +openmp
   cantera:
     variants: +python
+  libxml2:
+    variants: +python
