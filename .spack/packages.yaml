@@ -18,3 +18,5 @@ packages:
     variants: -mpi+hdf4
   python:
     variants: +tk
+  openblas:
+    variants: +openmp
