@@ -1,0 +1,20 @@
+packages:
+  all:
+    providers:
+      mpi: [openmpi, mvapich2, mpich]
+      blas: [openblas]
+      lapack: [openblas]
+  openmpi:
+    variants: +tm+psm~verbs
+  mpich:
+    variants: +verbs
+  mvapich2:
+    variants: +psm~mrail
+  hdf:
+    variants: +szip
+  hdf5:
+    variants: +szip
+  netcdf:
+    variants: -mpi+hdf4
+  python:
+    variants: +tk
