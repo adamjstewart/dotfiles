@@ -9,7 +9,7 @@ packages:
   mpich:
     variants: +verbs
   mvapich2:
-    variants: +psm~mrail
+    variants: +hydra+psm~mrail
   hdf:
     variants: +szip
   hdf5:
