@@ -7,7 +7,7 @@
 # OS Specific Aliases
 kernel=$(uname)
 case "$kernel" in
-    'Darwin') # OS X
+    'Darwin') # macOS
         colorFlag='-G'
         alias updatedb='sudo /usr/libexec/locate.updatedb'
         ;;

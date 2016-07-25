@@ -14,7 +14,7 @@ source ~/.bashrc
 # Sync Sublime Text settings files
 kernel=$(uname)
 case "$kernel" in
-    'Darwin') # OS X
+    'Darwin') # macOS
         sublimeDir="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
         ;;
     'Linux')
