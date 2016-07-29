@@ -17,12 +17,6 @@ case "$kernel" in
         then
             export PATH="$HOME/anaconda2/bin:$PATH"
         fi
-        # Spack
-        export SPACK_ROOT="$HOME/spack"
-        if [[ ! $PATH =~ spack ]]
-        then
-            export PATH+=":$SPACK_ROOT/bin:$SPACK_ROOT/share/spack/qa"
-        fi
         ;;
     'Linux')
         # The Linux version of ls uses LS_COLORS
@@ -54,5 +48,15 @@ export NAG_KUSARI_FILE='licman1.mcs.anl.gov:'
 if [[ -d /scratch ]]
 then
     export TMPDIR='/scratch'
+fi
+
+# Spack
+if [[ -z $SPACK_ROOT && -d ~/spack ]]
+then
+    export SPACK_ROOT="$HOME/spack"
+    if [[ ! $PATH =~ spack ]]
+    then
+        export PATH+=":$SPACK_ROOT/bin:$SPACK_ROOT/share/spack/qa"
+    fi
 fi
 
