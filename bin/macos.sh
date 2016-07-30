@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Credit goes to Mathias Bynens for most of these commands
-# https://github.com/mathiasbynens/dotfiles/blob/master/.osx
+# https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 
 # Ask for the administrator password upfront
 sudo -v
