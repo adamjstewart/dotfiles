@@ -1,7 +1,7 @@
-.git
 README.md
 bootstrap.sh
 exclude_list.txt
 screenshots
-*.sublime-settings
+sublime-settings
+.git
 .DS_Store

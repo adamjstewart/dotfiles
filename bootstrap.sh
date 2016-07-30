@@ -4,7 +4,7 @@
 
 # Used to install and update the dotfiles repository
 
-cd "$(dirname "$BASH_SOURCE")"
+cd "$(dirname "${BASH_SOURCE[0]}")"
 
 git pull origin master
 
@@ -27,7 +27,7 @@ esac
 
 if [[ -d "$sublimeDir" ]]
 then
-    rsync --include "*.sublime-settings" --exclude "*" -avh --no-perms . "$sublimeDir"
+    rsync --include "*.sublime-settings" --exclude "*" -avh --no-perms "sublime-settings" "$sublimeDir"
 fi
 
 cd "$OLDPWD"
