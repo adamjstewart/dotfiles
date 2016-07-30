@@ -1,0 +1,7 @@
+{
+    "extensions":
+    [
+        // Use Tcl syntax highlighting for Expect files
+        "exp"
+    ]
+}
