@@ -27,6 +27,11 @@ case "$kernel" in
         ;;
 esac
 
+if [[ ! $PATH =~ ~/bin ]]
+then
+    export PATH="$HOME/bin:$PATH"
+fi
+
 # Set default text editor
 export EDITOR='vim'
 
