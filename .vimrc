@@ -3,6 +3,7 @@
 " See ~/.vim/colors/   for additional color scheme files
 " See ~/.vim/ftplugin/ for language specific settings
 " See ~/.vim/ftdetect/ for language specific file type detection
+" See ~/.vim/indent/   for language specific indentation
 " See ~/.vim/spell/    for spell check files
 "
 " See ':help vimfiles' for a description of the .vim file hierarchy
@@ -67,6 +68,11 @@ set shiftwidth=4                " number of spaces to use for each auto-indent, 
 " Key Remaps
 nmap <silent> ,/ :nohlsearch<CR>
 nnoremap ; :
+
+" Automatically add closing bracket and indent properly
+inoremap {<cr> {<cr>}<c-o>O<tab>
+inoremap [<cr> [<cr>]<c-o>O<tab>
+inoremap (<cr> (<cr>)<c-o>O<tab>
 
 " Make searches always 'very magic'
 "nnoremap / /\v
