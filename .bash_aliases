@@ -96,5 +96,6 @@ then
     alias cs="cd $SPACK_ROOT"
     alias csv="cd $SPACK_ROOT/var/spack/repos/builtin/packages"
     alias csl="cd $SPACK_ROOT/lib/spack/spack"
+    alias csd="cd $SPACK_ROOT/lib/spack/docs"
     alias cso="cd $SPACK_ROOT/opt/spack"
 fi
