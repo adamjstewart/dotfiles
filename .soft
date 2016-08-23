@@ -13,10 +13,11 @@
 +cmake-3.5.2
 +flake8
 +sphinx
++coverage
++mercurial-3.9
 
 # General utilities
 +vim-7.4
-+bash-4.3
 
 # Userbase
 +userbase
