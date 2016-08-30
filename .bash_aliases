@@ -65,7 +65,7 @@ alias wget='wget -c'
 alias psg='ps | grep -v grep | grep -i -e VSZ -e'
 
 # List most commonly used commands
-alias common="history | awk '{CMD[\$2]++;count++;}END { for (a in CMD)print CMD[a] \" \" CMD[a]/count*100 \"% \" a;}' | grep -v \"./\" | column -c3 -s \" \" -t | sort -nr | nl |  head -n10"
+alias common="history | awk '{CMD[\$2]++;count++;}END { for (a in CMD)print CMD[a] \" \" CMD[a]/count*100 \"% \" a;}' | grep -v \"./\" | column -c3 -s \" \" -t | sort -nr | nl |  head"
 
 # Debugger Aliases
 alias ddd='ddd --exec-window'
