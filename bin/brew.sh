@@ -52,11 +52,13 @@ brew install homebrew/dupes/screen
 # Install various VCS
 brew install git
 brew install hg
+brew install cvs
 
 # Install other software
 brew install wget
 brew install dos2unix
 brew install ssh-copy-id
+brew install graphviz
 
 # Remove outdated versions from the Cellar
 brew cleanup
