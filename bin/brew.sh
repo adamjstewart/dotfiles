@@ -52,7 +52,7 @@ brew install homebrew/dupes/screen
 # Install various VCS
 brew install git
 brew install hg
-brew install cvs
+brew install subversion
 
 # Install other software
 brew install wget
