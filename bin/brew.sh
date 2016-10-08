@@ -46,8 +46,6 @@ brew install homebrew/dupes/grep --with-default-names
 
 # Install more recent versions of macOS tools
 brew install vim --with-override-system-vi
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
 
 # Install various VCS
 brew install git
