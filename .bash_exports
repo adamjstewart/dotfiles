@@ -15,7 +15,7 @@ case "$kernel" in
         # Anaconda Python
         if [[ ! $PATH =~ anaconda ]]
         then
-            export PATH="$HOME/anaconda2/bin:$PATH"
+            export PATH="$HOME/anaconda2/bin:$HOME/anaconda3/bin:$PATH"
         fi
         ;;
     'Linux')
