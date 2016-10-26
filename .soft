@@ -15,6 +15,7 @@
 +sphinx
 +coverage
 +mercurial-3.9
++binutils-2.27
 
 # General utilities
 +vim-7.4
