@@ -53,6 +53,7 @@ brew install hg
 brew install subversion
 
 # Install other software
+brew install watch
 brew install wget
 brew install dos2unix
 brew install ssh-copy-id
