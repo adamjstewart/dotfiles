@@ -48,8 +48,6 @@ export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
 
 # Work exports
-export NAG_KUSARI_FILE='licman1.mcs.anl.gov:'
-
 if [[ -d /scratch ]]
 then
     export TMPDIR='/scratch'
