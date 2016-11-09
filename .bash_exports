@@ -47,12 +47,6 @@ export HISTCONTROL='ignoreboth'
 export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
 
-# Work exports
-if [[ -d /scratch ]]
-then
-    export TMPDIR='/scratch'
-fi
-
 # Spack
 if [[ -z $SPACK_ROOT && -d ~/spack ]]
 then

@@ -90,9 +90,9 @@ alias soft-ms='soft-msd -n && soft-msd && soft-msc'
 # Like `which`, but for libraries
 alias whichlib='/sbin/ldconfig -p | grep'
 
-if [[ -d "$TMPDIR/$USER" ]]
+if [[ -d "/scratch/$USER" ]]
 then
-    alias csc="cd $TMPDIR/$USER"
+    alias csc="cd /scratch/$USER"
 fi
 
 # Spack Aliases
