@@ -83,6 +83,12 @@ if has("autocmd")
     " Enable file type plugin, indentation, and detection overrides in ~/.vim/
     filetype plugin indent on
 
+    " Read a skeleton (template) file when opening a new file
+    autocmd BufNewFile *.pl 0r ~/.vim/skeletons/skeleton.pl
+    autocmd BufNewFile *.py 0r ~/.vim/skeletons/skeleton.py
+    autocmd BufNewFile *.rb 0r ~/.vim/skeletons/skeleton.rb
+    autocmd BufNewFile *.sh 0r ~/.vim/skeletons/skeleton.sh
+
     " When editing a file, always jump to the last known cursor position.
     " Don't do it when the position is invalid or when inside an event handler
     " (happens when dropping a file on gvim).
