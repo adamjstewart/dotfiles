@@ -80,8 +80,8 @@ inoremap (<cr> (<cr>)<c-o>O<tab>
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
-    " Enable file type plugin, indentation, and detection overrides in ~/.vim/
-    filetype plugin indent on
+    " Enable file type plugin and detection overrides in ~/.vim/
+    filetype plugin on
 
     " Read a skeleton (template) file when opening a new file
     autocmd BufNewFile *.pl 0r ~/.vim/skeletons/skeleton.pl
