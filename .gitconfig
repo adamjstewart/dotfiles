@@ -8,6 +8,9 @@
     re = rebase
     st = status
 
+    # See changes since branching off of develop
+    changes = diff develop...HEAD
+
 [color]
 
     # Use colors in Git commands that are capable of colored output
