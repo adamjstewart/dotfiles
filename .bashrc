@@ -55,3 +55,10 @@ complete -d cd c
 # extensions denoting that they are compressed. This requires Extended Globs.
 complete -f -X '!*.@(gz|bz2|xz|tgz|tbz2|txz|tar|zip|rar|lzma|Z|7z|exe)' extract
 
+# macOS Sierra does not automatically load ssh keys stored in the keychain
+kernel=$(uname)
+case "$kernel" in
+    'Darwin') # macOS
+        ssh-add -A &> /dev/null;;
+esac
+
