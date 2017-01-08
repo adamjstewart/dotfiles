@@ -9,10 +9,14 @@ kernel=$(uname)
 case "$kernel" in
     'Darwin') # macOS
         colorFlag='-G'
+        alias df='df -Th'
+        alias du='du -ch -d 1 | sort -hr'
         alias updatedb='sudo /usr/libexec/locate.updatedb'
         ;;
     'Linux')
         colorFlag='--color'
+        alias df='df -Th --total'
+        alias du='du -ch --max-depth=1 | sort -hr'
         alias trash='mv --verbose -f --backup=numbered --target-directory $HOME/.Trash'
         alias empty='find "$HOME/.Trash" -mtime +2 -delete'
         alias open='xdg-open'
@@ -55,8 +59,6 @@ alias cl='clear'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-alias df='df -Th --total'
-alias du='du -ch --max-depth=1 | sort -hr'
 alias free='free -mt'
 alias ps='ps aux'
 alias bc='bc -ql'
