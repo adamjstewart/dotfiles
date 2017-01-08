@@ -10,7 +10,7 @@ case "$kernel" in
     'Darwin') # macOS
         colorFlag='-G'
         alias df='df -Th'
-        alias du='du -ch -d 1 | sort -hr'
+        alias du='du -ch -d 1 | sort -r'
         alias updatedb='sudo /usr/libexec/locate.updatedb'
         ;;
     'Linux')
