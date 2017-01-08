@@ -9,7 +9,7 @@ kernel=$(uname)
 case "$kernel" in
     'Darwin') # macOS
         colorFlag='-G'
-        alias df='df -Th'
+        alias df='df -h'
         alias du='du -ch -d 1 | sort -r'
         alias updatedb='sudo /usr/libexec/locate.updatedb'
         ;;
