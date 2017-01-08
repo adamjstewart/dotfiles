@@ -49,6 +49,11 @@
     # Unless otherwise specified, push the current branch to a remote branch of the same name
     default = current
 
+[rerere]
+    
+    # Reuse recorded resolution of conflicted merges
+    enabled = true
+
 [user]
 
     # Set user commit information
