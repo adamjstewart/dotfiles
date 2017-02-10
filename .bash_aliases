@@ -86,7 +86,7 @@ then
 fi
 
 # Work Aliases
-alias ub='userbase'
+alias ub='/soft/userbase/1.1.6/bin/userbase'
 
 # SoftEnv Aliases
 alias vsoft='vim /soft/softenv/latest/etc/softenv.db'
