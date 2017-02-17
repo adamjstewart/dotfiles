@@ -48,25 +48,26 @@ export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
 
 # Work aliases
-if [[ ! $PATH =~ userbase ]]
+if [[ ! "$PATH" =~ "userbase" ]]
 then
     export PATH+=":/soft/userbase/1.1.6/bin"
 fi
 
 # Spack
-if [[ -z $SPACK_ROOT && -d ~/spack ]]
+if [[ -z "$SPACK_ROOT" && -d "$HOME/spack" ]]
 then
     export SPACK_ROOT="$HOME/spack"
-    if [[ ! $PATH =~ spack ]]
-    then
-        export PATH+=":$SPACK_ROOT/bin:$SPACK_ROOT/share/spack/qa"
-    fi
+fi
+
+if [[ "$SPACK_ROOT" && ! "$PATH" =~ "$SPACK_ROOT/bin" ]]
+then
+    export PATH+=":$SPACK_ROOT/bin:$SPACK_ROOT/share/spack/qa"
 fi
 
 # EXPERIMENTAL
 # Lmod support
 if [[ -d "/soft/spack-0.10.0/share/spack/lmod/linux-centos6-x86_64" ]]
 then
-    export MODULEPATH=/soft/spack-0.10.0/share/spack/lmod/linux-centos6-x86_64
+    export MODULEPATH="/soft/spack-0.10.0/share/spack/lmod/linux-centos6-x86_64"
 fi
 
