@@ -18,7 +18,7 @@ do
 done
 
 # Source spack setting files
-for file in "$SPACK_ROOT/share/spack/setup-env.sh"
+for file in "$SPACK_ROOT/share/spack/spack-completion.bash"
 do
     if [[ -f "$file" ]]
     then
