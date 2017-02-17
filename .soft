@@ -6,11 +6,9 @@
 #   about this file, do a "man softenv".
 #
 
-# Spack and dependencies
-+spack-0.10.0
+# Spack dependencies
 +git-2.5.0
 +curl-7.47.1
-+cmake-3.5.2
 +flake8
 +sphinx
 +coverage
