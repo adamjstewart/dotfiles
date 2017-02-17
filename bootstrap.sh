@@ -4,7 +4,7 @@
 
 # Used to install and update the dotfiles repository
 
-local OLDPWD_backup="$OLDPWD"
+OLDPWD_backup="$OLDPWD"
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
 git pull origin master
@@ -13,7 +13,7 @@ rsync --exclude-from "exclude_list.txt" -avh --no-perms . ~
 source ~/.bashrc
 
 # Sync Sublime Text settings files
-local kernel=$(uname)
+kernel=$(uname)
 case "$kernel" in
     'Darwin') # macOS
         sublimeDir="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
