@@ -5,6 +5,7 @@
     br = branch
     ci = commit
     co = checkout
+    di = diff
     re = rebase
     st = status
 
