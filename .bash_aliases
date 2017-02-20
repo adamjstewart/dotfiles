@@ -106,10 +106,10 @@ fi
 # Spack Aliases
 if [[ "$SPACK_ROOT" ]]
 then
-    alias cs="cd $SPACK_ROOT"
-    alias csv="cd $SPACK_ROOT/var/spack/repos/builtin/packages"
-    alias csl="cd $SPACK_ROOT/lib/spack/spack"
-    alias csd="cd $SPACK_ROOT/lib/spack/docs"
-    alias csq="cd $SPACK_ROOT/share/spack/qa"
-    alias cso="cd $SPACK_ROOT/opt/spack"
+    alias cs='cd $SPACK_ROOT'
+    alias csv='cd $SPACK_ROOT/var/spack/repos/builtin/packages'
+    alias csl='cd $SPACK_ROOT/lib/spack/spack'
+    alias csd='cd $SPACK_ROOT/lib/spack/docs'
+    alias csq='cd $SPACK_ROOT/share/spack/qa'
+    alias cso='cd $SPACK_ROOT/opt/spack'
 fi
