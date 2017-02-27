@@ -76,7 +76,7 @@ function empty {
     fi
 
     # Delete the old files
-    find ~/.Trash -mtime "$mtime" -delete -depth
+    find ~/.Trash/* -depth -mtime "$mtime" -exec rm -rf '{}' \;
 }
 
 # Open Firefox in the background
