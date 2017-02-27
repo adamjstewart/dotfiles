@@ -37,6 +37,48 @@ function up {
     cd "$nwd"
 }
 
+# Send files or directories to the trash
+#
+# Files end up in ~/.Trash
+#
+# Usage: trash [files...] [directories...]
+function trash {
+    # Make the directory if one does not already exist
+    mkdir -pv ~/.Trash
+
+    # Move all files to the trash
+    local kernel=$(uname)
+    case "$kernel" in
+        'Darwin') # macOS
+            mv -fv -- "$@" ~/.Trash;;
+        'Linux')
+            mv --force --verbose --backup=numbered -- "$@" ~/.Trash;;
+        *)
+            echo "Unknown OS: $kernel";;
+    esac
+}
+
+# Empty the trash
+#
+# By default, deletes anything more than a week old
+# Accepts an optional argument to change the length of time
+# See the `-atime` section of `man find` for more information
+#
+# Usage: empty [[+-]n[smhdw]]
+function empty {
+    # Default to anything older than 1 week
+    local mtime='+1w'
+
+    # Accept optional mtime flag
+    if [[ "$1" ]]
+    then
+        mtime="$1"
+    fi
+
+    # Delete the old files
+    find ~/.Trash -mtime "$mtime" -delete -depth
+}
+
 # Open Firefox in the background
 #
 # Websites with text fields that don't specify both the

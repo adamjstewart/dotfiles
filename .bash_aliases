@@ -17,8 +17,6 @@ case "$kernel" in
         colorFlag='--color'
         alias df='df -Th --total'
         alias du='du -ch --max-depth=1 | sort -hr'
-        alias trash='mv --verbose -f --backup=numbered --target-directory $HOME/.Trash'
-        alias empty='find "$HOME/.Trash" -mtime +2 -delete'
         alias open='xdg-open'
         ;;
     *)
