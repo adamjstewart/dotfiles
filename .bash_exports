@@ -54,7 +54,10 @@ then
 fi
 
 # Spack
-if [[ -z "$SPACK_ROOT" && -d "$HOME/spack" ]]
+if [[ "$HOSTNAME" == "bh1" ]]
+then
+    export SPACK_ROOT="/soft/spack-0.10.1"
+elif [[ -z "$SPACK_ROOT" && -d "$HOME/spack" ]]
 then
     export SPACK_ROOT="$HOME/spack"
 fi
