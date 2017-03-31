@@ -15,6 +15,11 @@ function mcd {
     cd "$1"
 }
 
+# Returns the length of a string
+function length {
+    echo "${#1}"
+}
+
 # Go up a certain number of directories
 #
 # Usage: up [NUMBER]
