@@ -238,7 +238,7 @@ __git_ps1_show_upstream ()
 # to build a gitstring.
 __git_ps1_colorize_gitstring ()
 {
-	if [[ -n ${ZSH_VERSION-} ]]; then
+	if [[ -n ${ZSH_VERSION:-} ]]; then
 		local c_red='%F{red}'
 		local c_green='%F{green}'
 		local c_lblue='%F{blue}'
@@ -357,7 +357,7 @@ __git_ps1 ()
 	# incorrect.)
 	#
 	local ps1_expanded=yes
-	[ -z "$ZSH_VERSION" ] || [[ -o PROMPT_SUBST ]] || ps1_expanded=no
+	[ -z "${ZSH_VERSION:-}" ] || [[ -o PROMPT_SUBST ]] || ps1_expanded=no
 	[ -z "$BASH_VERSION" ] || shopt -q promptvars || ps1_expanded=no
 
 	local repo_info rev_parse_exit_code
