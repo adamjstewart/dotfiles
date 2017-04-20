@@ -54,9 +54,9 @@ then
 fi
 
 # Spack
-if [[ "$HOSTNAME" == "bh1" ]]
+if [[ "$HOSTNAME" =~ bebop ]]
 then
-    export SPACK_ROOT="/soft/spack-0.10.1"
+    export SPACK_ROOT="/nfs/software/spack"
 elif [[ -z "$SPACK_ROOT" && -d "$HOME/spack" ]]
 then
     export SPACK_ROOT="$HOME/spack"
