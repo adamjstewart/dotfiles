@@ -54,10 +54,7 @@ then
 fi
 
 # Spack
-if [[ "$HOSTNAME" =~ bebop ]]
-then
-    export SPACK_ROOT="/nfs/software/spack"
-elif [[ -z "$SPACK_ROOT" && -d "$HOME/spack" ]]
+if [[ -z "$SPACK_ROOT" && -d "$HOME/spack" ]]
 then
     export SPACK_ROOT="$HOME/spack"
 fi
@@ -66,11 +63,3 @@ if [[ "$SPACK_ROOT" && ! "$PATH" =~ "$SPACK_ROOT/bin" ]]
 then
     export PATH+=":$SPACK_ROOT/bin:$SPACK_ROOT/share/spack/qa"
 fi
-
-# EXPERIMENTAL
-# Lmod support
-if [[ -d "$HOME/spack/share/spack/lmod/linux-centos6-x86_64" ]]
-then
-    export MODULEPATH="$HOME/spack/share/spack/lmod/linux-centos6-x86_64"
-fi
-
