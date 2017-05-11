@@ -26,16 +26,6 @@ do
     fi
 done
 
-# EXPERIMENTAL
-# Lmod support
-for file in /soft/spack-0.10.0/opt/spack/linux-centos6-x86_64/gcc-6.1.0/lmod-6.4.5-5oryaq6qpsigwrs6lnlc5oozxnrof4oj/lmod/6.4.5/init/profile /soft/spack-0.10.0/opt/spack/linux-centos6-x86_64/gcc-6.1.0/lmod-6.4.5-5oryaq6qpsigwrs6lnlc5oozxnrof4oj/lmod/6.4.5/init/lmod_bash_completions
-do
-    if [[ -f "$file" ]]
-    then
-        source "$file"
-    fi
-done
-
 # If set, minor errors in the spelling of a directory component in a cd command will be corrected. The errors checked for are transposed characters, a missing character, and one character too many. If a correction is found, the corrected filename is printed, and the command proceeds. This option is only used by interactive shells.
 shopt -s cdspell
 # If set, bash checks that a command found in the hash table exists before trying to execute it. If a hashed command no longer exists, a normal path search is performed.
