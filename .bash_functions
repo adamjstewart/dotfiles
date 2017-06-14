@@ -133,6 +133,7 @@ function extract {
                 *.tar.gz|*.tgz)     tar xvzf   "$file" ;;
                 *.tar.bz2|*.tbz2)   tar xvjf   "$file" ;;
                 *.tar.xz|*.txz)     tar xvJf   "$file" ;;
+                *.tar.Z)            tar xvZf   "$file" ;;
                 *.tar)              tar xvf    "$file" ;;
                 *.gz)               gunzip     "$file" ;;
                 *.bz2)              bunzip2    "$file" ;;
