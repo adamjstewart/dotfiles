@@ -70,9 +70,9 @@ nmap <silent> ,/ :nohlsearch<CR>
 nnoremap ; :
 
 " Automatically add closing bracket and indent properly
-inoremap {<cr> {<cr>}<c-o>O<tab>
-inoremap [<cr> [<cr>]<c-o>O<tab>
-inoremap (<cr> (<cr>)<c-o>O<tab>
+"inoremap {<cr> {<cr>}<c-o>O<tab>
+"inoremap [<cr> [<cr>]<c-o>O<tab>
+"inoremap (<cr> (<cr>)<c-o>O<tab>
 
 " Make searches always 'very magic'
 "nnoremap / /\v
