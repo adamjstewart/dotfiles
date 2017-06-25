@@ -1,42 +1,50 @@
-# More suggestions of language-specific .gitignore files can be found at:
+# There are two types of .gitignore templates:
+#
+# 1. Project - language or framework specific
+# 2. Global  - operating system or editor specific
+#
+# The former belongs in the .gitignore for that particular project,
+# while the latter belongs here.
+#
+# More suggestions for .gitignore templates can be found at:
 # https://github.com/github/gitignore
 
-##########
-# Python #
-##########
+#################
+# Linux / macOS #
+#################
 
-# Byte-compiled / optimized / DLL files:
-*.py[cod]
+# Folder config files
+.DS_Store
+
+# Thumbnail cache files
+._*
+
+###########
+# Windows #
+###########
+
+# Folder config files
+Desktop.ini
+
+# Thumbnail cache files
+Thumbs.db
 
 #######
-# TeX #
+# Vim #
 #######
 
-# Core latex/pdflatex auxiliary files:
-*.aux
-*.fls
-*.fmt
-*.lof
-*.log
-*.lot
-*.out
-*.toc
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
 
-# Bibliography auxiliary files (bibtex/biblatex/biber):
-*.bbl
-*.bcf
-*.blg
-*-blx.aux
-*-blx.bib
-*.brf
-*.run.xml
+# Session
+Session.vim
 
-# Build tool auxiliary files:
-*.fdb_latexmk
-*.pdfsync
-*.synctex
-*.synctex.gz
-*.synctex.gz(busy)
+# Temporary
+.netrwhist
+*~
 
 #################
 # Sumblime Text #
@@ -49,29 +57,3 @@
 *.stTheme.cache
 *.tmlanguage.cache
 *.tmPreferences.cache
-
-#######
-# Vim #
-#######
-
-.netrwhist
-*~
-
-###########
-# Windows #
-###########
-
-# Folder view configuration files
-.DS_Store
-Desktop.ini
-
-# Thumbnail cache files
-._*
-Thumbs.db
-
-################
-# Linux / macOS #
-################
-
-.Trash*
-
