@@ -101,10 +101,17 @@ if has("autocmd")
 
     " Whitespace Handling
     function! StripTrailingWhitespaces()
+        " Save current cursor position
         let l = line(".")
         let c = col(".")
-        %s/\s\+$//e         " delete trailing whitespaces
-        call cursor(l, c)   " return cursor to previous position
+        " Save search history
+        let s = @/
+        " Delete trailing whitespaces
+        %s/\s\+$//e
+        " Return cursor to previous position
+        call cursor(l, c)
+        " Restore search history
+        let @/ = s
     endfunction
     
     " Clear searches when opening file
