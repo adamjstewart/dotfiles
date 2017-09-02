@@ -47,7 +47,13 @@ export HISTCONTROL='ignoreboth'
 export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
 
-# Work aliases
+# UIUC exports
+if [[ -d "/usr/lib/jvm/java-8-oracle" ]]
+then
+    export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+fi
+
+# Work exports
 if [[ ! "$PATH" =~ "userbase" ]]
 then
     export PATH+=":/soft/userbase/1.1.6/bin"
