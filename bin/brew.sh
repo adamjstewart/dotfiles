@@ -12,7 +12,7 @@ fi
 brew update
 
 # Upgrade any already-installed forumulae
-brew upgrade --all
+brew upgrade
 
 # Install software installation tools
 brew install automake
@@ -20,11 +20,12 @@ brew install cmake
 
 # Install compilers
 brew install gcc
+brew install ocaml
+brew install rlwrap
 
 # Install Bash 4 and set it as the default shell
 brew install bash
-brew tap homebrew/versions
-brew install bash-completion2
+brew install bash-completion@2
 
 if ! fgrep -q '/usr/local/bin/bash' /etc/shells
 then
@@ -42,14 +43,14 @@ brew install cabextract
 # Install GNU tools
 brew install gnu-time --with-default-names
 brew install gnu-sed  --with-default-names
-brew install homebrew/dupes/grep --with-default-names
+brew install grep --with-default-names
 
 # Install more recent versions of macOS tools
 brew install vim --with-override-system-vi
 
 # Install various VCS
 brew install git
-brew install hg
+brew install mercurial
 brew install subversion
 
 # Install other software
@@ -58,6 +59,8 @@ brew install wget
 brew install dos2unix
 brew install ssh-copy-id
 brew install graphviz
+brew install pandoc
+brew install flake8
 
 # Remove outdated versions from the Cellar
 brew cleanup
