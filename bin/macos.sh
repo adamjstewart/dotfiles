@@ -92,6 +92,13 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
+###############################################################################
+# Preview                                                                     #
+###############################################################################
+
+# Preview: default to Continuous Scroll when opening a new file
+defaults write com.apple.Preview kPVPDFDefaultPageViewModeOption 0
+
 # Display full POSIX path as Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
