@@ -42,6 +42,18 @@ function up {
     cd "$nwd"
 }
 
+# Backup the current directory
+#
+# A directory of the same name is made in Dropbox
+#
+# Usage: backup
+function backup {
+    local from="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+    local to=~/Dropbox
+
+    rsync -avh "$from" "$to"
+}
+
 # Send files or directories to the trash
 #
 # Files end up in ~/.Trash
