@@ -48,7 +48,7 @@ function up {
 #
 # Usage: backup
 function backup {
-    local from="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+    local from="$PWD"
     local to=~/Dropbox
 
     rsync -avh "$from" "$to"
