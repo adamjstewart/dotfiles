@@ -53,6 +53,11 @@ then
     export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
 fi
 
+if [[ -d "$HOME/.opam/4.05.0/bin" ]]
+then
+    export PATH="$HOME/.opam/4.05.0/bin:$PATH"
+fi
+
 # Work exports
 if [[ ! "$PATH" =~ "userbase" ]]
 then
