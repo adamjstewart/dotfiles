@@ -8,7 +8,7 @@
 
 ![Terminal Screenshot](screenshots/terminal.png)
 
-The bash prompt displays the time, username, hostname, and working directory. If you are in a Git repository, it will also display the current branch.
+The bash prompt displays the time, username, hostname, and working directory. If you are in a Git or Subversion repository, it will also display the current branch and status.
 
 ### Vim
 

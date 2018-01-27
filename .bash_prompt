@@ -81,7 +81,7 @@ mid+="$white)"
 post="$white\n\$ "
 
 # See .git-prompt.sh for details
-PROMPT_COMMAND="__git_ps1 '$pre' '$post' '$mid'"
+PROMPT_COMMAND="__git_svn_ps1 '$pre' '$post' '$mid'"
 
 export PROMPT_COMMAND
 

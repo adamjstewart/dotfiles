@@ -6,10 +6,11 @@
 # On Linux, this occurs when a new Terminal is opened
 
 # Source all user setting files
-# Note: .git-prompt.sh must come before .bash_prompt
+# Note: .git-prompt.sh must come before .svn-prompt.sh and .bash_prompt
+# Note: .svn-prompt.sh must come before .bash_prompt
 # Note: .bash_exports must come before .bash_aliases
 # Note: .bash_aliases must come before .bash_functions
-for file in ~/.git-{completion.bash,prompt.sh} ~/.bash_{exports,aliases,functions,prompt}
+for file in ~/.git-{completion.bash,prompt.sh} ~/.svn-prompt.sh ~/.bash_{exports,aliases,functions,prompt}
 do
     if [[ -f "$file" ]]
     then
