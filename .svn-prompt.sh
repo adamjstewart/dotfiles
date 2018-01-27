@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-#
 # bash/zsh svn prompt support
 #
 # This script allows you to see repository status in your prompt.
@@ -21,6 +19,11 @@
 #
 # The prompt status always includes the current branch name.
 #
+# If you set GIT_COMPATIBILITY_MODE to a nonempty value, the svn prompt
+# will act like the git prompt, with (*) representing unstaged changes,
+# (+) representing staged changes, and (%) representing untracked files.
+# Otherwise, use the symbols reported by svn status.
+#
 # This script is modeled after Shawn O. Pearce's git prompt support.
 
 __svn_ps1 ()
@@ -30,35 +33,48 @@ __svn_ps1 ()
     local printf_format="$3"
     local svnstring=""
 
-    if [[ -d .svn ]]
+    if [ -d .svn ]
     then
         local status=$(svn status)
 
         # TODO: better branch detection
         local branch='trunk'
-        local unstaged=''
-        local staged=''
-        local untracked=''
 
-        # Check for unstaged changes
-        if [[ $(echo "$status" | grep '^\s*[CDMR!]') ]]
+        if [ "$GIT_COMPATIBILITY_MODE" ]
         then
-            unstaged='*'
+            local unstaged=''
+            local staged=''
+            local untracked=''
+
+            if [ "$GIT_PS1_SHOWDIRTYSTATE" ]
+            then
+                # Check for unstaged changes
+                if [ "$(echo "$status" | grep '^\s*[CDMR!]')" ]
+                then
+                    unstaged='*'
+                fi
+
+                # Check for staged changes
+                if [ "$(echo "$status" | grep '^\s*A')" ]
+                then
+                    staged='+'
+                fi
+            fi
+
+            if [ "$GIT_PS1_SHOWUNTRACKEDFILES" ]
+            then
+                # Check for untracked files
+                if [ "$(echo "$status" | grep '^\s*\?')" ]
+                then
+                    untracked='%'
+                fi
+            fi
+
+            local state="$unstaged$staged$untracked"
+        else
+            local state=$(svn status | cut -c1 | sort | uniq | tr -d '\n')
         fi
 
-        # Check for staged changes
-        if [[ $(echo "$status" | grep '^\s*A') ]]
-        then
-            staged='+'
-        fi
-
-        # Check for untracked files
-        if [[ $(echo "$status" | grep '^\s*\?') ]]
-        then
-            untracked='%'
-        fi
-
-        local state="$unstaged$staged$untracked"
         local svnstring="$branch${state:+ $state}"
 
         printf -v svnstring -- "$printf_format" "$svnstring"
@@ -69,7 +85,7 @@ __svn_ps1 ()
 
 __git_svn_ps1 ()
 {
-    if [[ -d .svn ]]
+    if [ -d .svn ]
     then
         __svn_ps1 "$@"
     else
