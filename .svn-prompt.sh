@@ -49,13 +49,13 @@ __svn_ps1 ()
             if [ "$GIT_PS1_SHOWDIRTYSTATE" ]
             then
                 # Check for unstaged changes
-                if [ "$(echo "$status" | grep '^\s*[CDMR!]')" ]
+                if [ "$(echo "$status" | grep '^[CDMR!]')" ]
                 then
                     unstaged='*'
                 fi
 
                 # Check for staged changes
-                if [ "$(echo "$status" | grep '^\s*A')" ]
+                if [ "$(echo "$status" | grep '^A')" ]
                 then
                     staged='+'
                 fi
@@ -64,7 +64,7 @@ __svn_ps1 ()
             if [ "$GIT_PS1_SHOWUNTRACKEDFILES" ]
             then
                 # Check for untracked files
-                if [ "$(echo "$status" | grep '^\s*\?')" ]
+                if [ "$(echo "$status" | grep '^\?')" ]
                 then
                     untracked='%'
                 fi
@@ -72,7 +72,12 @@ __svn_ps1 ()
 
             local state="$unstaged$staged$untracked"
         else
-            local state=$(svn status | cut -c1 | sort | uniq | tr -d '\n')
+            # The first seven columns in the output are each one character wide,
+            # and each column gives you information about a different aspect of
+            # each working copy item.
+            #
+            # http://svnbook.red-bean.com/en/1.7/svn.ref.svn.c.status.html
+            local state=$(svn status | cut -c -7 | fold -w 1 | sort | uniq | tr -d ' \n')
         fi
 
         local svnstring="$branch${state:+ $state}"
