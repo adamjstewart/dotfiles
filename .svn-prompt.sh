@@ -26,6 +26,24 @@
 #
 # This script is modeled after Shawn O. Pearce's git prompt support.
 
+__in_svn_repo ()
+{
+    # Get the physical current working directory (all symbolic links resolved)
+    local dir="$(pwd -P)"
+
+    while [ "$dir" != "/" ]
+    do
+        if [ -d "$dir/.svn" ]
+        then
+            return 0
+        fi
+
+        dir="$(dirname "$dir")"
+    done
+
+    return 1
+}
+
 __svn_ps1 ()
 {
     local ps1pc_start="$1"
@@ -33,7 +51,7 @@ __svn_ps1 ()
     local printf_format="$3"
     local svnstring=""
 
-    if [ -d .svn ]
+    if __in_svn_repo
     then
         local status=$(svn status)
 
@@ -90,7 +108,7 @@ __svn_ps1 ()
 
 __git_svn_ps1 ()
 {
-    if [ -d .svn ]
+    if __in_svn_repo
     then
         __svn_ps1 "$@"
     else
