@@ -100,6 +100,38 @@ global-ignores =
     *.stTheme.cache
     *.tmlanguage.cache
     *.tmPreferences.cache
+    __pycache__/
+    *.py[cod]
+    *.aux
+    *.lof
+    *.log
+    *.lot
+    *.fls
+    *.out
+    *.toc
+    *.fmt
+    *.fot
+    *.cb
+    *.cb2
+    .*.lb
+    *.dvi
+    *.ps
+    *.eps
+    *.pdf
+    *.bbl
+    *.bcf
+    *.blg
+    *-blx.aux
+    *-blx.bib
+    *.run.xml
+    *.fdb_latexmk
+    *.synctex
+    *.synctex(busy)
+    *.synctex.gz
+    *.synctex.gz(busy)
+    *.pdfsync
+    *.alg
+    *.loa
 ### Set log-encoding to the default encoding for log messages
 # log-encoding = latin1
 ### Set use-commit-times to make checkout/update/switch/revert
