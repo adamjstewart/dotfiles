@@ -28,7 +28,7 @@ esac
 
 if [[ -d "$sublimeDir" ]]
 then
-    rsync --include "*.sublime-settings" --exclude "*" -avh --no-perms "sublime-settings" "$sublimeDir"
+    rsync -avh --no-perms "sublime-settings/" "$sublimeDir"
 fi
 
 cd "$OLDPWD"
