@@ -38,7 +38,7 @@
     // Columns in which to display vertical rulers
     "rulers":
     [
-        100
+        79
     ],
 
     // Set to false to disable scrolling past the end of the buffer.
