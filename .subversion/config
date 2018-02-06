@@ -100,7 +100,7 @@ global-ignores =
     *.stTheme.cache
     *.tmlanguage.cache
     *.tmPreferences.cache
-    __pycache__/
+    __pycache__
     *.py[cod]
     *.aux
     *.lof
