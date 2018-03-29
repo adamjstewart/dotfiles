@@ -83,13 +83,6 @@ then
     done
 fi
 
-# Work Aliases
-alias ub='userbase'
-
-# SoftEnv Aliases
-alias vsoft='vim /soft/softenv/latest/etc/softenv.db'
-alias soft-ms='soft-msd -n && soft-msd && soft-msc'
-
 # Like `which`, but for libraries
 alias whichlib='/sbin/ldconfig -p | grep'
 

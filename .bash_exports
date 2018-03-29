@@ -47,23 +47,6 @@ export HISTCONTROL='ignoreboth'
 export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
 
-# UIUC exports
-if [[ -d "/usr/lib/jvm/java-8-oracle" ]]
-then
-    export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
-fi
-
-if [[ -d "$HOME/.opam/4.05.0/bin" ]]
-then
-    export PATH="$HOME/.opam/4.05.0/bin:$PATH"
-fi
-
-# Work exports
-if [[ ! "$PATH" =~ "userbase" ]]
-then
-    export PATH+=":/soft/userbase/1.1.6/bin"
-fi
-
 # Spack
 if [[ -z "$SPACK_ROOT" && -d "$HOME/spack" ]]
 then

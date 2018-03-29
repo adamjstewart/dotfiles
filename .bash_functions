@@ -204,10 +204,3 @@ function man {
     # Now run actual command `man` and search for string `search`
     LESS="$search" command man "$name"
 }
-
-# Work functions
-
-# Find the gender of a particular user
-function gender {
-    userbase -look "$1" | grep gender
-}
