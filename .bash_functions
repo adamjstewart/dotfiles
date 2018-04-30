@@ -46,12 +46,27 @@ function up {
 #
 # A directory of the same name is made in Dropbox
 #
+# Files and directories listed in .gitignore are
+# automatically excluded
+#
 # Usage: backup
 function backup {
     local from="$PWD"
     local to=~/Dropbox
 
-    rsync -avh "$from" "$to"
+    # Global .gitignore
+    if [[ -f ~/.gitignore ]]
+    then
+        local exclude_global="--exclude-from $HOME/.gitignore"
+    fi
+
+    # Local .gitignore
+    if [[ -f .gitignore ]]
+    then
+        local exclude_local='--exclude-from .gitignore'
+    fi
+
+    rsync -avh $exclude_global $exclude_local "$from" "$to"
 }
 
 # Send files or directories to the trash
