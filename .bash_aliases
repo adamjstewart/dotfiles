@@ -89,6 +89,9 @@ alias whichlib='/sbin/ldconfig -p | grep'
 if [[ -d "/scratch/$USER" ]]
 then
     alias csc="cd /scratch/$USER"
+elif [[ -d "/scratch/sciteam/$USER" ]]
+then
+    alias csc="cd /scratch/sciteam/$USER"
 elif [[ -d "$HOME/Downloads" ]]
 then
     alias csc="cd $HOME/Downloads"
