@@ -27,6 +27,9 @@ do
     fi
 done
 
+# This user file-creation mask prevents others from seeing my work
+umask 0007
+
 # If set, minor errors in the spelling of a directory component in a cd command will be corrected. The errors checked for are transposed characters, a missing character, and one character too many. If a correction is found, the corrected filename is printed, and the command proceeds. This option is only used by interactive shells.
 shopt -s cdspell
 # If set, bash checks that a command found in the hash table exists before trying to execute it. If a hashed command no longer exists, a normal path search is performed.
