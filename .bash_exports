@@ -48,12 +48,20 @@ export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
 
 # Spack
-if [[ -z "$SPACK_ROOT" && -d "$HOME/spack" ]]
+if [[ -d "$HOME/spack" ]]
 then
-    export SPACK_ROOT="$HOME/spack"
-fi
+    if [[ -z "$SPACK_ROOT" ]]
+    then
+        export SPACK_ROOT="$HOME/spack"
+    fi
 
-if [[ "$SPACK_ROOT" && ! "$PATH" =~ "$SPACK_ROOT/bin" ]]
-then
-    export PATH+=":$SPACK_ROOT/bin:$SPACK_ROOT/share/spack/qa"
+    if [[ ! "$PATH" =~ "$SPACK_ROOT/bin" ]]
+    then
+        export PATH+=":$SPACK_ROOT/bin"
+    fi
+
+    if [[ -d "$SPACK_ROOT/share/spack/modules/cray-cnl5-interlagos" && ! "$MODULEPATH" =~ "$SPACK_ROOT/share/spack/modules/cray-cnl5-interlagos" ]]
+    then
+        export MODULEPATH="$SPACK_ROOT/share/spack/modules/cray-cnl5-interlagos:$MODULEPATH"
+    fi
 fi
