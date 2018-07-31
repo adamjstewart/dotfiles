@@ -78,9 +78,9 @@ mid=" $white("
 mid+="$red%s"
 mid+="$white)"
 
-post="$white\n\$ "
+post="$reset\n\$ "
 
-# See .git-prompt.sh for details
+# See .git-prompt.sh and .svn-prompt.sh for details
 PROMPT_COMMAND="__git_svn_ps1 '$pre' '$post' '$mid'"
 
 export PROMPT_COMMAND
@@ -88,6 +88,20 @@ export PROMPT_COMMAND
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
+
+# Disable git/svn prompt
+#
+# Useful on slow NFS filesystems
+function fastprompt {
+    unset PROMPT_COMMAND
+    PS1="$pre$post"
+}
+
+# Reenable git/svn prompt
+function slowprompt {
+    unset PS1
+    PROMPT_COMMAND="__git_svn_ps1 '$pre' '$post' '$mid'"
+}
 
 # Define continuation prompt (PS2)
 
