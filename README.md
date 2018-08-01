@@ -24,17 +24,21 @@ I chose a color scheme called Monokai, originally written by Wimer Hazenberg for
 
 You can clone the repository wherever you want by running:
 
-```bash
-git clone https://github.com/adamjstewart/dotfiles.git
+```console
+$ git clone https://github.com/adamjstewart/dotfiles.git
 ```
 
 Then, all you have to do is source the bootstrap script:
 
-```bash
-source dotfiles/bootstrap.sh
+```console
+$ source dotfiles/bootstrap.sh
 ```
 
 To update your local repository with any changes I've made, just source the bootstrap script again.
+
+### Installing the Terminal profile on macOS
+
+To install the Monokai Terminal profile, go to the Terminal Preferences and click on the Profiles tab. Click the settings gear at the bottom of the profile list and hit Import. Then, navigate to the `Monokai.terminal` file in your cloned repository. Click Default at the bottom of the profile list to set this as your default profile when launching a new terminal.
 
 ## Credits
 

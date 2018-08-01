@@ -1,7 +1,17 @@
-README.md
+# Installation
 bootstrap.sh
 exclude_list.txt
+Monokai.terminal
+
+# GitHub
+README.md
 screenshots
-sublime-settings
 .git
+
+# Sublime Text
+sublime-settings
+dotfiles.sublime-project
+dotfiles.sublime-workspace
+
+# Miscellaneous
 .DS_Store
