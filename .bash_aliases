@@ -10,13 +10,11 @@ case "$kernel" in
     'Darwin') # macOS
         colorFlag='-G'
         alias df='df -h'
-        alias du='du -ch -d 1 | sort -r'
         alias updatedb='sudo /usr/libexec/locate.updatedb'
         ;;
     'Linux')
         colorFlag='--color'
         alias df='df -Th --total'
-        alias du='du -ch --max-depth=1 | sort -hr'
         alias open='xdg-open'
         ;;
     *)
@@ -52,6 +50,7 @@ alias vi='vim     "$HOME/.inputrc"'
 alias si='bind -f "$HOME/.inputrc"'
 
 # System Aliases
+alias du='du -ch -d 1 | sort -hr'
 alias mkdirp='mkdir -p'
 alias cl='clear'
 alias grep='grep --color=auto -I'
