@@ -50,7 +50,6 @@ alias vi='vim     "$HOME/.inputrc"'
 alias si='bind -f "$HOME/.inputrc"'
 
 # System Aliases
-alias du='du -ch -d 1 | sort -hr'
 alias mkdirp='mkdir -p'
 alias cl='clear'
 alias grep='grep --color=auto -I'

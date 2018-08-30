@@ -15,6 +15,11 @@ function mcd {
     cd "$1"
 }
 
+# Limit depth of du and sort results by size
+function du {
+    command du -ch -d 1 "$@" | sort -hr
+}
+
 # Returns the length of a string
 function length {
     echo "${#1}"
