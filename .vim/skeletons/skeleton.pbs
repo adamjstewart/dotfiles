@@ -1,10 +1,17 @@
 #!/usr/bin/env bash
-#PBS -l nodes=1:ppn=32:xe
-#PBS -l walltime=00:00:00
+#PBS -l nodes=1:ppn=16:xk
+#PBS -l walltime=48:00:00
 #PBS -q low
 #PBS -N job_name
 #PBS -A gkj
+#PBS -m abef
+#PBS -M adamjs5@illinois.edu
+
+# Modules
+module load bwpy/2.0.0-pre4
+module load cudatoolkit
 
 # Switch to the directory the job was submitted from
 cd "$PBS_O_WORKDIR"
 
+time aprun -n 1 -N 1 python3.6 main.py
