@@ -29,7 +29,7 @@
 __in_svn_repo ()
 {
     # Get the physical current working directory (all symbolic links resolved)
-    local dir="$(pwd -P)"
+    local dir="$(pwd -P 2> /dev/null || echo "/")"
 
     while [ "$dir" != "/" ]
     do
