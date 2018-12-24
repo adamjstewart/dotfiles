@@ -17,6 +17,11 @@
     # Use colors in Git commands that are capable of colored output
     ui = auto
 
+[commit]
+
+    # Automatically sign using GPG keys
+    gpgsign = true
+
 [core]
 
     # Set the default editor
@@ -60,4 +65,4 @@
     # Set user commit information
     email = ajstewart426@gmail.com
     name = Adam J. Stewart
-
+    signingkey = 7F00A7CEDBF7E7B7

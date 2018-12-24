@@ -43,7 +43,7 @@ export HISTSIZE='32768'
 export HISTFILESIZE="$HISTSIZE"
 export HISTCONTROL='ignoreboth'
 
-# Language Settings
+# Language settings
 export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
 
@@ -65,3 +65,6 @@ then
         export MODULEPATH="$SPACK_ROOT/share/spack/modules/cray-cnl5-interlagos:$MODULEPATH"
     fi
 fi
+
+# GPG settings
+export GPG_TTY=$(tty)
