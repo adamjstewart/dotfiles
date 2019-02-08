@@ -1,7 +1,4 @@
-" Markdown-specific vim settings
-
-" Turn on spell checking
-set spell
+" DOT-specific vim settings
 
 " Strip trailing whitespaces upon write
 autocmd BufWrite <buffer> :call StripTrailingWhitespaces()
