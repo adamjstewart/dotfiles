@@ -3,13 +3,13 @@
 #PBS -l walltime=48:00:00
 #PBS -q low
 #PBS -N job_name
-#PBS -A gkj
+#PBS -A bavj
 #PBS -j oe
-#PBS -m abef
+#PBS -m abe
 #PBS -M adamjs5@illinois.edu
 
 # Modules
-module load bwpy/2.0.0-pre4
+module load bwpy/2.0.1
 module load cudatoolkit
 
 # Switch to the directory the job was submitted from
