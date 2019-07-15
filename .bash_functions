@@ -197,7 +197,7 @@ function man {
         'builtin')
             case "$1" in
                 # Bash builtins with stand-alone man pages
-                echo|false|kill|printf|pwd|test|true)
+                echo|false|kill|printf|pwd|test|true|\[)
                     name="$1"
                     ;;
                 # Special cases
