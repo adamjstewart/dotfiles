@@ -1,0 +1,12 @@
+modules:
+    enable::
+        # Only generate TCL environment module files
+        - tcl
+    tcl:
+        # Ignore compiler and compiler version in module file name
+        naming_scheme: '${PACKAGE}/${VERSION}'
+        # Automatically load modules for Java and Python dependencies
+        ^java:
+              autoload: 'direct'
+        ^python:
+              autoload: 'direct'

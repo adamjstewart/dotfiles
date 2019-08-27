@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#PBS -l nodes=1:ppn=32:xe
+#PBS -l walltime=24:00:00
+#PBS -q high
+#PBS -N spack/inkscape
+#PBS -A gkj
+#PBS -j oe
+#PBS -m abe
+#PBS -M adamjs5@illinois.edu
+
+# For reference, see https://bluewaters.ncsa.illinois.edu/python
+
+# Modules
+module load bwpy
+
+# Build
+aprun -n 1 -N 1 -- bwpy-environ -- spack --color=never install --test=root inkscape ^pango+X ^python@3:

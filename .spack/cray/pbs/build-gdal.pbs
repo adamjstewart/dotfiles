@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#PBS -l nodes=1:ppn=32:xe
+#PBS -l walltime=48:00:00
+#PBS -q low
+#PBS -N spack/gdal
+#PBS -A gkj
+#PBS -j oe
+
+# For reference, see https://bluewaters.ncsa.illinois.edu/python
+
+# Modules
+module load bwpy
+
+# Build GDAL
+aprun -b -n 1 -- bwpy-environ -- spack install --keep-stage --test=root gdal

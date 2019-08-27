@@ -1,0 +1,32 @@
+packages:
+    all:
+        # Newest GCC compiler that supports CUDA 9.1
+        compiler: ['gcc@:5']
+        providers:
+            blas: [intel-mkl]
+            lapack: [intel-mkl]
+            scalapack: [intel-mkl]
+            mkl: [intel-mkl]
+            mpi: [mpich]
+        variants: +cuda+openmp
+    cmake:
+        modules:
+            cmake@3.9.4: cmake/3.9.4
+        buildable: False
+    cuda:
+        modules:
+            cuda@9.1.85: cudatoolkit/9.1.85_3.10-1.0502.df1cc54.3.1
+        buildable: False
+    cudnn:
+        # Newest cudnn that supports CUDA 9
+        version: [':7.4']
+    jdk:
+        modules:
+            jdk@1.8.0_51: java/jdk1.8.0_51
+        buildable: False
+    mpich:
+        modules:
+            mpich@7.5.0: cray-mpich/7.5.0
+        buildable: False
+    py-torch:
+        variants: +cuda+cudnn+magma+mkldnn+nccl

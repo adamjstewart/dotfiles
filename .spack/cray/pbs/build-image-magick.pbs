@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#PBS -l nodes=1:ppn=32:xe
+#PBS -l walltime=24:00:00
+#PBS -q high
+#PBS -N spack/image-magick
+#PBS -A gkj
+#PBS -j oe
+#PBS -M adamjs5@illinois.edu
+#PBS -m abef
+
+# For reference, see https://bluewaters.ncsa.illinois.edu/python
+
+# Modules
+module load bwpy
+
+# Build
+aprun -n 1 -N 1 -- bwpy-environ -- spack --color=never install --test=root image-magick ^cairo+X ^python@3:
