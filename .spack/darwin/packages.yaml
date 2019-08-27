@@ -1,0 +1,20 @@
+packages:
+    all:
+        variants: ~cuda~mpi
+        providers:
+            gl:
+            - opengl
+    intel-mkl:
+        paths:
+            intel-mkl@2019.4: /opt/intel
+        buildable: False
+    jdk:
+        paths:
+            jdk@12.0.1_12: /Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home
+            jdk@10.0.1_10: /Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home
+            jdk@1.7.0_45-b18: /Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
+        buildable: False
+    opengl:
+        paths:
+            opengl@2.1: /opt/X11
+        buildable: False
