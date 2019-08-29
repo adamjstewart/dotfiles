@@ -13,3 +13,45 @@ compilers:
       fc: /bin/gfortran
     spec: gcc@4.8.5
     target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    implicit_rpaths:
+    - /usr/local/gcc/7.2.0/lib64
+    - /usr/local/gcc/7.2.0/lib/gcc/x86_64-pc-linux-gnu/7.2.0
+    - /usr/local/gcc/7.2.0/lib
+    modules:
+    - gcc/7.2.0
+    operating_system: centos7
+    paths:
+      cc: /usr/local/gcc/7.2.0/bin/gcc
+      cxx: /usr/local/gcc/7.2.0/bin/g++
+      f77: /usr/local/gcc/7.2.0/bin/gfortran
+      fc: /usr/local/gcc/7.2.0/bin/gfortran
+    spec: gcc@7.2.0
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    implicit_rpaths:
+    - /usr/local/intel/parallel_studio_xe_2018/clck/2018.1/lib/intel64
+    - /usr/local/intel/parallel_studio_xe_2018/compilers_and_libraries_2018.1.163/linux/ipp/lib/intel64
+    - /usr/local/intel/parallel_studio_xe_2018/compilers_and_libraries_2018.1.163/linux/compiler/lib/intel64_lin
+    - /usr/local/intel/parallel_studio_xe_2018/compilers_and_libraries_2018.1.163/linux/mkl/lib/intel64_lin
+    - /usr/local/intel/parallel_studio_xe_2018/compilers_and_libraries_2018.1.163/linux/tbb/lib/intel64/gcc4.4
+    - /usr/local/intel/parallel_studio_xe_2018/compilers_and_libraries_2018.1.163/linux/daal/lib/intel64_lin
+    - /usr/local/gcc/7.2.0/lib64
+    - /usr/local/gcc/7.2.0/lib
+    - /usr/local/gcc/7.2.0/lib/gcc/x86_64-pc-linux-gnu/7.2.0
+    modules:
+    - intel/18.0
+    operating_system: centos7
+    paths:
+      cc: /usr/local/intel/parallel_studio_xe_2018/compilers_and_libraries_2018.1.163/linux/bin/intel64/icc
+      cxx: /usr/local/intel/parallel_studio_xe_2018/compilers_and_libraries_2018.1.163/linux/bin/intel64/icpc
+      f77: /usr/local/intel/parallel_studio_xe_2018/compilers_and_libraries_2018.1.163/linux/bin/intel64/ifort
+      fc: /usr/local/intel/parallel_studio_xe_2018/compilers_and_libraries_2018.1.163/linux/bin/intel64/ifort
+    spec: intel@18.0.1
+    target: x86_64
