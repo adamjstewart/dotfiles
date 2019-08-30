@@ -1,0 +1,156 @@
+packages:
+    all:
+        compiler:
+        - intel
+        providers:
+            blas:
+            - intel-parallel-studio
+            lapack:
+            - intel-parallel-studio
+            scalapack:
+            - intel-parallel-studio
+            mkl:
+            - intel-parallel-studio
+            mpi:
+            - intel-parallel-studio
+    boost:
+        modules:
+            boost@1.68.0+python^python@2.7.15: boost/1.68.0
+        buildable: False
+    cmake:
+        modules:
+            cmake@3.12.0%gcc@7.2.0: cmake/3.12.0
+        buildable: False
+    cuda:
+        modules:
+            cuda@10.0: cuda/10.0
+            cuda@9.2: cuda/9.2
+        buildable: False
+    dos2unix:
+        modules:
+            dos2unix@7.4.0: dos2unix/7.4.0
+        buildable: False
+    emacs:
+        modules:
+            emacs@26.1: emacs/26.1
+        buildable: False
+    fftw:
+        modules:
+            fftw@3.3.8%gcc@7.2.0+mpi^mvapich2@2.3: fftw-3.3.8/gcc-7.2.0/mvapich2-2.3
+            fftw@3.3.8%intel@18.0.1+mpi^intel-mpi@2018.1: fftw-3.3.8/intel-18.0/intel_mpi-2018
+            fftw@3.3.8%intel@18.0.1+mpi^mvapich2@2.3: fftw-3.3.8/intel-18.0/mvapich2-2.3
+            fftw@3.3.8%intel@18.0.1+mpi^openmpi@3.1.1: fftw-3.3.8/intel-18.0/openmpi-3.1.1
+        buildable: False
+    gcc:
+        modules:
+            gcc@7.2.0: gcc/7.2.0
+        buildable: False
+    git:
+        modules:
+            git@2.19.0: git/2.19.0
+        buildable: False
+    gsl:
+        modules:
+            gsl@2.5: gsl/2.5
+        buildable: False
+    hwloc:
+        modules:
+            hwloc@1.7.2: hwloc/1.7.2
+        buildable: False
+    intel-parallel-studio:
+        modules:
+            intel-parallel-studio@18.0.1: intel/18.0
+        buildable: False
+    java:
+        modules:
+            java@10: java/10
+            java@9: java/9
+            java@1.8: java/1.8
+        buildable: False
+    libxml2:
+        modules:
+            libxml2@2.9.1: libxml2/2.9.1
+        buildable: False
+    mathematica:
+        modules:
+            mathematica@11: mathematica/11
+        buildable: False
+    matlab:
+        modules:
+            matlab@9.5: matlab/9.5
+            matlab@9.4: matlab/9.4
+        buildable: False
+    moab:
+        modules:
+            moab@9.1.2: moab/9.1.2
+        buildable: False
+    mpfr:
+        modules:
+            mpfr@3.1.4: mpfr/3.1.4
+        buildable: False
+    mvapich2:
+        modules:
+            mvapich2@2.3%gcc@7.2.0: mvapich2/2.3-gcc-7.2.0
+            mvapich2@2.3%intel@18.0.1: mvapich2/2.3-intel-18.0
+        buildable: False
+    openblas:
+        modules:
+            openblas@0.2.20%gcc@7.2.0: openblas/0.2.20
+        buildable: False
+    openmpi:
+        modules:
+            openmpi@3.1.1%gcc@7.2.0: openmpi/3.1.1-gcc-7.2.0
+            openmpi@3.1.1%intel@18.0.1: openmpi/3.1.1-intel-18.0
+        buildable: False
+    papi:
+        modules:
+            papi@5.6.0%gcc@7.2.0: papi/5.6.0
+        buildable: False
+    pcre:
+        modules:
+            pcre@8.42: pcre/8.42
+        buildable: False
+    petsc:
+        modules:
+            petsc@3.10.0: petsc/3.10.0
+            petsc@3.10.3%gcc@7.2.0+mpi^mvapich2@2.3: petsc/3.10.3-g
+            petsc@3.11.1%gcc@7.2.0+mpi^mvapich2@2.3: petsc/3.11.1-g
+            petsc@3.11.1%intel@18.0.1+mpi^mvapich2@2.3: petsc/3.11.1-i
+        buildable: False
+    python:
+        modules:
+            python@2.7.15%gcc@7.2.0: python/2
+            python@3.7.0%gcc@7.2.0: python/3
+        buildable: False
+    r:
+        modules:
+            r@3.5.1%gcc@7.2.0: R/3.5.1
+        buildable: False
+    singularity:
+        modules:
+            singularity@3.2.0: singularity/3.2.0
+        buildable: False
+    sqlite:
+        modules:
+            sqlite@3.25.2: sqlite/3.25.2
+        buildable: False
+    subversion:
+        modules:
+            subversion@1.10.3: svn/1.10.3
+        buildable: False
+    texlive:
+        modules:
+            texlive@2018: texlive/2018
+        buildable: False
+    valgrind:
+        modules:
+            valgrind@3.13.0: valgrind/3.13.0
+        buildable: False
+    vim:
+        modules:
+            vim@8.1: vim/8.1
+        buildable: False
+    xz:
+        modules:
+            xz@5.2.2: xz/5.2.2
+        buildable: False

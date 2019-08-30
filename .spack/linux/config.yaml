@@ -1,4 +1,3 @@
 config:
-    # Build in scratch directory
     build_stage:
         - /scratch/users/$user
