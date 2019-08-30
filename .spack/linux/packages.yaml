@@ -61,11 +61,11 @@ packages:
         modules:
             intel-parallel-studio@18.0.1: intel/18.0
         buildable: False
-    java:
+    jdk:
         modules:
-            java@10: java/10
-            java@9: java/9
-            java@1.8: java/1.8
+            jdk@10: java/10
+            jdk@9: java/9
+            jdk@1.8: java/1.8
         buildable: False
     libxml2:
         modules:
