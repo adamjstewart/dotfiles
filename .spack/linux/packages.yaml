@@ -132,7 +132,7 @@ packages:
         buildable: False
     sqlite:
         modules:
-            sqlite@3.25.2: sqlite/3.25.2
+            sqlite@3.25.2~fts: sqlite/3.25.2
         buildable: False
     subversion:
         modules:
