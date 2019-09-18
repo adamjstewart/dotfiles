@@ -3,7 +3,6 @@ compilers:
     environment: {}
     extra_rpaths: []
     flags: {}
-    implicit_rpaths: []
     modules: []
     operating_system: centos7
     paths:
@@ -17,10 +16,6 @@ compilers:
     environment: {}
     extra_rpaths: []
     flags: {}
-    implicit_rpaths:
-    - /usr/local/gcc/7.2.0/lib64
-    - /usr/local/gcc/7.2.0/lib/gcc/x86_64-pc-linux-gnu/7.2.0
-    - /usr/local/gcc/7.2.0/lib
     modules:
     - gcc/7.2.0
     operating_system: centos7
@@ -35,16 +30,6 @@ compilers:
     environment: {}
     extra_rpaths: []
     flags: {}
-    implicit_rpaths:
-    - /usr/local/intel/parallel_studio_xe_2018/clck/2018.1/lib/intel64
-    - /usr/local/intel/parallel_studio_xe_2018/compilers_and_libraries_2018.1.163/linux/ipp/lib/intel64
-    - /usr/local/intel/parallel_studio_xe_2018/compilers_and_libraries_2018.1.163/linux/compiler/lib/intel64_lin
-    - /usr/local/intel/parallel_studio_xe_2018/compilers_and_libraries_2018.1.163/linux/mkl/lib/intel64_lin
-    - /usr/local/intel/parallel_studio_xe_2018/compilers_and_libraries_2018.1.163/linux/tbb/lib/intel64/gcc4.4
-    - /usr/local/intel/parallel_studio_xe_2018/compilers_and_libraries_2018.1.163/linux/daal/lib/intel64_lin
-    - /usr/local/gcc/7.2.0/lib64
-    - /usr/local/gcc/7.2.0/lib
-    - /usr/local/gcc/7.2.0/lib/gcc/x86_64-pc-linux-gnu/7.2.0
     modules:
     - intel/18.0
     operating_system: centos7

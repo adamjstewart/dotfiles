@@ -3,7 +3,6 @@ compilers:
     environment: {}
     extra_rpaths: []
     flags: {}
-    implicit_rpaths: []
     modules: []
     operating_system: mojave
     paths:
@@ -17,9 +16,6 @@ compilers:
     environment: {}
     extra_rpaths: []
     flags: {}
-    implicit_rpaths:
-    - /usr/local/Cellar/gcc/7.2.0/lib/gcc/7/gcc/x86_64-apple-darwin17.0.0/7.2.0
-    - /usr/local/Cellar/gcc/7.2.0/lib/gcc/7
     modules: []
     operating_system: mojave
     paths:
