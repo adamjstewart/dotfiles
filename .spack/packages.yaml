@@ -11,4 +11,4 @@ packages:
     # Hummingbird data requires GeoPackage (sqlite3) support
     # Build with Python bindings
     gdal:
-        variants: +hdf4+hdf5+java+mdb+jasper+openjpeg+sqlite3+python
+        variants: +hdf4+hdf5+java+mdb+jasper+openjpeg+sqlite3+python+libkml
