@@ -8,7 +8,20 @@ compilers:
     paths:
       cc: /usr/bin/clang
       cxx: /usr/bin/clang++
-      f77: null
-      fc: null
+      f77: /Users/Adam/spack/opt/spack/darwin-catalina-ivybridge/clang-11.0.0-apple/gcc-9.2.0-ok5gz4q7bgiqmom4dxtr4vbzy4ukdusx/bin/gfortran
+      fc: /Users/Adam/spack/opt/spack/darwin-catalina-ivybridge/clang-11.0.0-apple/gcc-9.2.0-ok5gz4q7bgiqmom4dxtr4vbzy4ukdusx/bin/gfortran
     spec: clang@11.0.0-apple
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: catalina
+    paths:
+      cc: /Users/Adam/spack/opt/spack/darwin-catalina-ivybridge/clang-11.0.0-apple/gcc-9.2.0-ok5gz4q7bgiqmom4dxtr4vbzy4ukdusx/bin/gcc
+      cxx: /Users/Adam/spack/opt/spack/darwin-catalina-ivybridge/clang-11.0.0-apple/gcc-9.2.0-ok5gz4q7bgiqmom4dxtr4vbzy4ukdusx/bin/g++
+      f77: /Users/Adam/spack/opt/spack/darwin-catalina-ivybridge/clang-11.0.0-apple/gcc-9.2.0-ok5gz4q7bgiqmom4dxtr4vbzy4ukdusx/bin/gfortran
+      fc: /Users/Adam/spack/opt/spack/darwin-catalina-ivybridge/clang-11.0.0-apple/gcc-9.2.0-ok5gz4q7bgiqmom4dxtr4vbzy4ukdusx/bin/gfortran
+    spec: gcc@9.2.0
     target: x86_64
