@@ -1,6 +1,2 @@
 modules:
-  enable::
-    - lmod
-  lmod:
-    core_compilers:
-      - 'clang@9.0.0-apple'
+  enable:: []
