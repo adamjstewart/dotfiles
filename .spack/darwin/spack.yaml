@@ -1,0 +1,43 @@
+spack:
+  specs:
+  # Newer versions of Linux tools
+  - bash
+  - graphviz
+  - watch
+  - wget
+
+  # Software installation tools
+  - automake
+  - autoconf
+  - libtool
+  - m4
+  - cmake
+
+  # Compilers
+  - gcc
+
+  # Version control systems
+  - mercurial
+  - subversion
+
+  # Python libraries
+  - python
+  - py-flake8
+  - py-matplotlib
+  - py-numpy
+  - py-pandas
+  - py-pytest
+  - py-setuptools
+  - py-scikit-learn
+  - py-scipy
+  - py-sphinx
+  - py-sphinx-rtd-theme
+  - py-tables
+  - py-torch
+  - py-torchvision
+
+  # Research libraries
+  - gdal
+
+  concretization: together
+  view: /usr/local
