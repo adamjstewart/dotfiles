@@ -61,5 +61,17 @@ then
     fi
 fi
 
+# Java settings
+for jar in /usr/local/*.jar
+do
+    if [[ -z "$CLASSPATH" ]]
+    then
+        export CLASSPATH="$jar"
+    elif [[ ! "$CLASSPATH" =~ "$jar" ]]
+    then
+        export CLASSPATH+=":$jar"
+    fi
+done
+
 # GPG settings
 export GPG_TTY=$(tty)
