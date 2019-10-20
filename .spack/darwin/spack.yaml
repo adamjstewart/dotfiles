@@ -32,6 +32,7 @@ spack:
   - py-scipy
   - py-sphinx
   - py-sphinx-rtd-theme
+  - py-sphinxcontrib-programoutput
   - py-tables
   - py-torch
   - py-torchvision
