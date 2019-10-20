@@ -12,6 +12,8 @@ spack:
   - libtool
   - m4
   - cmake
+  - ninja
+  - patchelf
 
   # Compilers
   - gcc
@@ -19,6 +21,7 @@ spack:
   # Version control systems
   - mercurial
   - subversion
+  - gnupg
 
   # Python libraries
   - python
