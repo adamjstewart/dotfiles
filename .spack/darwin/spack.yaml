@@ -15,9 +15,6 @@ spack:
   - ninja
   - patchelf
 
-  # Compilers
-  - gcc
-
   # Version control systems
   - mercurial
   - subversion
