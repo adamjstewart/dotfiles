@@ -41,4 +41,3 @@ spack:
   - gdal
 
   concretization: together
-  view: /usr/local
