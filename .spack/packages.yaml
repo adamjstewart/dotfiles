@@ -1,7 +1,4 @@
 packages:
-    # Default to Python 3.7
-    python:
-        version: ['3.7']
     # GDAL
     #
     # Landsat data requires GeoTIFF support
