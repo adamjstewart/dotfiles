@@ -52,7 +52,7 @@ then
 
     if [[ ! "$PATH" =~ "$SPACK_ROOT/bin" ]]
     then
-        export PATH+=":$SPACK_ROOT/bin"
+        export PATH="$SPACK_ROOT/bin:$PATH"
     fi
 
     if [[ -d "$SPACK_ROOT/share/spack/modules/cray-cnl5-interlagos" && ! "$MODULEPATH" =~ "$SPACK_ROOT/share/spack/modules/cray-cnl5-interlagos" ]]
@@ -61,17 +61,27 @@ then
     fi
 fi
 
-# Java settings
-for jar in /usr/local/*.jar
-do
-    if [[ -z "$CLASSPATH" ]]
+if [[ -d "$HOME/.spack/darwin/.spack-env/view" ]]
+then
+    if [[ ! "$PATH" =~ "$HOME/.spack/darwin/.spack-env/view/bin" ]]
     then
-        export CLASSPATH="$jar"
-    elif [[ ! "$CLASSPATH" =~ "$jar" ]]
-    then
-        export CLASSPATH+=":$jar"
+        export PATH="$HOME/.spack/darwin/.spack-env/view/bin:$PATH"
     fi
-done
+
+    # Trailing colon allows `man' to search system locations as well
+    export MANPATH="$HOME/.spack/darwin/.spack-env/view/share/man:$HOME/.spack/darwin/.spack-env/view/man:"
+
+    for jar in ~/.spack/darwin/.spack-env/view/*.jar
+    do
+        if [[ -z "$CLASSPATH" ]]
+        then
+            export CLASSPATH="$jar"
+        elif [[ ! "$CLASSPATH" =~ "$jar" ]]
+        then
+            export CLASSPATH+=":$jar"
+        fi
+    done
+fi
 
 # GPG settings
 export GPG_TTY=$(tty)
