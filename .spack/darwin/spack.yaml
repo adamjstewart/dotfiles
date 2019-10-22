@@ -22,11 +22,15 @@ spack:
 
   # Python libraries
   - python
+  - py-codecov
   - py-flake8
   - py-matplotlib
   - py-numpy
   - py-pandas
   - py-pytest
+  - py-pytest-cov
+  - py-pytest-mock
+  - py-pytest-runner
   - py-setuptools
   - py-scikit-learn
   - py-scipy
