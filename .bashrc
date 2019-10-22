@@ -6,7 +6,7 @@
 # On Linux, this occurs when a new Terminal is opened
 
 # See `man shopt`
-shopt -s checkhash checkwinsize cmdhist dirspell dotglob extglob globstar histappend no_empty_cmd_completion nocaseglob nullglob
+shopt -s checkhash checkwinsize cmdhist dirspell dotglob extglob globstar histappend no_empty_cmd_completion nocaseglob nullglob 2> /dev/null
 
 # Source all user setting files
 # Note: .git-prompt.sh must come before .svn-prompt.sh and .bash_prompt
