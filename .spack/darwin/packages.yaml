@@ -2,8 +2,18 @@ packages:
     all:
         variants: ~cuda~mpi
         providers:
+            blas:
+            - intel-mkl
             gl:
             - opengl
+            lapack:
+            - intel-mkl
+            mkl:
+            - intel-mkl
+    intel-mkl:
+        paths:
+            intel-mkl@2019.4.233: /opt/intel
+        buildable: False
     jdk:
         paths:
             jdk@12.0.1_12: /Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home
