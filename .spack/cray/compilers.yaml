@@ -196,7 +196,7 @@ compilers:
     target: any
 - compiler:
     environment: {}
-    extra_rpaths: []
+    extra_rpaths: ['/opt/gcc/5.3.0/snos/lib64']
     flags: {}
     modules:
     - PrgEnv-gnu
