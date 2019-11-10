@@ -18,8 +18,7 @@ packages:
             cuda@9.1.85: cudatoolkit/9.1.85_3.10-1.0502.df1cc54.3.1
         buildable: False
     cudnn:
-        # Newest cudnn that supports CUDA 9
-        version: [':7.4']
+        version: ['9.0-linux-x64-v7.6.5.32']
     jdk:
         modules:
             jdk@1.8.0_51: java/jdk1.8.0_51
