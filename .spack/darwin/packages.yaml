@@ -24,3 +24,5 @@ packages:
         paths:
             opengl@2.1: /opt/X11
         buildable: False
+    py-torch:
+        variants: ~cuda~cudnn~nccl~mkldnn

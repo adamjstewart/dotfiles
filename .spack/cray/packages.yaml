@@ -28,5 +28,3 @@ packages:
         modules:
             mpich@7.5.0: cray-mpich/7.5.0
         buildable: False
-    py-torch:
-        variants: +cuda+cudnn+magma+mkldnn+nccl
