@@ -20,7 +20,7 @@
 [commit]
 
     # Automatically sign using GPG keys
-    gpgsign = true
+    gpgsign = false
 
 [core]
 
