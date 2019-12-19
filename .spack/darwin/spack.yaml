@@ -2,6 +2,7 @@ spack:
   specs:
   # Newer versions of Linux tools
   - bash
+  - gnupg
   - graphviz
   - watch
   - wget
@@ -18,12 +19,13 @@ spack:
   # Version control systems
   - mercurial
   - subversion
-  - gnupg
 
   # Python libraries
   - python
+  - py-boto3
   - py-codecov
   - py-flake8
+  - py-pyinstrument
   - py-matplotlib
   - py-numpy
   - py-pandas
@@ -43,6 +45,7 @@ spack:
   - py-twine
 
   # Research libraries
+  - awscli
   - gdal
 
   concretization: together
