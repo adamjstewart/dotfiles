@@ -9,6 +9,3 @@ packages:
     # Build with Python bindings
     gdal:
         variants: +hdf4+hdf5+java+mdb+jasper+openjpeg+sqlite3+python+libkml
-    # Needed for Python 3 support
-    node-js:
-        version: ['13:']
