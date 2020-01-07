@@ -46,6 +46,7 @@ spack:
 
   # Research libraries
   - awscli
+  - aws-parallelcluster
   - gdal
 
   concretization: together
