@@ -4,6 +4,7 @@ spack:
   - bash
   - gnupg
   - graphviz
+  - kcov
   - watch
   - wget
 
@@ -25,10 +26,10 @@ spack:
   - py-boto3
   - py-codecov
   - py-flake8
-  - py-pyinstrument
   - py-matplotlib
   - py-numpy
   - py-pandas
+  - py-pyinstrument
   - py-pytest
   - py-pytest-cov
   - py-pytest-mock
