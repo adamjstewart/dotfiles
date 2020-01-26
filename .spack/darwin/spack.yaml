@@ -44,6 +44,7 @@ spack:
   - py-torch
   - py-torchvision
   - py-twine
+  - py-vermin
 
   # Research libraries
   - awscli
