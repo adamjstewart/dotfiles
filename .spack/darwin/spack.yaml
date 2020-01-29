@@ -23,6 +23,7 @@ spack:
 
   # Python libraries
   - python
+  - py-black
   - py-boto3
   - py-codecov
   - py-flake8
