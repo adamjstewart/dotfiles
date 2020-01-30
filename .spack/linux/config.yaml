@@ -1,3 +1,2 @@
 config:
-    build_stage:
-        - /scratch/users/$user
+    build_jobs: 4
