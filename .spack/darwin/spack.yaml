@@ -16,6 +16,7 @@ spack:
   - cmake
   - ninja
   - patchelf
+  - scons
 
   # Version control systems
   - mercurial
