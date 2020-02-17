@@ -1,0 +1,6 @@
+packages:
+  openmpi:
+    modules:
+      openmpi@3.0.0%gcc@6.1.0: gnu/openmpi-3.0.0-gnu-6.1.0
+      openmpi@3.0.0%intel@15.0.3: intel/openmpi-3.0.0-intel-15.0.3
+    buildable: False
