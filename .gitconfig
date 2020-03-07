@@ -20,7 +20,7 @@
 [commit]
 
     # Automatically sign using GPG keys
-    gpgsign = false
+    gpgsign = true
 
 [core]
 
@@ -65,4 +65,4 @@
     # Set user commit information
     email = ajstewart426@gmail.com
     name = Adam J. Stewart
-    signingkey = 7F00A7CEDBF7E7B7
+    signingkey = C66C0675661156FC
