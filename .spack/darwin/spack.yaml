@@ -24,6 +24,7 @@ spack:
 
   # Python libraries
   - python
+  - py-astpretty
   - py-black
   - py-boto3
   - py-codecov
