@@ -28,6 +28,7 @@ spack:
   - py-black
   - py-boto3
   - py-codecov
+  - py-dgl
   - py-flake8
   - py-matplotlib
   - py-numpy
@@ -45,6 +46,7 @@ spack:
   - py-sphinxcontrib-programoutput
   - py-tables
   - py-torch
+  - py-torchtext
   - py-torchvision
   - py-twine
   - py-vermin
