@@ -12,6 +12,9 @@
     # See changes since branching off of develop
     changes = diff develop...HEAD
 
+    # Delete all local branches except develop
+    purge = !git branch | grep -v develop | xargs git branch -D
+
 [color]
 
     # Use colors in Git commands that are capable of colored output
