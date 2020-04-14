@@ -30,3 +30,7 @@ packages:
         buildable: False
     py-torch:
         variants: ~cuda~cudnn~nccl~mkldnn
+    rust:
+        paths:
+            rust@nightly: /Users/Adam/.cargo
+        buildable: False
