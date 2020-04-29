@@ -24,13 +24,12 @@ spack:
 
   # Python libraries
   - python
-  - py-astpretty
   - py-black
   - py-boto3
   - py-codecov
-  - py-dgl
   - py-flake8
   - py-matplotlib
+  - py-mypy
   - py-numpy
   - py-pandas
   - py-pyinstrument
@@ -46,8 +45,8 @@ spack:
   - py-sphinxcontrib-programoutput
   - py-tables
   - py-torch
-  - py-torchtext
   - py-torchvision
+  - py-tox
   - py-twine
   - py-vermin
 
