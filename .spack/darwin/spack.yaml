@@ -26,10 +26,14 @@ spack:
   - python
   - py-black
   - py-boto3
+  - py-cartopy
   - py-codecov
+  - py-dgl
   - py-flake8
+  - py-gensim
   - py-matplotlib
   - py-mypy
+  - py-nltk
   - py-numpy
   - py-pandas
   - py-pyinstrument
@@ -37,15 +41,18 @@ spack:
   - py-pytest-cov
   - py-pytest-mock
   - py-pytest-runner
+  - py-pyyaml
   - py-setuptools
   - py-scikit-learn
   - py-scipy
+  - py-spacy
   - py-sphinx
   - py-sphinx-rtd-theme
   - py-sphinxcontrib-programoutput
   - py-tables
   - py-torch
   - py-torchvision
+  - py-transformers
   - py-tox
   - py-twine
   - py-vermin
