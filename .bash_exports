@@ -68,6 +68,8 @@ then
         export PATH="$HOME/.spack/darwin/.spack-env/view/bin:$PATH"
     fi
 
+    export DYLD_FALLBACK_LIBRARY_PATH="$HOME/.spack/darwin/.spack-env/view/lib:$DYLD_LIBRARY_PATH"
+
     # Trailing colon allows `man' to search system locations as well
     export MANPATH="$HOME/.spack/darwin/.spack-env/view/share/man:$HOME/.spack/darwin/.spack-env/view/man:"
 
