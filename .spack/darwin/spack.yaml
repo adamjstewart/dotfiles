@@ -33,7 +33,6 @@ spack:
   - py-gensim
   - py-matplotlib
   - py-mypy
-  - py-nltk
   - py-numpy
   - py-pandas
   - py-pyinstrument
@@ -46,6 +45,7 @@ spack:
   - py-scikit-learn
   - py-scipy
   - py-spacy
+  - py-spacy-models-en-core-web-sm
   - py-sphinx
   - py-sphinx-rtd-theme
   - py-sphinxcontrib-programoutput
