@@ -52,7 +52,6 @@ spack:
   - py-tables
   - py-torch
   - py-torchvision
-  - py-transformers
   - py-tox
   - py-twine
   - py-vermin
