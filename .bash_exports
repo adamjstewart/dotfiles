@@ -87,3 +87,6 @@ fi
 
 # GPG settings
 export GPG_TTY=$(tty)
+
+# DGL settings
+export DGLBACKEND=pytorch
