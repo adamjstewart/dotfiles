@@ -1,6 +1,6 @@
 compilers:
 - compiler:
-    spec: clang@11.0.3-apple
+    spec: apple-clang@11.0.3
     paths:
       cc: /usr/bin/clang
       cxx: /usr/bin/clang++
