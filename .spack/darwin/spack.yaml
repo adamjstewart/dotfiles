@@ -25,12 +25,9 @@ spack:
   # Python libraries
   - python
   - py-black
-  - py-boto3
   - py-cartopy
   - py-codecov
-  - py-dgl
   - py-flake8
-  - py-gensim
   - py-matplotlib
   - py-mypy
   - py-numpy
@@ -44,8 +41,6 @@ spack:
   - py-setuptools
   - py-scikit-learn
   - py-scipy
-  - py-spacy
-  - py-spacy-models-en-core-web-sm
   - py-sphinx
   - py-sphinx-rtd-theme
   - py-sphinxcontrib-programoutput
@@ -57,8 +52,6 @@ spack:
   - py-vermin
 
   # Research libraries
-  - awscli
-  - aws-parallelcluster
   - gdal
 
   concretization: together
