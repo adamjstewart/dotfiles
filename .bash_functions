@@ -171,6 +171,7 @@ function extract {
                 *.bz2)              bunzip2    "$file" ;;
                 *.xz)               unxz       "$file" ;;
                 *.zip)              unzip      "$file" ;;
+                *.whl)              unzip      "$file" ;;
                 *.rar)              unrar x    "$file" ;;
                 *.lzma)             unlzma     "$file" ;;
                 *.Z)                uncompress "$file" ;;
