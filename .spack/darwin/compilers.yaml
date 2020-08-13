@@ -4,8 +4,8 @@ compilers:
     paths:
       cc: /usr/bin/clang
       cxx: /usr/bin/clang++
-      f77: /Users/Adam/spack/opt/spack/darwin-catalina-x86_64/clang-11.0.3-apple/gcc-9.3.0-th2gg6gtbyz5ipoh5joauzedtwau6goi/bin/gfortran
-      fc: /Users/Adam/spack/opt/spack/darwin-catalina-x86_64/clang-11.0.3-apple/gcc-9.3.0-th2gg6gtbyz5ipoh5joauzedtwau6goi/bin/gfortran
+      f77: /Users/Adam/spack/opt/spack/darwin-catalina-x86_64/apple-clang-11.0.3/gcc-10.2.0-phyqkhktab6nxd2noi3kklzjxsnku5le/bin/gfortran
+      fc: /Users/Adam/spack/opt/spack/darwin-catalina-x86_64/apple-clang-11.0.3/gcc-10.2.0-phyqkhktab6nxd2noi3kklzjxsnku5le/bin/gfortran
     flags: {}
     operating_system: catalina
     target: x86_64
@@ -13,12 +13,12 @@ compilers:
     environment: {}
     extra_rpaths: []
 - compiler:
-    spec: gcc@9.3.0
+    spec: gcc@10.2.0
     paths:
-      cc: /Users/Adam/spack/opt/spack/darwin-catalina-x86_64/clang-11.0.3-apple/gcc-9.3.0-th2gg6gtbyz5ipoh5joauzedtwau6goi/bin/gcc
-      cxx: /Users/Adam/spack/opt/spack/darwin-catalina-x86_64/clang-11.0.3-apple/gcc-9.3.0-th2gg6gtbyz5ipoh5joauzedtwau6goi/bin/g++
-      f77: /Users/Adam/spack/opt/spack/darwin-catalina-x86_64/clang-11.0.3-apple/gcc-9.3.0-th2gg6gtbyz5ipoh5joauzedtwau6goi/bin/gfortran
-      fc: /Users/Adam/spack/opt/spack/darwin-catalina-x86_64/clang-11.0.3-apple/gcc-9.3.0-th2gg6gtbyz5ipoh5joauzedtwau6goi/bin/gfortran
+      cc: /Users/Adam/spack/opt/spack/darwin-catalina-x86_64/apple-clang-11.0.3/gcc-10.2.0-phyqkhktab6nxd2noi3kklzjxsnku5le/bin/gcc
+      cxx: /Users/Adam/spack/opt/spack/darwin-catalina-x86_64/apple-clang-11.0.3/gcc-10.2.0-phyqkhktab6nxd2noi3kklzjxsnku5le/bin/g++
+      f77: /Users/Adam/spack/opt/spack/darwin-catalina-x86_64/apple-clang-11.0.3/gcc-10.2.0-phyqkhktab6nxd2noi3kklzjxsnku5le/bin/gfortran
+      fc: /Users/Adam/spack/opt/spack/darwin-catalina-x86_64/apple-clang-11.0.3/gcc-10.2.0-phyqkhktab6nxd2noi3kklzjxsnku5le/bin/gfortran
     flags: {}
     operating_system: catalina
     target: x86_64
