@@ -1,4 +1,0 @@
-config:
-    # Build in scratch directory
-    build_stage:
-        - /scratch/sciteam/$user
