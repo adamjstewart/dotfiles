@@ -61,28 +61,22 @@ then
     fi
 fi
 
-if [[ -d "$HOME/.spack/darwin/.spack-env/view" ]]
+if [[ -d "$HOME/.spack/.spack-env/view" ]]
 then
-    if [[ ! "$PATH" =~ "$HOME/.spack/darwin/.spack-env/view/bin" ]]
-    then
-        export PATH="$HOME/.spack/darwin/.spack-env/view/bin:$PATH"
-    fi
+    export PATH="$HOME/.spack/.spack-env/view/bin:$PATH"
 
-    export PYTHONPATH="$HOME/.spack/darwin/.spack-env/view/lib/python3.8/site-packages:$PYTHONPATH"
-    export DYLD_FALLBACK_LIBRARY_PATH="$HOME/.spack/darwin/.spack-env/view/lib:$DYLD_LIBRARY_PATH"
+    for path in ~/.spack/.spack-env/view/lib/python*/site-packages
+    do
+        export PYTHONPATH+=":$path"
+    done
+    export DYLD_FALLBACK_LIBRARY_PATH+=":$HOME/.spack/.spack-env/view/lib"
 
     # Trailing colon allows `man' to search system locations as well
-    export MANPATH="$HOME/.spack/darwin/.spack-env/view/share/man:$HOME/.spack/darwin/.spack-env/view/man:"
+    export MANPATH+=":$HOME/.spack/.spack-env/view/share/man:$HOME/.spack/.spack-env/view/man:"
 
-    for jar in ~/.spack/darwin/.spack-env/view/*.jar
+    for jar in ~/.spack/.spack-env/view/*.jar
     do
-        if [[ -z "$CLASSPATH" ]]
-        then
-            export CLASSPATH="$jar"
-        elif [[ ! "$CLASSPATH" =~ "$jar" ]]
-        then
-            export CLASSPATH+=":$jar"
-        fi
+        export CLASSPATH+=":$jar"
     done
 fi
 
