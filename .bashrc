@@ -13,16 +13,8 @@ shopt -s checkhash checkwinsize cmdhist dirspell dotglob extglob globstar histap
 # Note: .svn-prompt.sh must come before .bash_prompt
 # Note: .bash_exports must come before .bash_aliases
 # Note: .bash_aliases must come before .bash_functions
-for file in ~/.git-{completion.bash,prompt.sh} ~/.svn-prompt.sh ~/.bash_{exports,aliases,functions,prompt}
-do
-    if [[ -f "$file" ]]
-    then
-        source "$file"
-    fi
-done
-
 # Source spack setting files
-for file in "$SPACK_ROOT/share/spack/spack-completion.bash"
+for file in ~/.git-{completion.bash,prompt.sh} ~/.svn-prompt.sh ~/.bash_{exports,aliases,functions,prompt} "$SPACK_ROOT/share/spack/setup-env.sh"
 do
     if [[ -f "$file" ]]
     then
