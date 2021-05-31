@@ -6,6 +6,8 @@ set colored-stats on
 set completion-ignore-case on
 # (Bash 4.2+) Set hyphens and underscores as equivalent for filename matching and completion
 set completion-map-case on
+# (Bash 4.4+) Insert each paste into the editing buffer as a single string of characters
+set enable-bracketed-paste off
 # Completed names which are directories have a slash appended
 set mark-directories on
 # Completed names which are symbolic links to directories have a slash appended
