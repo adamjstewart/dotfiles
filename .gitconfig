@@ -32,6 +32,8 @@
 [commit]
 
     # Automatically sign using GPG keys
+    # Instructions for copying GPG keys from one machine to another:
+    # https://makandracards.com/makandra-orga/37763-gpg-extract-private-key-and-import-on-different-machine
     gpgsign = true
 
 [core]
