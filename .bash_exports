@@ -58,6 +58,8 @@ then
     if [[ -d "$SPACK_ROOT/share/spack/modules/cray-cnl5-interlagos" && ! "$MODULEPATH" =~ "$SPACK_ROOT/share/spack/modules/cray-cnl5-interlagos" ]]
     then
         export MODULEPATH="$SPACK_ROOT/share/spack/modules/cray-cnl5-interlagos:$MODULEPATH"
+    else
+        export SPACK_SKIP_MODULES=true
     fi
 fi
 
