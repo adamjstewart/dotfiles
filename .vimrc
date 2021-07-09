@@ -68,6 +68,8 @@ set shiftwidth=4                " number of spaces to use for each auto-indent, 
 " Key Remaps
 nmap <silent> ,/ :nohlsearch<CR>
 nnoremap ; :
+" https://github.com/microsoft/terminal/issues/5790#issuecomment-660532307
+nnoremap v <c-v>
 
 " Automatically add closing bracket and indent properly
 "inoremap {<cr> {<cr>}<c-o>O<tab>
