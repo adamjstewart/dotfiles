@@ -76,6 +76,8 @@ then
     # Trailing colon allows `man' to search system locations as well
     export MANPATH+=":$HOME/.spack/.spack-env/view/share/man:$HOME/.spack/.spack-env/view/man:"
 
+    export SPATIALINDEX_C_LIBRARY="$HOME/.spack/.spack-env/view/lib/libspatialindex_c.dylib"
+
     for jar in ~/.spack/.spack-env/view/*.jar
     do
         export CLASSPATH+=":$jar"
