@@ -14,6 +14,7 @@ set backspace=indent,eol,start  " allow backspacing over everything in insert mo
 set mousefocus                  " window focus follows mouse
 set mousehide                   " hide mouse pointer when characters are typed
 set history=50                  " keep 50 lines of command line history
+set viminfo='100,<1000,s100,h   " increase buffer size: https://stackoverflow.com/q/3676855
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 "if has('mouse')
