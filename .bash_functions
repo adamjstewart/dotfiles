@@ -167,12 +167,12 @@ function extract {
                 *.tar.xz|*.txz)     tar xvJf   "$file" ;;
                 *.tar.Z)            tar xvZf   "$file" ;;
                 *.tar)              tar xvf    "$file" ;;
-                *.gz)               gunzip     "$file" ;;
-                *.bz2)              bunzip2    "$file" ;;
-                *.xz)               unxz       "$file" ;;
+                *.gz)               gunzip -k  "$file" ;;
+                *.bz2)              bunzip2 -k "$file" ;;
+                *.xz)               unxz -k    "$file" ;;
                 *.zip|*.ZIP|*.whl)  unzip      "$file" ;;
                 *.rar)              unrar x    "$file" ;;
-                *.lzma)             unlzma     "$file" ;;
+                *.lzma)             unlzma -k  "$file" ;;
                 *.Z)                uncompress "$file" ;;
                 *.7z)               7z x       "$file" ;;
                 *.exe)              cabextract "$file" ;;
