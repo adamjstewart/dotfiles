@@ -2,12 +2,18 @@
 
     # Abbreviated command names
     ad = add
+    bi = bisect
     br = branch
     ci = commit
     co = checkout
     di = diff
-    re = rebase
+    lo = log
+    pl = pull
+    ps = push
+    rb = rebase
+    rs = restore
     st = status
+    sw = switch
 
     # See changes since branching off of main branch
     changes = "!f() { \
