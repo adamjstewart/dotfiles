@@ -36,7 +36,6 @@ alias -- -='cd "$OLDPWD"'
 alias ..='cd ..'
 
 # Text Editor Aliases
-alias s='subl'
 alias v='vim'
 alias vd='vimdiff'
 alias va='vim     "$HOME/.bash_aliases"'
@@ -50,6 +49,7 @@ alias vi='vim     "$HOME/.inputrc"'
 alias si='bind -f "$HOME/.inputrc"'
 
 # System Aliases
+alias g='git'
 alias mkdirp='mkdir -p'
 alias cl='clear'
 alias grep='grep --color=auto -I'
@@ -98,6 +98,7 @@ fi
 # Spack Aliases
 if [[ "$SPACK_ROOT" ]]
 then
+    alias s='spack'
     alias spack2='python2 $(which spack)'
     alias spack3='python3 $(which spack)'
 
