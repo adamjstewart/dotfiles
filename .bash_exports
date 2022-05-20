@@ -55,12 +55,7 @@ then
         export PATH="$SPACK_ROOT/bin:$PATH"
     fi
 
-    if [[ -d "$SPACK_ROOT/share/spack/modules/cray-cnl5-interlagos" && ! "$MODULEPATH" =~ "$SPACK_ROOT/share/spack/modules/cray-cnl5-interlagos" ]]
-    then
-        export MODULEPATH="$SPACK_ROOT/share/spack/modules/cray-cnl5-interlagos:$MODULEPATH"
-    else
-        export SPACK_SKIP_MODULES=true
-    fi
+    export SPACK_SKIP_MODULES=true
 fi
 
 if [[ -d "$HOME/.spack/.spack-env/view" ]]
@@ -77,15 +72,7 @@ then
     export MANPATH+=":$HOME/.spack/.spack-env/view/share/man:$HOME/.spack/.spack-env/view/man:"
 
     export SPATIALINDEX_C_LIBRARY="$HOME/.spack/.spack-env/view/lib/libspatialindex_c.dylib"
-
-    for jar in ~/.spack/.spack-env/view/*.jar
-    do
-        export CLASSPATH+=":$jar"
-    done
 fi
 
 # GPG settings
 export GPG_TTY=$(tty)
-
-# DGL settings
-export DGLBACKEND=pytorch
