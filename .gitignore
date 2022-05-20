@@ -45,15 +45,3 @@ Session.vim
 # Temporary
 .netrwhist
 *~
-
-#################
-# Sumblime Text #
-#################
-
-# Workspace files
-*.sublime-workspace
-
-# Cache files
-*.stTheme.cache
-*.tmlanguage.cache
-*.tmPreferences.cache

@@ -8,10 +8,5 @@ README.md
 screenshots
 .git
 
-# Sublime Text
-sublime-settings
-dotfiles.sublime-project
-dotfiles.sublime-workspace
-
 # Miscellaneous
 .DS_Store

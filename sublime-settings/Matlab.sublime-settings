@@ -1,7 +1,0 @@
-{
-    "extensions":
-    [
-        // Use Matlab syntax highlighting for .m files
-        "m"
-    ]
-}
