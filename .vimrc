@@ -72,6 +72,10 @@ nnoremap ; :
 " https://github.com/microsoft/terminal/issues/5790#issuecomment-660532307
 nnoremap v <c-v>
 
+" Spack has a custom black configuration
+" TODO - why doesn't this work in .vim/ftplugin/python.vim?
+autocmd BufNewFile,BufRead ~/spack/*.py set colorcolumn=100
+
 " Automatically add closing bracket and indent properly
 "inoremap {<cr> {<cr>}<c-o>O<tab>
 "inoremap [<cr> [<cr>]<c-o>O<tab>
