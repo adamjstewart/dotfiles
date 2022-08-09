@@ -117,6 +117,18 @@ if has("autocmd")
     
     " Clear searches when opening file
     autocmd BufReadPre <buffer> :let @/ = ""
+
+    " Add color column with project-specific line length
+    function! ColorColumn()
+        let path = expand('%:p:h')
+        if path =~ expand("~/spack")
+            setlocal colorcolumn=100
+        else
+            setlocal colorcolumn=89
+        endif
+    endfunction
+
+    autocmd BufRead,BufNewFile *.py call ColorColumn()
 endif
 
 " Convenient command to see the difference between the current buffer and the

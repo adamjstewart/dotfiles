@@ -1,8 +1,5 @@
 " Python-specific vim settings
 
-" Black line length limit
-set colorcolumn=89
-
 " Strip trailing whitespaces upon write
 autocmd BufWrite <buffer> :call StripTrailingWhitespaces()
 
