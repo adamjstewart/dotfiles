@@ -114,6 +114,8 @@ if has("autocmd")
         " Restore search history
         let @/ = s
     endfunction
+
+    autocmd BufWrite <buffer> :call StripTrailingWhitespaces()
     
     " Clear searches when opening file
     autocmd BufReadPre <buffer> :let @/ = ""
