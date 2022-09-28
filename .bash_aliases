@@ -50,6 +50,7 @@ alias si='bind -f "$HOME/.inputrc"'
 
 # System Aliases
 alias g='git'
+alias p='python3'
 alias mkdirp='mkdir -p'
 alias cl='clear'
 alias grep='grep --color=auto -I'
