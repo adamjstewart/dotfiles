@@ -97,12 +97,12 @@ then
 fi
 
 # Spack Aliases
+alias s='spack'
+alias spack2='python2 $(which spack)'
+alias spack3='python3 $(which spack)'
+
 if [[ "$SPACK_ROOT" ]]
 then
-    alias s='spack'
-    alias spack2='python2 $(which spack)'
-    alias spack3='python3 $(which spack)'
-
     alias cs='cd $SPACK_ROOT'
     alias csv='cd $SPACK_ROOT/var/spack/repos/builtin/packages'
     alias csl='cd $SPACK_ROOT/lib/spack/spack'
