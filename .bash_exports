@@ -50,28 +50,24 @@ then
         export SPACK_ROOT="$HOME/spack"
     fi
 
-    if [[ ! "$PATH" =~ "$SPACK_ROOT/bin" ]]
-    then
-        export PATH="$SPACK_ROOT/bin:$PATH"
-    fi
-
     export SPACK_SKIP_MODULES=true
 fi
 
-if [[ -d "$HOME/.spack/.spack-env/view" ]]
+SPACK_VIEW="$SPACK_ROOT/var/spack/environments/system/.spack-env/view"
+if [[ -d "$SPACK_VIEW" ]]
 then
-    export PATH="$HOME/.spack/.spack-env/view/bin:$PATH"
+    export PATH="$SPACK_VIEW/bin:$PATH"
 
-    for path in ~/.spack/.spack-env/view/lib/python*/site-packages
+    for path in $SPACK_VIEW/lib/python*/site-packages
     do
         export PYTHONPATH+=":$path"
     done
-    export DYLD_FALLBACK_LIBRARY_PATH+=":$HOME/.spack/.spack-env/view/lib"
+    export DYLD_FALLBACK_LIBRARY_PATH+=":$SPACK_VIEW/lib"
 
     # Trailing colon allows `man' to search system locations as well
-    export MANPATH+=":$HOME/.spack/.spack-env/view/share/man:$HOME/.spack/.spack-env/view/man:"
+    export MANPATH+=":$SPACK_VIEW/share/man:$SPACK_VIEW/man:"
 
-    export SPATIALINDEX_C_LIBRARY="$HOME/.spack/.spack-env/view/lib/libspatialindex_c.dylib"
+    export SPATIALINDEX_C_LIBRARY="$SPACK_VIEW/lib/libspatialindex_c.dylib"
 fi
 
 # GPG settings
