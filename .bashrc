@@ -31,8 +31,8 @@ do
     fi
 done
 
-# This user file-creation mask prevents others from seeing my work
-umask u=rwx,g=rx,o=
+# All anyone in my group to share data and software
+umask u=rwx,g=rwx
 
 # Add tab completion for alias based on existing aliases
 complete -o "nospace" -W "$(alias | cut -d ' ' -f 2 | cut -d '=' -f 1)" alias
