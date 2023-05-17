@@ -49,7 +49,7 @@ alias vi='vim     "$HOME/.inputrc"'
 alias si='bind -f "$HOME/.inputrc"'
 
 # Slurm Aliases
-alias sq='squeue -o "%.8i %.9P %.8j %.8u %.2t %.10M %.5D %.4C %.10m %.15b %R"'
+alias sq='squeue -o "%.8i %.9P %.16j %.8u %.2t %.10M %.5D %.4C %.10m %.15b %R"'
 
 # System Aliases
 alias g='git'
