@@ -5,7 +5,6 @@ set -gx EDITOR vim
 set -gx __fish_git_prompt_showdirtystate true
 set -gx __fish_git_prompt_showuntrackedfiles true
 set -gx __fish_git_prompt_showstashstate true
-set -gx __fish_git_prompt_showcolorhints true
 set -gx __fish_git_prompt_color_flags red
 set -gx __fish_git_prompt_color_branch red
 
