@@ -9,11 +9,11 @@
 shopt -s checkhash checkwinsize cmdhist dirspell dotglob extglob globstar histappend no_empty_cmd_completion nocaseglob 2> /dev/null
 
 # Source all user setting files
-# Note: .git-prompt.sh must come before .svn-prompt.sh and .bash_prompt
-# Note: .svn-prompt.sh must come before .bash_prompt
-# Note: .bash_exports must come before .bash_aliases
-# Note: .bash_aliases must come before .bash_functions
-for file in ~/.git-{completion.bash,prompt.sh} ~/.svn-prompt.sh ~/.bash_{exports,aliases,functions,prompt}
+# Note: git-prompt.sh must come before svn-prompt.sh and prompt.sh
+# Note: svn-prompt.sh must come before prompt.sh
+# Note: exports.sh must come before aliases.sh
+# Note: aliases.sh must come before functions.sh
+for file in ~/.config/bash/git-{completion.bash,prompt.sh} ~/.config/bash/svn-prompt.sh ~/.config/bash/{exports,aliases,functions,prompt}.sh
 do
     if [[ -f "$file" ]]
     then
