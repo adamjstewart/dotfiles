@@ -17,7 +17,7 @@ set -l spack_view $HOME/spack/var/spack/environments/system/.spack-env/view
 if test -e $spack_view
     fish_add_path $spack_view/bin
     set -gx DYLD_FALLBACK_LIBRARY_PATH $spack_view/lib* $DYLD_FALLBACK_LIBRARY_PATH
-    set -gx MANPATH $spack_view/share/man $spack_view/man $MANPATH
+    set -gx MANPATH $spack_view/share/man $spack_view/man $MANPATH ''
     set -gx PYTHONPATH $spack_view/lib*/python*/site-packages $PYTHONPATH
     set -gx SPATIALINDEX_C_LIBRARY $spack_view/lib/libspatialindex_c.dylib
 end
