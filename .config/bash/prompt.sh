@@ -66,8 +66,7 @@ pre+="$white] "
 
 pre+="$cyan\u"   # username
 pre+="$white@"
-pre+="$green\h"  # hostname
-pre+="$white:"
+pre+="$green\h " # hostname
 pre+="$yellow\w" # pwd
 
 mid=" $white("
