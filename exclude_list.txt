@@ -4,6 +4,7 @@ exclude_list.txt
 Monokai.terminal
 
 # GitHub
+LICENSE
 README.md
 screenshots
 .git
