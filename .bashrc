@@ -9,7 +9,7 @@ shopt -s checkhash checkwinsize cmdhist dirspell dotglob extglob globstar histap
 # Note: svn-prompt.sh must come before prompt.sh
 # Note: exports.sh must come before aliases.sh
 # Note: aliases.sh must come before functions.sh
-for file in ~/.config/bash/git-{completion.bash,prompt.sh} ~/.config/bash/svn-prompt.sh ~/.config/bash/{exports,aliases,functions,prompt}.sh
+for file in ~/.config/bash/git-{completion.bash,prompt.sh} ~/.config/bash/svn-prompt.sh ~/.config/bash/{exports,aliases,functions,prompt}.bash
 do
     if [[ -f "$file" ]]
     then
