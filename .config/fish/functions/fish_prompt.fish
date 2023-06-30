@@ -1,4 +1,4 @@
-function fish_prompt -d 'Write out the prompt'
+function fish_prompt -d 'define the appearance of the command line prompt'
     # [time]
     echo -ns [ (set_color blue) (date '+%H:%M:%S') (set_color normal) ] ' '
 
