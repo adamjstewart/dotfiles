@@ -1,7 +1,3 @@
-#!/usr/bin/env bash
-
-# .bashrc
-
 # Sourced when an interactive shell that is not a login shell is started
 # On Linux, this occurs when a new Terminal is opened
 

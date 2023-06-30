@@ -1,7 +1,3 @@
-#!/usr/bin/env bash
-
-# .bash_prompt
-
 # Contains settings for various prompts
 
 # Best Terminal Background Colors:

@@ -1,7 +1,3 @@
-#!/usr/bin/env bash
-
-# .bash_exports
-
 # Contains all exported environment variables
 
 # OS Specific Aliases
