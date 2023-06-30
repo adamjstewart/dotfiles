@@ -6,6 +6,9 @@ if test -e $HOME/Downloads
     abbr -a csc c $HOME/Downloads
 end
 
+# df
+abbr -a df df -H
+
 # git
 abbr -a g git
 
@@ -32,3 +35,5 @@ end
 # vim
 abbr -a v vim
 
+# wget
+abbr -a wget wget -c
