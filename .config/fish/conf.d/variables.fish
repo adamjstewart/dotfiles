@@ -8,6 +8,9 @@ set -gx __fish_git_prompt_showstashstate true
 set -gx __fish_git_prompt_color_flags red
 set -gx __fish_git_prompt_color_branch red
 
+# less
+set -gx LESS -iR
+
 # spack
 if test -e $HOME/spack
     set -gx SPACK_SKIP_MODULES true

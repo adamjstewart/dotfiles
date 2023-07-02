@@ -15,9 +15,6 @@ abbr -a df df -H
 # git
 abbr -a g git
 
-# less
-abbr -a less less -ir
-
 # ls
 abbr -a l ls
 abbr -a la ls -A
