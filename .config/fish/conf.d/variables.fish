@@ -11,6 +11,9 @@ set -gx __fish_git_prompt_color_branch red
 # less
 set -gx LESS -iR
 
+# rust
+fish_add_path ~/.cargo/bin
+
 # spack
 if test -e $HOME/spack
     set -gx SPACK_SKIP_MODULES true

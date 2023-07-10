@@ -38,6 +38,12 @@ export HISTCONTROL='ignoreboth'
 export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
 
+# Rust
+if [[ -d "$HOME/.cargo/bin" ]]
+then
+    export PATH="$HOME/.cargo/bin:$PATH"
+fi
+
 # Spack
 if [[ -d "$HOME/spack" ]]
 then
