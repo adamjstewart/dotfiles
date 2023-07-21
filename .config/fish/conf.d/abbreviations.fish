@@ -9,8 +9,14 @@ if test -e $HOME/Downloads
     abbr -a csc c $HOME/Downloads
 end
 
+# curl
+abbr -a curl curl -LO
+
 # df
 abbr -a df df -H
+
+# diff
+abbr -a diff diff --color=always
 
 # git
 abbr -a g git

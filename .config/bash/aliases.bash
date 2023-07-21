@@ -44,7 +44,9 @@ alias fgrep='fgrep --color=auto -I'
 alias ps='ps aux'
 alias bc='bc -ql'
 alias ftp='lftp'
+alias curl='curl -LO'
 alias wget='wget -c'
+alias diff='diff --color=always'
 
 # List most commonly used commands
 alias common="history | awk '{CMD[\$2]++;count++;}END { for (a in CMD)print CMD[a] \" \" CMD[a]/count*100 \"% \" a;}' | grep -v \"./\" | column -c3 -s \" \" -t | sort -nr | nl |  head"
