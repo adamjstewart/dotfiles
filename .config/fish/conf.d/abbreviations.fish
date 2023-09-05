@@ -44,6 +44,16 @@ if test -e $HOME/spack
     abbr -a csd cd $HOME/spack/lib/spack/docs
 end
 
+# torchgeo
+abbr -a t torchgeo
+
+if test -e $HOME/torchgeo
+    abbr -a ct cd $HOME/torchgeo
+    abbr -a ctd cd $HOME/torchgeo/torchgeo/datasets
+    abbr -a ctd cd $HOME/torchgeo/torchgeo/models
+    abbr -a ctt cd $HOME/torchgeo/torchgeo/trainers
+end
+
 # vim
 abbr -a v vim
 

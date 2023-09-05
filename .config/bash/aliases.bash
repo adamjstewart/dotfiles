@@ -89,3 +89,14 @@ then
     alias csl='cd $SPACK_ROOT/lib/spack/spack'
     alias csd='cd $SPACK_ROOT/lib/spack/docs'
 fi
+
+# TorchGeo Aliases
+alias t='torchgeo'
+
+if [[ -d "$HOME/torchgeo" ]]
+then
+    alias ct='cd $HOME/torchgeo'
+    alias ctd='cd $HOME/torchgeo/torchgeo/datasets'
+    alias ctm='cd $HOME/torchgeo/torchgeo/models'
+    alias ctt='cd $HOME/torchgeo/torchgeo/trainers'
+fi
