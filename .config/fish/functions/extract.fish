@@ -2,7 +2,7 @@ function extract -d 'extract any compressed file'
     for file in $argv
         switch $file
             case '*.tar*' '*.tgz' '*.tbz*' '*.txz'
-                tar xvaf $file
+                tar xvf $file
             case '*.zip' '*.ZIP' '*.whl'
                 unzip $file
             case '*.gz'
