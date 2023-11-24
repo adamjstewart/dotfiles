@@ -55,7 +55,7 @@ then
     export SPACK_SKIP_MODULES=true
 fi
 
-SPACK_VIEW="$SPACK_ROOT/var/spack/environments/system/.spack-env/view"
+SPACK_VIEW="$SPACK_ROOT/var/spack/environments/default/.spack-env/view"
 if [[ -d "$SPACK_VIEW" ]]
 then
     export PATH="$SPACK_VIEW/bin:$PATH"
