@@ -1,3 +1,6 @@
+# docker
+fish_add_path ~/.docker/bin
+
 # editor
 set -gx EDITOR vim
 
