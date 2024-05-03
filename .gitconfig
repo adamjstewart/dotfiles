@@ -30,10 +30,6 @@
         git branch | grep -v \"$main\" | xargs git branch -D; \
     }; f"
 
-[blame]
-
-    ignoreRevsFile = .git-blame-ignore-revs
-
 [color]
 
     # Use colors in Git commands that are capable of colored output
