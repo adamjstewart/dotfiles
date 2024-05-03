@@ -30,6 +30,10 @@
         git branch | grep -v \"$main\" | xargs git branch -D; \
     }; f"
 
+[blame]
+
+    ignoreRevsFile = .git-blame-ignore-revs
+
 [color]
 
     # Use colors in Git commands that are capable of colored output
@@ -80,7 +84,7 @@
     default = current
 
 [rerere]
-    
+
     # Reuse recorded resolution of conflicted merges
     enabled = true
 
