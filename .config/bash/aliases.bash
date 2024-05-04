@@ -47,6 +47,7 @@ alias ftp='lftp'
 alias curl='curl -LO'
 alias wget='wget -c'
 alias diff='diff --color=always'
+alias r='ruff format && ruff check'
 
 # List most commonly used commands
 alias common="history | awk '{CMD[\$2]++;count++;}END { for (a in CMD)print CMD[a] \" \" CMD[a]/count*100 \"% \" a;}' | grep -v \"./\" | column -c3 -s \" \" -t | sort -nr | nl |  head"

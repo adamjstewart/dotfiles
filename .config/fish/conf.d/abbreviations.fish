@@ -31,6 +31,9 @@ abbr -a lf ls -1f
 # python
 abbr -a p python3
 
+# ruff
+abbr -a r 'ruff format && ruff check'
+
 # slurm
 abbr -a sq squeue -o "%.8i %.9P %.16j %.8u %.2t %.10M %.5D %.4C %.10m %.15b %R" -S -i
 
