@@ -17,6 +17,7 @@
 
     # See changes since branching off of main branch
     changes = "!f() { \
+        set -e; \
         current=$(git rev-parse --abbrev-ref HEAD); \
         main=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'); \
         commit=$(git merge-base --fork-point \"$main\" \"$current\"); \
@@ -31,6 +32,7 @@
     # > git lab pull upstream develop
     # > git lab rebase develop
     lab = "!f() { \
+        set -e; \
         commit=$(curl -L \"https://gitlab.spack.io/api/v4/projects/2/pipelines?scope=finished&ref=develop&per_page=1\" 2> /dev/null | jq -r first.sha); \
         case \"$1\" in \
             merge) \
@@ -51,6 +53,7 @@
 
     # Delete all local branches except the main branch
     purge = "!f() { \
+        set -e; \
         main=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'); \
         git checkout \"$main\"; \
         git branch | grep -v \"$main\" | xargs git branch -D; \
