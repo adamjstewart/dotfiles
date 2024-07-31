@@ -1,3 +1,5 @@
+fish_add_path ~/bin
+
 # docker
 fish_add_path ~/.docker/bin
 
