@@ -15,15 +15,6 @@
     st = status
     sw = switch
 
-    # See changes since branching off of main branch
-    changes = "!f() { \
-        set -e; \
-        current=$(git rev-parse --abbrev-ref HEAD); \
-        main=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'); \
-        commit=$(git merge-base --fork-point \"$main\" \"$current\"); \
-        git diff \"$commit\"...; \
-    }; f"
-
     # Rebase off of the latest commit that has completed GitLab CI (Spack-only)
     #
     # Examples:
