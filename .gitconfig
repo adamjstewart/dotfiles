@@ -15,6 +15,9 @@
     st = status
     sw = switch
 
+    # Execute from root directory (automatic for shell commands)
+    gr = !git grep
+
 [color]
 
     # Use colors in Git commands that are capable of colored output
