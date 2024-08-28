@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Do not use -e
+set -u
+
+# Loosely based on:
+# https://github.com/tj/git-extras/blob/master/bin/git-sed
+
+if sed --version >/dev/null 2>&1
+then
+    # GNU sed
+    git grep -Ilz $1 | xargs -0 sed -i "s/$1/$2/g"
+else
+    # BSD sed
+    git grep -Ilz $1 | xargs -0 sed -i '' "s/$1/$2/g"
+fi
+

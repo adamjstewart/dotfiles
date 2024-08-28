@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -euo pipefail
+set -eu
 
 # Rebase off of the latest commit that has completed GitLab CI (Spack-only)
 #

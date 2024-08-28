@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -euo pipefail
+set -eu
 
 # See changes since branching off of main branch
 current=$(git rev-parse --abbrev-ref HEAD)
