@@ -9,9 +9,9 @@ set -u
 if sed --version >/dev/null 2>&1
 then
     # GNU sed
-    git grep -Ilz $1 | xargs -0 sed -i "s/$1/$2/g"
+    git grep -Ilz "$1" | xargs -0 sed -i "s/$1/$2/g"
 else
     # BSD sed
-    git grep -Ilz $1 | xargs -0 sed -i '' "s/$1/$2/g"
+    git grep -Ilz "$1" | xargs -0 sed -i '' "s/$1/$2/g"
 fi
 
