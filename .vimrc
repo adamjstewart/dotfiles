@@ -9,6 +9,8 @@
 " See ':help vimfiles' for a description of the .vim file hierarchy
 
 " Compatibility
+set encoding=utf-8              " the encoding displayed
+set fileencoding=utf-8          " the encoding written to file
 set nocompatible                " disable vi compatibility mode, must be done first
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
 set mousefocus                  " window focus follows mouse
@@ -116,7 +118,7 @@ if has("autocmd")
     endfunction
 
     autocmd BufWrite <buffer> :call StripTrailingWhitespaces()
-    
+
     " Clear searches when opening file
     autocmd BufReadPre <buffer> :let @/ = ""
 
