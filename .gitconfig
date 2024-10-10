@@ -6,6 +6,7 @@
     br = branch
     ci = commit
     co = checkout
+    cp = cherry-pick
     di = diff
     gr = grep
     lo = log
