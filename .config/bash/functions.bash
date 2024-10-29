@@ -72,21 +72,17 @@ function extract {
     do
         if [[ -f "$file" ]]; then
             case "$file" in
-                *.tar.gz|*.tgz)     tar xvzf   "$file" ;;
-                *.tar.bz2|*.tbz*)   tar xvjf   "$file" ;;
-                *.tar.xz|*.txz)     tar xvJf   "$file" ;;
-                *.tar.Z)            tar xvZf   "$file" ;;
-                *.tar)              tar xvf    "$file" ;;
-                *.gz)               gunzip -k  "$file" ;;
-                *.bz2)              bunzip2 -k "$file" ;;
-                *.xz)               unxz -k    "$file" ;;
-                *.zip|*.ZIP|*.whl)  unzip      "$file" ;;
-                *.rar)              unrar x    "$file" ;;
-                *.lzma)             unlzma -k  "$file" ;;
-                *.Z)                uncompress "$file" ;;
-                *.7z)               7z x       "$file" ;;
-                *.exe)              cabextract "$file" ;;
-                *)                  echo "extract: '$file' - unknown archive method" ;;
+                *.tar*|*.tgz|*.tbz*|*.txz)  tar xvf    "$file" ;;
+                *.gz)                       gunzip -k  "$file" ;;
+                *.bz2)                      bunzip2 -k "$file" ;;
+                *.xz)                       unxz -k    "$file" ;;
+                *.zip|*.ZIP|*.whl)          unzip      "$file" ;;
+                *.rar)                      unrar x    "$file" ;;
+                *.lzma)                     unlzma -k  "$file" ;;
+                *.Z)                        uncompress "$file" ;;
+                *.7z)                       7z x       "$file" ;;
+                *.exe)                      cabextract "$file" ;;
+                *)                          echo "extract: '$file' - unknown archive method" ;;
             esac
         else
             echo "extract: '$file' - file does not exist"
