@@ -1,0 +1,6 @@
+#!/bin/sh
+
+set -eu
+
+# See lines of code committed by each author
+git ls-tree -rz --name-only HEAD "$1" | xargs -0 -n1 git blame --line-porcelain | grep '^author ' | sort | uniq -c | sort -nr
