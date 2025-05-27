@@ -42,7 +42,7 @@ abbr -a s spack
 
 if test -e $HOME/spack
     abbr -a cs cd $HOME/spack
-    abbr -a csv cd $HOME/spack/var/spack/repos/builtin/packages
+    abbr -a csv cd $HOME/spack/var/spack/repos/spack_repo/builtin/packages
     abbr -a csl cd $HOME/spack/lib/spack/spack
     abbr -a csd cd $HOME/spack/lib/spack/docs
 end
