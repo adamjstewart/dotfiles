@@ -40,9 +40,9 @@ abbr -a sq squeue -o "%.8i %.9P %.16j %.8u %.2t %.10M %.5D %.4C %.10m %.15b %R" 
 # spack
 abbr -a s spack
 
-if test -e $HOME/spack
-    abbr -a cs cd $HOME/spack
-    abbr -a csv cd $HOME/spack/var/spack/repos/spack_repo/builtin/packages
+if test -e $HOME/spack; and test -e $HOME/spack-packages
+    abbr -a cs cd $HOME/spack-packages
+    abbr -a csv cd $HOME/spack-packages/repos/spack_repo/builtin/packages
     abbr -a csl cd $HOME/spack/lib/spack/spack
     abbr -a csd cd $HOME/spack/lib/spack/docs
 end

@@ -83,12 +83,12 @@ fi
 # Spack Aliases
 alias s='spack'
 
-if [[ "$SPACK_ROOT" ]]
+if [[ -d "$HOME/spack" && -d "$HOME/spack-packages" ]]
 then
-    alias cs='cd $SPACK_ROOT'
-    alias csv='cd $SPACK_ROOT/var/spack/repos/spack_repo/builtin/packages'
-    alias csl='cd $SPACK_ROOT/lib/spack/spack'
-    alias csd='cd $SPACK_ROOT/lib/spack/docs'
+    alias cs='cd $HOME/spack-packages'
+    alias csv='cd $HOME/spack-packages/repos/spack_repo/builtin/packages'
+    alias csl='cd $HOME/spack/lib/spack/spack'
+    alias csd='cd $HOME/spack/lib/spack/docs'
 fi
 
 # TorchGeo Aliases
