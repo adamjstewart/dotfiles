@@ -27,7 +27,7 @@
     # Automatically sign using GPG keys
     # Instructions for copying GPG keys from one machine to another:
     # https://makandracards.com/makandra-orga/37763-gpg-extract-private-key-and-import-on-different-machine
-    gpgsign = true
+    gpgSign = true
 
 [core]
 
@@ -35,7 +35,7 @@
     editor = vim
 
     # Use global .gitignore file to ignore certain filetypes
-    excludesfile = ~/.gitignore
+    excludesFile = ~/.gitignore
 
 [diff]
 
@@ -45,7 +45,12 @@
 [difftool]
 
     # Disable the prompt asking you if you want to open with vimdiff
-    prompt = False
+    prompt = false
+
+[format]
+
+    # Automatically sign off all commits
+    signOff = true
 
 [merge]
 
@@ -55,7 +60,7 @@
 [mergetool]
 
     # Disable the prompt asking you if you want to open with vimdiff
-    prompt = False
+    prompt = false
 
 [pull]
     # Don't merge or rebase when branch has local changes
@@ -76,4 +81,4 @@
     # Set user commit information
     email = ajstewart426@gmail.com
     name = Adam J. Stewart
-    signingkey = C66C0675661156FC
+    signingKey = C66C0675661156FC
