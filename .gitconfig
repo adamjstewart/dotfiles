@@ -4,7 +4,7 @@
     ad = add
     bi = bisect
     br = branch
-    ci = commit
+    ci = commit -s
     co = checkout
     cp = cherry-pick
     di = diff
@@ -46,11 +46,6 @@
 
     # Disable the prompt asking you if you want to open with vimdiff
     prompt = false
-
-[format]
-
-    # Automatically sign off all commits
-    signOff = true
 
 [merge]
 
