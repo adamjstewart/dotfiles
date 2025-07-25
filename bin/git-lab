@@ -9,7 +9,20 @@ set -eu
 # > git lab merge
 # > git lab pull upstream develop
 # > git lab rebase develop
-commit=$(curl -Lfs 'https://gitlab.spack.io/api/v4/projects/2/pipelines?scope=finished&ref=develop&per_page=1' | sed -nr 's/.*sha.:.(.{40}).*/\1/p')
+case "$PWD" in
+    */spack-packages*)
+        project=57
+        ;;
+    */spack*)
+        project=2
+        ;;
+    *)
+        echo "Not a Spack repo"
+        return 1
+        ;;
+esac
+
+commit=$(curl -Lfs "https://gitlab.spack.io/api/v4/projects/$project/pipelines?scope=finished&ref=develop&per_page=1" | sed -nr 's/.*sha.:.(.{40}).*/\1/p')
 subcommand="$1"
 shift
 case "$subcommand" in
