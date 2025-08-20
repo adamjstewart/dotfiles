@@ -9,7 +9,7 @@ set -eu
 # > git lab merge
 # > git lab pull upstream develop
 # > git lab rebase develop
-case "$PWD" in
+case $(git remote get-url upstream) in
     */spack-packages*)
         project=57
         ;;
