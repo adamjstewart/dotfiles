@@ -54,6 +54,7 @@ if test -e $HOME/torchgeo
     abbr -a ct cd $HOME/torchgeo
     abbr -a ctd cd $HOME/torchgeo/torchgeo/datasets
     abbr -a ctm cd $HOME/torchgeo/torchgeo/models
+    abbr -a cts cd $HOME/torchgeo/torchgeo/samplers
     abbr -a ctt cd $HOME/torchgeo/torchgeo/trainers
 end
 

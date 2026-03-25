@@ -99,5 +99,6 @@ then
     alias ct='cd $HOME/torchgeo'
     alias ctd='cd $HOME/torchgeo/torchgeo/datasets'
     alias ctm='cd $HOME/torchgeo/torchgeo/models'
+    alias cts='cd $HOME/torchgeo/torchgeo/samplers'
     alias ctt='cd $HOME/torchgeo/torchgeo/trainers'
 fi
