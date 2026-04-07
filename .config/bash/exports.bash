@@ -60,6 +60,10 @@ if [[ -d "$SPACK_VIEW" ]]
 then
     export PATH="$SPACK_VIEW/bin:$PATH"
 
+    for path in $SPACK_VIEW/lib/python*/site-packages
+    do
+        export PYTHONPATH+=":$path"
+    done
     export DYLD_FALLBACK_LIBRARY_PATH+=":$SPACK_VIEW/lib"
 
     # Trailing colon allows `man' to search system locations as well
