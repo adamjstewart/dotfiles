@@ -66,6 +66,10 @@ then
     done
     export DYLD_FALLBACK_LIBRARY_PATH+=":$SPACK_VIEW/lib"
 
+    export JUPYTER_CONFIG_PATH+=":$SPACK_VIEW/etc/jupyter"
+    export JUPYTER_PATH+=":$SPACK_VIEW/share/jupyter"
+    export JUPYTERLAB_DIR+=":$SPACK_VIEW/share/jupyter/lab"
+
     # Trailing colon allows `man' to search system locations as well
     export MANPATH+=":$SPACK_VIEW/share/man:$SPACK_VIEW/man:"
 
