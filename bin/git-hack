@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -eu
+
+# https://docs.python.org/3/library/functions.html#eval
+# https://docs.python.org/3/library/functions.html#exec
+# https://docs.python.org/3/library/os.html#process-management
+# https://docs.python.org/3/library/pickle.html
+# https://docs.python.org/3/library/subprocess.html#security-considerations
+# https://numpy.org/doc/stable/reference/generated/numpy.load.html
+# https://docs.pytorch.org/docs/2.14/notes/serialization.html#weights-only-security
+git grep -P '\beval\([^)]|\bexec\([^)]|os\.exec|os\.fork|os\.popen|os\.posix_spawn|os\.spawn|os\.system|pickle\.load|shell=True|allow_pickle=True|weights_only=False'
