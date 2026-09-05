@@ -7,7 +7,8 @@ set -eu
 # https://docs.python.org/3/library/marshal.html#module-marshal
 # https://docs.python.org/3/library/os.html#process-management
 # https://docs.python.org/3/library/pickle.html
+# https://docs.python.org/3/library/shelve.html#module-shelve
 # https://docs.python.org/3/library/subprocess.html#security-considerations
 # https://numpy.org/doc/stable/reference/generated/numpy.load.html
 # https://docs.pytorch.org/docs/2.14/notes/serialization.html#weights-only-security
-git grep -P '\beval\([^)]|\bexec\([^)]|marshal\.load|os\.exec|os\.fork|os\.popen|os\.posix_spawn|os\.spawn|os\.system|pickle\.load|shell=True|allow_pickle=True|weights_only=False'
+git grep -P '\beval\([^)]|\bexec\([^)]|marshal\.load|os\.exec|os\.fork|os\.popen|os\.posix_spawn|os\.spawn|os\.system|pickle\.load|shelve\.open|shell=True|allow_pickle=True|weights_only=False'
