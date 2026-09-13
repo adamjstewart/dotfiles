@@ -3,7 +3,7 @@ function fish_prompt -d 'define the appearance of the command line prompt'
     set --local ms $CMD_DURATION
     set --local ss (math --scale 0 $ms/1000 % 60)
     set --local mm (math --scale 0 $ms/1000/60 % 60)
-    set --local hh (math --scale 0 $mm/1000/60/60)
+    set --local hh (math --scale 0 $mm/1000/60/60 % 100)
     echo -ns [ (set_color blue) (printf "%02d:%02d:%02d" $hh $mm $ss) (set_color normal) ] ' '
 
     # user@host
