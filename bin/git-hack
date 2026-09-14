@@ -13,4 +13,4 @@ set -eu
 # https://docs.pytorch.org/docs/stable/notes/serialization.html#weights-only-security
 # https://docs.pytorch.org/docs/stable/hub.html
 # https://docs.pytorch.org/vision/stable/models.html
-git grep -P '\beval\([^)]|\bexec\([^)]|marshal\.loads?|os\.exec[a-z]*|os\.fork|os\.popen|os\.posix_spawn|os\.spawn[a-z]*|os\.system|pickle\.loads?|shelve\.open|shell=True|allow_pickle=True|weights_only=False|torch\.load(?!.*weights_only=True)|load_state_dict_from_url\((?!.*weights_only=True)|get_state_dict\((?!.*weights_only=True)'
+git grep -P '\beval\([^)]|\bexec\([^)]|marshal\.loads?|os\.exec[a-z]*|os\.fork|os\.popen|os\.posix_spawn|os\.spawn[a-z]*|os\.system|pickle\.loads?|shelve\.open|shell=True|allow_pickle=True|weights_only=False|torch\.load(?!.*weights_only=True)|load_state_dict_from_url\((?!.*weights_only=True)|get_state_dict\((?!.*weights_only=True)' -- '*.py*'
