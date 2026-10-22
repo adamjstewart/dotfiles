@@ -7,7 +7,7 @@
 OLDPWD_backup="$OLDPWD"
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
-git pull origin master
+git pull origin main
 
 rsync --exclude-from "exclude_list.txt" -avh --no-perms . ~
 
