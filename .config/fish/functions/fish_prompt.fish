@@ -4,7 +4,7 @@ set -gx VIRTUAL_ENV_DISABLE_PROMPT true
 function fish_prompt -d 'define the appearance of the command line prompt'
     # (virtual env)
     if test -n "$VIRTUAL_ENV_PROMPT"
-        echo -ns '(' (set_color purple) "$VIRTUAL_ENV_PROMPT" (set_color --reset) ') '
+        echo -ns '(' (set_color magenta) "$VIRTUAL_ENV_PROMPT" (set_color --reset) ') '
     end
 
     # [HH:MM:SS] execution time of previous command
